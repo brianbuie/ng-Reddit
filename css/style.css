@@ -67,23 +67,81 @@ a:focus, button:focus, input:focus{
 	display: none !important;
 }
 
-
-/* WELCOME SCREEN */
-
-#welcome{
-	width: 30%;
-	margin: 0 auto;
+.material{
+	background-color: #fcfcfc;
+	box-shadow: 0 -3px 2px rgba(0,0,0,0.12);
 }
+
+
+
+
+
+/* SETTINGS */
+
+#settingsContainer{
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+#logoContainer{
+	position: relative;
+	left: 1em;
+	display: inline-block;
+	line-height: 0;
+	padding: 1em;
+	transition: all 0.2s ease-out;
+}
+
+#logoContainer img{
+	width: 2.5em;
+}
+
+#logoContainer:hover{
+	cursor: pointer;
+	padding-right: 1em;
+}
+
+#settings{
+	max-height: 0;
+	transition: all 0.2s ease-out;
+}
+
+.closed #logoContainer:hover + #settings, 
+.closed #settings:hover{
+	max-height: 2em;
+	padding-top: 2em;
+}
+
+.open #settings{
+	max-height: 100em;
+	padding: 2em;
+}
+
+
+
+
+/* MAIN CONTENT */
+
+#content{
+	display: flex;
+}
+
+#mute{
+	color: #555;
+}
+
+
+
+
+
+/* FORMS */
 
 .form-inline{
 	width: 90%;
 	margin: 0 auto;
 	display: flex;
-}
-
-#threadSelect{
-	width: 80%;
-	margin: 0 0;
 }
 
 .form-inline input[type="text"], .form-inline button{
@@ -93,38 +151,6 @@ a:focus, button:focus, input:focus{
 
 .form-inline input[type="text"]{
 	flex-grow: 1;
-}
-
-.form-inline button{
-	
-}
-
-
-/* MAIN CONTENT */
-
-#content{
-	display: flex;
-}
-
-#titleBar{
-	display: flex;
-	align-items: center;
-	padding: 10px 10px 0 20px;
-}
-
-#titleBar img{
-	width: 10%;
-	height: auto;
-}
-
-#titleBar h2{
-	margin: 0 0 0 10px;
-	font-weight: normal;
-	flex-grow: 1;
-}
-
-#mute{
-	color: #555;
 }
 
 
