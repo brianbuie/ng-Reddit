@@ -1,0 +1,275 @@
+@import url('reset.css');
+
+/* CORE */
+
+body{
+	background: #ddd;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #555;
+}
+
+strong{
+	font-weight: bold;
+}
+
+h1, h2, h3, h4{
+	font-weight: bold;
+	margin: 20px 0 10px 0;
+}
+
+h1{
+	font-size: 22px;
+}
+
+h2{
+	font-size: 20px;
+}
+
+h3{
+	font-size: 18px;
+}
+
+h4{
+	font-size: 16px;
+}
+
+button{
+	background-color: #F73906;
+	border-color: #F73906;
+	border-style:  solid;
+	color: #fff;
+	-webkit-appearance: none;
+	transition: all .2s ease;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: #fff;
+	color: #F73906;
+}
+
+a{
+	color: #F73906;
+	text-decoration: none;
+}
+
+a:focus, button:focus, input:focus{
+	outline: none !important;
+}
+
+.center{
+	text-align: center;
+}
+
+.hidden{
+	display: none !important;
+}
+
+
+/* WELCOME SCREEN */
+
+#welcome{
+	width: 30%;
+	margin: 0 auto;
+}
+
+.form-inline{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+}
+
+#threadSelect{
+	width: 80%;
+	margin: 0 0;
+}
+
+.form-inline input[type="text"], .form-inline button{
+	padding: 10px;
+	font-size: 16px;
+}
+
+.form-inline input[type="text"]{
+	flex-grow: 1;
+}
+
+.form-inline button{
+	
+}
+
+
+/* MAIN CONTENT */
+
+#content{
+	display: flex;
+}
+
+#titleBar{
+	display: flex;
+	align-items: center;
+	padding: 10px 10px 0 20px;
+}
+
+#titleBar img{
+	width: 10%;
+	height: auto;
+}
+
+#titleBar h2{
+	margin: 0 0 0 10px;
+	font-weight: normal;
+	flex-grow: 1;
+}
+
+#mute{
+	color: #555;
+}
+
+
+
+/* POSTS COLUMN */
+
+#postsContainer{
+	width: 40%;
+	flex-grow: 0;
+}
+
+#posts .post{
+	display: flex;
+	align-items: center;
+	padding: 10px 5px;
+	margin: 10px;
+	background: #fcfcfc;
+}
+
+#posts .postLink{
+	color: inherit;
+}
+
+.postStats{
+	text-align: center;
+	width: 13%;
+}
+
+.postStats h1{
+	margin: 0;
+}
+
+.postStats p{
+	font-size: 14px;
+}
+
+#posts .post .postTitle{
+	margin: 0;
+	width: 87%;
+	font-weight: normal;
+}
+
+#posts .post.active{
+	padding-left: 0;
+	border-left: 5px solid #F73906;
+	color: #F73906;
+}
+
+#posts .post.active .postTitle{
+	font-weight: bold;
+}
+
+#posts .post.removed{
+	opacity: 0.4;
+}
+
+#posts .post.removed.active{
+	opacity: 1;
+}
+
+
+
+
+/* COMMENTS */
+
+#commentsContainer{
+	width: 60%;
+	padding: 0 20px;
+}
+
+.activePost-title{
+	padding-right: 25px;
+}
+
+.activePost-title .title{
+	color: #555;
+}
+
+.activePost-title .score{
+	margin-right: 15px;
+}
+
+#removeActive{
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	color: #888;
+}
+
+.activePost-content{
+	margin-bottom: 20px;
+}
+
+#comments>.comment{
+	background-color: #fcfcfc;
+	margin: 10px 0;
+	padding: 15px;
+}
+
+.comment{
+	margin: 10px;
+}
+
+.comment .comment{
+	padding-left: 20px;
+}
+
+.comment .body{
+	margin: 0 0 10px 0;
+}
+
+.comment .body p, .activePost-content p{
+	margin-bottom: 10px;
+}
+
+.meta{
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.meta .score-big{
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: 16px;	
+}
+
+/* username */
+.meta b{
+	font-weight: bold;
+	font-size: 80%;
+}
+
+.OP{
+	background-color: #0055DF;
+	color: #fff;
+	border-radius: 4px;
+	font-size: 80%;
+	padding: 2px 5px;
+	margin-left: 5px;
+}
+
+.meta .flair{
+	margin-left: 10px;
+	font-size: 70%;
+	color: #888;
+}
+

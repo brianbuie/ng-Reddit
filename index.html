@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> </title>
+	<link href="css/vendor/font-awesome/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="welcome">
+	<div class="center">
+		<img src="media/snoo-outlined.svg" />
+		<h1>Reddit Live</h1>
+	</div>
+	<form class="form-inline" id="subSelect">
+		<input type="text" name="sub" placeholder="Subreddit" />
+		<button type="submit">Go!</button>
+	</form>
+</div>
+
+<section id="content" class="hidden">
+	<div id="postsContainer">
+		<div id="titleBar">
+			<img src="media/snoo-outlined.svg" />
+			<h2>r/something </h2>
+			<a href="#" id="mute" class="appLink"><i class="fa fa-bell-slash"></i></a>
+		</div>
+		<div id="posts" data-sub=""></div>
+	</div>
+	<div id="commentsContainer">
+		<a href="#" id="removeActive" class="hidden appLink"><i class="fa fa-close"></i></a>
+		<h3 class="activePost-title"><span class="score"></span><a id="postLink" href="#" target="_blank"><span class="title"></span></a></h3>
+		<div class="meta hidden">posted by <b id="OP" class="OP"></b><span id="OP-flair" class="flair"></span></div>
+		<p class="activePost-content">
+			<form class="form-inline" id="threadSelect">
+				<input type="text" name="thread" placeholder="Thread URL" />
+				<button type="submit">Go!</button>
+			</form>
+		</p>
+		<div id="comments">
+		</div>
+	</div>
+</section>
+
+<div id="stats" class="hidden">
+	<h5>Total: <span id="postsAmount">0</span></h5>
+	<h5>Request time: <span id="processTime">0</span></h5>
+	<h5>List check: <span id="listCheck">0</span></h5>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/full.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- liveupdating during development -->
+<script src="js/vendor/live.js" type="text/javascript" charset="utf-8"></script>
+
+<div id="formatZone" class="hidden"></div>
+
+</body>
+</html>
