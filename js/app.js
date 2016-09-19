@@ -23,10 +23,6 @@ redditApp.controller('settingsController', function settingsController($scope){
 	$scope.modalStatus = "closed";
 
 	$scope.toggleModal = function() {
-		if($scope.modalStatus === "closed"){ 
-			$scope.modalStatus = "open"; 
-		} else { 
-			$scope.modalStatus = "closed"; 
-		}
+		$scope.modalStatus = $scope.modalStatus === "closed" ? "open" : "closed";
 	}
 })

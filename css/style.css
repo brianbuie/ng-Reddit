@@ -106,6 +106,7 @@ a:focus, button:focus, input:focus{
 #settings{
 	max-height: 0;
 	transition: all 0.2s ease-out;
+	padding: 0 2em;
 }
 
 .closed #logoContainer:hover + #settings, 
@@ -128,10 +129,6 @@ a:focus, button:focus, input:focus{
 	display: flex;
 }
 
-#mute{
-	color: #555;
-}
-
 
 
 
@@ -145,7 +142,7 @@ a:focus, button:focus, input:focus{
 }
 
 .form-inline input[type="text"], .form-inline button{
-	padding: 10px;
+	padding: 0.75em;
 	font-size: 16px;
 }
 
