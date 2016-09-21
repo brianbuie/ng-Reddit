@@ -1,15 +1,21 @@
 var redditApp = angular.module('redditApp', []);
 
-redditApp.controller('subredditController', function subredditController($scope) {
-	$scope.things = [
-		{
-			name: 'value 1'
-		}, {
-			name: 'value 2'
-		}, {
-			name: 'value 3'
-		}
-	];
+
+redditApp.controller('postsController', function postsController(){
+	this.subreddit = '';
+	this.subInput = '';
+	this.formVisibility = '';
+
+	this.subSelect = function(){
+		this.subreddit = this.subInput;
+		this.subInput = '';
+		this.formVisibility = 'hidden';
+	}
+
+	this.removeSub = function(){
+		this.subreddit = '';
+		this.formVisibility = '';
+	}
 });
 
 redditApp.controller('settingsController', function settingsController($scope){
@@ -21,7 +27,6 @@ redditApp.controller('settingsController', function settingsController($scope){
 		};
 
 	$scope.modalStatus = "closed";
-
 	$scope.toggleModal = function() {
 		$scope.modalStatus = $scope.modalStatus === "closed" ? "open" : "closed";
 	}

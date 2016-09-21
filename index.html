@@ -7,11 +7,13 @@
 	<link href="css/vendor/font-awesome/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+	<script src="js/vendor/angular.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
+
 
 <section id="settingsContainer" ng-controller="settingsController" class="{{modalStatus}}">
 	<div id="logoContainer" class="material" ng-click="toggleModal()">
@@ -24,13 +26,20 @@
 	</div>
 </section>
 
+
+
+
 <section id="content">
-	<div id="postsContainer" ng-controller="subredditController">
-		<form class="form-inline" id="subSelect">
-			<input type="text" ng-model="sub" placeholder="Subreddit" />
+	<div id="postsContainer" ng-controller="postsController as posts">
+		<form class="form-inline {{posts.formVisibility}}" id="subSelect" ng-submit="posts.subSelect()">
+			<input type="text" placeholder="Subreddit" ng-model="posts.subInput" />
 			<button type="submit">Go!</button>
 		</form>
+		{{ posts.subreddit }}
 	</div>
+
+
+
 	<div id="commentsContainer">
 		<form class="form-inline" id="threadSelect">
 			<input type="text" name="thread" placeholder="Thread URL" />
@@ -38,6 +47,10 @@
 		</form>
 	</div>
 </section>
+
+
+
+
 
 <div id="stats" class="hidden">
 	<h5>Total: <span id="postsAmount">0</span></h5>
