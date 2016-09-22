@@ -7,12 +7,12 @@
 
     function Pane() {
 		var vm = this;
-		vm.paneStatus = "closed";
+		vm.paneState = "closed";
 		vm.togglePane = togglePane;
 
 
 		function togglePane() {
-			vm.paneStatus = vm.paneStatus === "closed" ? "open" : "closed";
+			vm.paneState = vm.paneState === "closed" ? "open" : "closed";
 		}
 	}
 })();

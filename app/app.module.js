@@ -5,7 +5,8 @@
         
         // list modules here
         
-        'app.settings'
+        'app.settings',
+        'app.posts'
         // 'app.dashboard',
         // 'app.layout'
     ]);

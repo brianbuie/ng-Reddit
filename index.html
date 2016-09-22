@@ -14,22 +14,19 @@
 <body>
 
 <div ng-app="app.settings">
-	<section id="settingsContainer" ng-controller="Pane as vm" class="{{vm.paneStatus}}" ng-include="'app/settings/pane.html'">
+	<section id="settingsContainer" ng-controller="Pane as vm" class="{{vm.paneState}}" ng-include="'app/settings/pane.html'">
 	</section>
 </div>
 
-
-
-
 <section id="content">
-	<div id="postsContainer">
-		<form class="form-inline" id="subSelect">
-			<input type="text" placeholder="Subreddit" />
-			<button type="submit">Go!</button>
-		</form>
+
+	<div id="postsContainer" ng-app="app.posts">
+		<header ng-controller="Setter as vm">
+		{{ vm.subreddit }}
+		</header>
+		<div id="posts">
+		</div>
 	</div>
-
-
 
 	<div id="commentsContainer">
 		<form class="form-inline" id="threadSelect">
@@ -52,13 +49,19 @@
 <!-- bootstrapping -->
 <script src="app/vendor/angular.js" type="text/javascript" charset="utf-8"></script>
 
-
-<!-- modules -->
+<!-- core module -->
 <script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
 
+<!-- settings module -->
 <script src="app/settings/settings.module.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/settings/pane.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/settings/values.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- posts module -->
+<script src="app/posts/posts.module.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/posts/setter.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="app/settings/pane.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/settings/values.js" type="text/javascript" charset="utf-8"></script> -->
 
 <!-- Remove Before Production -->
 <script src="app/vendor/live.js" type="text/javascript" charset="utf-8"></script>
