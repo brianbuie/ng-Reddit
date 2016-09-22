@@ -22,7 +22,13 @@
 
 	<div id="postsContainer" ng-app="app.posts">
 		<header ng-controller="Setter as vm">
-		{{ vm.subreddit }}
+			<div ng-if="vm.subreddit">
+				<h2>{{ vm.subreddit }}</h2>
+				<a href="" ng-click="vm.removeSub()">Remove</a>
+			</div>
+			<div ng-if="vm.subreddit === ''">
+				<ng-include src="'app/posts/form.html'">
+			</div>
 		</header>
 		<div id="posts">
 		</div>

@@ -5,20 +5,33 @@
         .module('app.posts')
         .controller('Setter', Setter);
 
-    Setter.$inject = ['$templateRequest'];
-
-    function Setter($templateRequest) {
+    function Setter() {
 		var vm = this;
 		vm.subreddit = "";
-		vm.display = display;
+		vm.entry = "";
+		vm.error = "";
+		vm.setSub = setSub;
+		vm.removeSub = removeSub;
 
 
-		function display() {
-			if(vm.subreddit === ""){
-				var template = $templateRequest('app/posts/form.html')
-				return template;
-			} else {
-				return '<h2>'+vm.subreddit+'</h2>';
+		function setSub() {
+			if(vm.entry){
+				vm.subreddit = vm.entry;
+				vm.entry = "";
+				vm.error = "";
+			}
+			validateSub();
+		}
+
+		function removeSub(){
+			vm.subreddit = "";
+		}
+
+		function validateSub(){
+			if(vm.subreddit != "nba"){
+				vm.entry = vm.subreddit;
+				vm.error = "That's not r/nba";
+				vm.subreddit = "";
 			}
 		}
 	}
