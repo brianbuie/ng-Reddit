@@ -1,41 +1,32 @@
 <!DOCTYPE html>
-<html ng-app="redditApp">
+<html ng-app="app" ng-strict-di>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> </title>
+
+	<!-- styles -->
 	<link href="css/vendor/font-awesome/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
-	<script src="js/vendor/angular.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
-</head>
 
+</head>
 <body>
 
-
-<section id="settingsContainer" ng-controller="settingsController" class="{{modalStatus}}">
-	<div id="logoContainer" class="material" ng-click="toggleModal()">
-		<img src="media/snoo-outlined.svg" />
-	</div>
-	<div id="settings" class="material">
-		<form>
-			<input type="checkbox" ng-model="settings.sound"><label>Sound</label>
-		</form>
-	</div>
-</section>
+<div ng-app="app.settings">
+	<section id="settingsContainer" ng-controller="Pane as vm" class="{{vm.paneStatus}}" ng-include="'app/settings/pane.html'">
+	</section>
+</div>
 
 
 
 
 <section id="content">
-	<div id="postsContainer" ng-controller="postsController as posts">
-		<form class="form-inline {{posts.formVisibility}}" id="subSelect" ng-submit="posts.subSelect()">
-			<input type="text" placeholder="Subreddit" ng-model="posts.subInput" />
+	<div id="postsContainer">
+		<form class="form-inline" id="subSelect">
+			<input type="text" placeholder="Subreddit" />
 			<button type="submit">Go!</button>
 		</form>
-		{{ posts.subreddit }}
 	</div>
 
 
@@ -58,8 +49,19 @@
 	<h5>List check: <span id="listCheck">0</span></h5>
 </div>
 
-<!-- liveupdating during development -->
-<script src="js/vendor/live.js" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrapping -->
+<script src="app/vendor/angular.js" type="text/javascript" charset="utf-8"></script>
+
+
+<!-- modules -->
+<script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="app/settings/settings.module.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/settings/pane.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/settings/values.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Remove Before Production -->
+<script src="app/vendor/live.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

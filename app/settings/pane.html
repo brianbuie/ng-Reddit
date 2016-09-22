@@ -1,0 +1,10 @@
+<div id="logoContainer" class="material" ng-click="vm.togglePane()">
+	<img src="content/snoo-outlined.svg" />
+</div>
+<div id="settings" class="material" ng-controller="Values as vm">
+	<form>
+		<div><input type="checkbox" ng-model="vm.settings.sound"><label>Sound</label></div>
+		<div><input type="number" min="5" max="60" ng-model="vm.settings.refresh"><label>Refresh Rate</label></div>
+	</form>
+	<a href="" ng-click="vm.getTimeout()">Get Timeout</a>
+</div>
