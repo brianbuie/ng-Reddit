@@ -36,16 +36,28 @@ h4{
 }
 
 button{
+	border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.inline-form button{
 	background-color: #F73906;
 	border-color: #F73906;
 	border-style:  solid;
 	color: #fff;
-	-webkit-appearance: none;
 	transition: all .2s ease;
 	cursor: pointer;
 }
 
-button:hover{
+.inline-form button:hover{
 	background-color: #fff;
 	color: #F73906;
 }
@@ -121,6 +133,32 @@ a:focus, button:focus, input:focus{
 }
 
 
+/* TABS */
+
+.tabContainer{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.tab{
+	flex-grow: 1;
+	padding: 10px;
+	background-color: #fff;
+	color: #888;
+}
+
+.tab:hover:not(.active){
+	background-color: #eee;
+}
+
+.tab.active{
+	padding-bottom: 5px;
+	border-bottom: 5px solid #F73906;
+	color: #F73906;
+	cursor: initial;
+}
+
 
 
 /* MAIN CONTENT */
@@ -129,6 +167,28 @@ a:focus, button:focus, input:focus{
 	display: flex;
 }
 
+.container{
+	padding: 15px;
+}
+
+.container header{
+	background: #fff;
+}
+
+header h2{
+	margin: 0;
+	padding: 5px;
+}
+
+.close{
+	color: #888;
+	margin-left: 5px;
+	opacity: 0;
+}
+
+h2:hover .close{
+	opacity: 1;
+}
 
 
 
@@ -136,7 +196,6 @@ a:focus, button:focus, input:focus{
 /* FORMS */
 
 .form-inline{
-	width: 90%;
 	margin: 0 auto;
 	display: flex;
 }
@@ -215,7 +274,6 @@ a:focus, button:focus, input:focus{
 
 #commentsContainer{
 	width: 60%;
-	padding: 0 20px;
 }
 
 .activePost-title{

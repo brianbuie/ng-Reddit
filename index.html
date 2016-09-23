@@ -20,21 +20,34 @@
 
 <section id="content">
 
-	<div id="postsContainer" ng-app="app.posts">
+	<div id="postsContainer" class="container" ng-app="app.posts">
 		<header ng-controller="Setter as vm">
 			<div ng-if="vm.subreddit">
-				<h2>{{ vm.subreddit }}</h2>
-				<a href="" ng-click="vm.removeSub()">Remove</a>
+				<h2>
+					r/{{ vm.subreddit }}
+					<a href="" ng-click="vm.removeSub()" class="close"><i class="fa fa-close"></i></a>
+				</h2>
 			</div>
 			<div ng-if="vm.subreddit === ''">
-				<ng-include src="'app/posts/form.html'">
+				<ng-include src="'app/posts/form.html'"></ng-include>
 			</div>
 		</header>
+		<div class="tabContainer">
+			<button class="tab">
+				Title
+			</button>
+			<button class="tab">
+				Title
+			</button>
+			<button class="tab active">
+				Title
+			</button>
+		</div>
 		<div id="posts">
 		</div>
 	</div>
 
-	<div id="commentsContainer">
+	<div id="commentsContainer" class="container">
 		<form class="form-inline" id="threadSelect">
 			<input type="text" name="thread" placeholder="Thread URL" />
 			<button type="submit">Go!</button>
