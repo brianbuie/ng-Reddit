@@ -7,7 +7,7 @@
 
     function Sorter() {
     	var vm = this;
-    	vm.options = ['New', 'Hot', 'Top'];
-    	vm.active = vm.options[0];
+    	vm.tabOptions = ['New', 'Hot', 'Top'];
+    	vm.activeTab = vm.tabOptions[0];
 	}
 })();

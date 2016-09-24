@@ -32,11 +32,7 @@
 				<ng-include src="'app/posts/form.html'"></ng-include>
 			</div>
 		</header>
-		<div class="tabContainer" ng-controller="Sorter as vm">
-			<buton ng-repeat="option in vm.options" class="tab" ng-class="{active : vm.active == option}" ng-click="vm.active = option">
-				{{option}}
-			</buton>
-		</div>
+		<ng-include src="'app/templates/tabs.html'" ng-controller="Sorter as vm"> </ng-include>
 		<div id="posts">
 		</div>
 	</div>
@@ -76,6 +72,9 @@
 <script src="app/posts/sorter.js" type="text/javascript" charset="utf-8"></script>
 <!-- <script src="app/settings/pane.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/settings/values.js" type="text/javascript" charset="utf-8"></script> -->
+
+<script src="app/posts/tester.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/services/tab.service.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Remove Before Production -->
 <script src="app/vendor/live.js" type="text/javascript" charset="utf-8"></script>
