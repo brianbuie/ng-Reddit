@@ -32,16 +32,10 @@
 				<ng-include src="'app/posts/form.html'"></ng-include>
 			</div>
 		</header>
-		<div class="tabContainer">
-			<button class="tab">
-				Title
-			</button>
-			<button class="tab">
-				Title
-			</button>
-			<button class="tab active">
-				Title
-			</button>
+		<div class="tabContainer" ng-controller="Sorter as vm">
+			<buton ng-repeat="option in vm.options" class="tab" ng-class="{active : vm.active == option}" ng-click="vm.active = option">
+				{{option}}
+			</buton>
 		</div>
 		<div id="posts">
 		</div>
@@ -79,6 +73,7 @@
 <!-- posts module -->
 <script src="app/posts/posts.module.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/posts/setter.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/posts/sorter.js" type="text/javascript" charset="utf-8"></script>
 <!-- <script src="app/settings/pane.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/settings/values.js" type="text/javascript" charset="utf-8"></script> -->
 

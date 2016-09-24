@@ -146,10 +146,12 @@ a:focus, button:focus, input:focus{
 	padding: 10px;
 	background-color: #fff;
 	color: #888;
+	text-align: center;
 }
 
 .tab:hover:not(.active){
 	background-color: #eee;
+	cursor: pointer;
 }
 
 .tab.active{
