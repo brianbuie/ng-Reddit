@@ -1,5 +1,10 @@
-<div class="tabContainer">
-	<buton ng-repeat="option in vm.tabOptions" class="tab" ng-class="{active : vm.activeTab == option}" ng-click="vm.activeTab = option">
+<div class="tabContainer material">
+	<button 
+		ng-repeat="option in vm.tabOptions" 
+		class="tab" 
+		ng-class="{active : vm.activeTab == option}" 
+		ng-click="vm.activeTab = option"
+	>
 		{{option}}
-	</buton>
+	</button>
 </div>

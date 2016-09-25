@@ -46,20 +46,7 @@ button{
     border-color: initial;
     -webkit-appearance: none;
     cursor: pointer;
-}
-
-.inline-form button{
-	background-color: #F73906;
-	border-color: #F73906;
-	border-style:  solid;
-	color: #fff;
-	transition: all .2s ease;
-	cursor: pointer;
-}
-
-.inline-form button:hover{
-	background-color: #fff;
-	color: #F73906;
+    font-size: inherit;
 }
 
 a{
@@ -81,7 +68,7 @@ a:focus, button:focus, input:focus{
 
 .material{
 	background-color: #fcfcfc;
-	box-shadow: 0 -3px 2px rgba(0,0,0,0.12);
+	box-shadow: 0 0 3px rgba(0,0,0,0.12);
 }
 
 
@@ -133,17 +120,91 @@ a:focus, button:focus, input:focus{
 }
 
 
+
+/* MAIN CONTENT */
+
+#content{
+	display: flex;
+}
+
+.container{
+	padding: 0.75em;
+}
+
+#postsContainer{
+	width: 40%;
+	flex-grow: 0;
+}
+
+#commentsContainer{
+	width: 60%;
+}
+
+
+/* FORMS */
+
+.formReplacement,
+.form-inline input[type="text"], 
+.form-inline button,
+.form-inline label{
+	padding: 0.75em;
+	font-size: 1.25em;
+	line-height: 1.25;
+}
+
+.formReplacement{
+	cursor: text;
+	color: #F73906;
+}
+
+.form-inline{
+	margin: 0 auto;
+	display: flex;
+}
+
+.form-inline button{
+	background-color: #fff;
+	color: #F73906;
+	transition: all .2s ease;
+	cursor: pointer;
+}
+
+.form-inline button:hover{
+	background-color: #F73906;
+	color: #fff;
+}
+
+.form-inline input[type="text"]{
+	flex-grow: 1;
+	border-width: 0;
+	padding-left: 0;
+}
+
+.form-inline label{
+	padding-right: 0;
+}
+
+
+
 /* TABS */
 
 .tabContainer{
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
+	max-height: 0;
+	transition: all .5s ease;
+	overflow: hidden;
+}
+
+header:hover .tabContainer,
+.tabContainer:hover{
+	max-height: 10em;
 }
 
 .tab{
 	flex-grow: 1;
-	padding: 10px;
+	padding: 0.6em;
 	background-color: #fff;
 	color: #888;
 	text-align: center;
@@ -155,81 +216,24 @@ a:focus, button:focus, input:focus{
 }
 
 .tab.active{
-	padding-bottom: 5px;
-	border-bottom: 5px solid #F73906;
+	padding-bottom: 0.3em;
+	border-bottom: 0.3em solid #F73906;
 	color: #F73906;
 	cursor: initial;
 }
 
 
 
-/* MAIN CONTENT */
-
-#content{
-	display: flex;
-}
-
-.container{
-	padding: 15px;
-}
-
-.container header{
-	background: #fff;
-}
-
-header h2{
-	margin: 0;
-	padding: 5px;
-}
-
-.close{
-	color: #888;
-	margin-left: 5px;
-	opacity: 0;
-}
-
-h2:hover .close{
-	opacity: 1;
-}
-
-
-
-
-/* FORMS */
-
-.form-inline{
-	margin: 0 auto;
-	display: flex;
-}
-
-.form-inline input[type="text"], .form-inline button{
-	padding: 0.75em;
-	font-size: 16px;
-}
-
-.form-inline input[type="text"]{
-	flex-grow: 1;
-}
-
 
 
 /* POSTS COLUMN */
 
-#postsContainer{
-	width: 40%;
-	flex-grow: 0;
-}
-
 #posts .post{
 	display: flex;
 	align-items: center;
-	padding: 10px 5px;
-	margin: 10px;
-	background: #fcfcfc;
-}
-
-#posts .postLink{
-	color: inherit;
+	padding: 0.5em 0.3em;
+	margin: 0;
+	cursor: pointer;
 }
 
 .postStats{
@@ -237,11 +241,11 @@ h2:hover .close{
 	width: 13%;
 }
 
-.postStats h1{
+.postStats .score{
 	margin: 0;
 }
 
-.postStats p{
+.postStats .comments{
 	font-size: 14px;
 }
 
@@ -253,12 +257,14 @@ h2:hover .close{
 
 #posts .post.active{
 	padding-left: 0;
-	border-left: 5px solid #F73906;
-	color: #F73906;
+	border-left: 0.3em solid #F73906;
+	/* color: #F73906; */
+	background-color: #eee;
+
 }
 
 #posts .post.active .postTitle{
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 #posts .post.removed{
@@ -269,14 +275,20 @@ h2:hover .close{
 	opacity: 1;
 }
 
+#posts{
+	max-height: 100em;
+	overflow: hidden;
+	transition: all .4s ease;
+}
+
+#posts.minimized{
+	max-height: 0;
+}
+
 
 
 
 /* COMMENTS */
-
-#commentsContainer{
-	width: 60%;
-}
 
 .activePost-title{
 	padding-right: 25px;

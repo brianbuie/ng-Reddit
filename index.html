@@ -13,27 +13,23 @@
 </head>
 <body>
 
-<div ng-app="app.settings">
-	<section id="settingsContainer" ng-controller="Pane as vm" class="{{vm.paneState}}" ng-include="'app/settings/pane.html'">
-	</section>
-</div>
+
+<ng-include src="'app/settings/settingsPane.html'"></ng-include>
 
 <section id="content">
 
-	<div id="postsContainer" class="container" ng-app="app.posts">
-		<header ng-controller="Setter as vm">
-			<div ng-if="vm.subreddit">
-				<h2>
-					r/{{ vm.subreddit }}
-					<a href="" ng-click="vm.removeSub()" class="close"><i class="fa fa-close"></i></a>
-				</h2>
+	<div id="postsContainer" class="container">
+		<header class="material" ng-controller="SubSelectCtrl as vm">
+			<div ng-if="subreddit" class="formReplacement" ng-click="vm.removeSub()">
+				r/{{ subreddit }}
 			</div>
-			<div ng-if="vm.subreddit === ''">
-				<ng-include src="'app/posts/form.html'"></ng-include>
+			<div ng-if="subreddit === ''">
+				<ng-include src="'app/posts/subSelectForm.html'"></ng-include>
 			</div>
+			<ng-include src="'app/templates/tabs.html'" ng-controller="SubSortCtrl as vm"> </ng-include>
 		</header>
-		<ng-include src="'app/templates/tabs.html'" ng-controller="Sorter as vm"> </ng-include>
-		<div id="posts">
+		<div id="posts" class="material" ng-class="{minimized : subreddit === ''}" ng-controller="DisplayPostsCtrl as vm">
+			<ng-include src="'app/templates/post.html'"> </ng-include>
 		</div>
 	</div>
 
@@ -61,20 +57,16 @@
 <!-- core module -->
 <script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
 
+<!-- services -->
+<!-- <script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script> -->
+
 <!-- settings module -->
-<script src="app/settings/settings.module.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/settings/pane.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/settings/values.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/settings/settingsDisplay.controller.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- posts module -->
-<script src="app/posts/posts.module.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/posts/setter.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/posts/sorter.js" type="text/javascript" charset="utf-8"></script>
-<!-- <script src="app/settings/pane.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/settings/values.js" type="text/javascript" charset="utf-8"></script> -->
-
-<script src="app/posts/tester.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/services/tab.service.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/posts/subSelect.controller.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/posts/subSort.controller.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/posts/displayPosts.controller.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Remove Before Production -->
 <script src="app/vendor/live.js" type="text/javascript" charset="utf-8"></script>

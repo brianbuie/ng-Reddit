@@ -1,0 +1,13 @@
+<div 
+	ng-repeat="post in vm.posts"
+	id="{{ post.id }}" 
+	class="post" 
+	ng-class="{active : vm.activePost == post.id}" 
+	ng-click="vm.activePost = post.id"
+>
+	<div class="postStats">
+		<h1 class="score">{{ post.score }}</h1>
+		<p class="comments">{{ post.comments }}</p>
+	</div>
+	<h4 class="postTitle">{{ post.title }}</h4>
+</div>

@@ -2,10 +2,10 @@
     'use strict';
 
     angular
-        .module('app.posts')
-        .controller('Sorter', Sorter);
+        .module('app')
+        .controller('SubSortCtrl', SubSortCtrl);
 
-    function Sorter() {
+    function SubSortCtrl() {
     	var vm = this;
     	vm.tabOptions = ['New', 'Hot', 'Top'];
     	vm.activeTab = vm.tabOptions[0];
