@@ -5,17 +5,15 @@
     	.module('app')
         .service('Settings', Settings);
 
-    Settings.$inject = ['$scope']
+    Settings.$inject = ['$rootScope']
 
-    function Settings($scope) {
+    function Settings($rootScope) {
 
-        $scope.subreddit      = ""
-        $scope.thread         = ""
-        $scope.sound          = false
-        $scope.timeout        = 10000
-	
+        $rootScope.subreddit      = ""
+        $rootScope.thread         = ""
+        $rootScope.sound          = false
+        $rootScope.timeout        = 10000
+    
+        console.log($rootScope)
     }
-
-    // todo: load defaults from JSON file
-
 })();

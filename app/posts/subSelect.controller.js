@@ -5,11 +5,11 @@
         .module('app')
         .controller('SubSelectCtrl', SubSelectCntrl);
 
-    SubSelectCntrl.$inject = ['$scope'];
+    SubSelectCntrl.$inject = ['$rootScope'];
 
-    function SubSelectCntrl($scope) {
+    function SubSelectCntrl($rootScope) {
 		var vm = this;
-		$scope.subreddit = ""
+		$rootScope.subreddit = ""
 		vm.entry = ""
 		vm.error = ""
 		vm.setSub = setSub
@@ -18,7 +18,7 @@
 
 		function setSub() {
 			if(vm.entry){
-				$scope.subreddit = vm.entry;
+				$rootScope.subreddit = vm.entry;
 				vm.entry = "";
 				vm.error = "";
 			}
@@ -26,16 +26,16 @@
 		}
 
 		function removeSub(){
-			vm.entry = $scope.subreddit
-			$scope.subreddit = "";
+			vm.entry = $rootScope.subreddit
+			$rootScope.subreddit = "";
 		}
 
 		function validateSub(){
-			console.log($scope)
+			console.log($rootScope)
 			if(false){
-				vm.entry = $scope.subreddit;
+				vm.entry = $rootScope.subreddit;
 				vm.error = "That's not a valid subreddit";
-				$scope.subreddit = "";
+				$rootScope.subreddit = "";
 			}
 		}
 

@@ -23,7 +23,7 @@
 			<div ng-if="subreddit" class="formReplacement" ng-click="vm.removeSub()">
 				r/{{ subreddit }}
 			</div>
-			<div ng-if="subreddit === ''">
+			<div ng-class="{hidden : subreddit !== ''}">
 				<ng-include src="'app/posts/subSelectForm.html'"></ng-include>
 			</div>
 			<ng-include src="'app/templates/tabs.html'" ng-controller="SubSortCtrl as vm"> </ng-include>
@@ -52,13 +52,14 @@
 </div>
 
 <!-- bootstrapping -->
+<!-- <script src="app/vendor/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script> -->
 <script src="app/vendor/angular.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- core module -->
 <script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- services -->
-<!-- <script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- settings module -->
 <script src="app/settings/settingsDisplay.controller.js" type="text/javascript" charset="utf-8"></script>
