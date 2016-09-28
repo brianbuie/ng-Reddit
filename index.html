@@ -11,7 +11,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
 </head>
-<body>
+<body ng-controller="SettingsCtrl as settings">
 
 
 <ng-include src="'app/settings/settingsPane.html'"></ng-include>
@@ -19,16 +19,14 @@
 <section id="content">
 
 	<div id="postsContainer" class="container">
-		<header class="material" ng-controller="SubSelectCtrl as vm">
-			<div ng-if="subreddit" class="formReplacement" ng-click="vm.removeSub()">
-				r/{{ subreddit }}
+		<header class="material" ng-class="{waiting : !settings.values.subreddit}" ng-controller="SubSelectCtrl as vm">
+			<div class="subName" ng-click="vm.removeSub()">
+				r/{{ settings.values.subreddit }}
 			</div>
-			<div ng-class="{hidden : subreddit !== ''}">
-				<ng-include src="'app/posts/subSelectForm.html'"></ng-include>
-			</div>
-			<ng-include src="'app/templates/tabs.html'" ng-controller="SubSortCtrl as vm"> </ng-include>
+			<ng-include src="'app/posts/subSelectForm.html'"></ng-include>
+			<tabs></tabs>
 		</header>
-		<div id="posts" class="material" ng-class="{minimized : subreddit === ''}" ng-controller="DisplayPostsCtrl as vm">
+		<div id="posts" class="material" ng-class="{minimized : $scope.values.subreddit}" ng-controller="DisplayPostsCtrl as vm">
 			<ng-include src="'app/templates/post.html'"> </ng-include>
 		</div>
 	</div>
@@ -58,15 +56,15 @@
 <!-- core module -->
 <script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- services -->
-<script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script>
+<!-- directives -->
+<script src="app/services/tabs.directive.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- settings module -->
 <script src="app/settings/settingsDisplay.controller.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/settings/settings.controller.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- posts module -->
 <script src="app/posts/subSelect.controller.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/posts/subSort.controller.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/posts/displayPosts.controller.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Remove Before Production -->

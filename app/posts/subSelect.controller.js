@@ -3,40 +3,46 @@
 
     angular
         .module('app')
-        .controller('SubSelectCtrl', SubSelectCntrl);
+        .controller('SubSelectCtrl', SubSelectCtrl);
 
-    SubSelectCntrl.$inject = ['$rootScope'];
+    SubSelectCtrl.$inject = ['$scope']
 
-    function SubSelectCntrl($rootScope) {
+    function SubSelectCtrl($scope) {
 		var vm = this;
-		$rootScope.subreddit = ""
 		vm.entry = ""
 		vm.error = ""
+		vm.sort = ""
 		vm.setSub = setSub
 		vm.removeSub = removeSub
+		vm.setSort = setSort
 
 
 		function setSub() {
 			if(vm.entry){
-				$rootScope.subreddit = vm.entry;
+				$scope.$parent.values.subreddit = vm.entry;
 				vm.entry = "";
 				vm.error = "";
 			}
+			console.log($scope.$parent.values)
 			validateSub();
 		}
 
 		function removeSub(){
-			vm.entry = $rootScope.subreddit
-			$rootScope.subreddit = "";
+			vm.entry = $scope.$parent.values.subreddit
+			$scope.$parent.values.subreddit = "";
 		}
 
 		function validateSub(){
-			console.log($rootScope)
 			if(false){
-				vm.entry = $rootScope.subreddit;
+				vm.entry = $scope.$parent.values.subreddit;
 				vm.error = "That's not a valid subreddit";
-				$rootScope.subreddit = "";
+				$scope.$parent.values.subreddit = "";
 			}
+		}
+
+		function setSort(option){
+			vm.sort = option
+			console.log(vm)
 		}
 
 	}

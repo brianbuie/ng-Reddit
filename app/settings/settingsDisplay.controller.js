@@ -5,16 +5,13 @@
         .module('app')
         .controller('settingsDisplayCtrl', settingsDisplayCtrl);
 
-   	settingsDisplayCtrl.$inject = ['$rootScope']
-
-    function settingsDisplayCtrl($rootScope) {
+    function settingsDisplayCtrl() {
 		var vm = this
 		vm.paneState = "closed";
 		vm.togglePane = togglePane;
 
 		function togglePane() {
 			vm.paneState = vm.paneState === "closed" ? "open" : "closed";
-			console.log($rootScope.subreddit)
 		}
 	}
 })();

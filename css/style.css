@@ -143,7 +143,7 @@ a:focus, button:focus, input:focus{
 
 /* FORMS */
 
-.formReplacement,
+.subName,
 .form-inline input[type="text"], 
 .form-inline button,
 .form-inline label{
@@ -152,7 +152,7 @@ a:focus, button:focus, input:focus{
 	line-height: 1.25;
 }
 
-.formReplacement{
+.subName{
 	cursor: text;
 	color: #F73906;
 }
@@ -184,6 +184,16 @@ a:focus, button:focus, input:focus{
 	padding-right: 0;
 }
 
+
+/* Form replacement */
+
+header:not(.waiting) form{
+	display: none;
+}
+
+header.waiting .subName{
+	display: none;
+}
 
 
 /* TABS */
