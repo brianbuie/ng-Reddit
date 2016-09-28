@@ -1,5 +1,5 @@
 ## ng-Reddit
 
-Angular version of Reddit-Live
+Angular version of RedditLive
 
 (a work in progress)
