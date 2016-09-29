@@ -18,17 +18,8 @@
 
 <section id="content">
 
-	<div id="postsContainer" class="container">
-		<header class="material" ng-class="{waiting : !settings.values.subreddit}" ng-controller="SubSelectCtrl as vm">
-			<div class="subName" ng-click="vm.removeSub()">
-				r/{{ settings.values.subreddit }}
-			</div>
-			<ng-include src="'app/posts/subSelectForm.html'"></ng-include>
-			<tabs></tabs>
-		</header>
-		<div id="posts" class="material" ng-class="{minimized : $scope.values.subreddit}" ng-controller="DisplayPostsCtrl as vm">
-			<ng-include src="'app/templates/post.html'"> </ng-include>
-		</div>
+	<div id="postsContainer" class="container" ng-controller="PostsCtrl as vm">
+		<ng-include src="'app/posts/posts.html'"> </ng-include>
 	</div>
 
 	<div id="commentsContainer" class="container">
@@ -56,19 +47,17 @@
 <!-- core module -->
 <script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- directives -->
+<!-- directives and services -->
 <script src="app/services/tabs.directive.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- settings module -->
-<script src="app/settings/settingsDisplay.controller.js" type="text/javascript" charset="utf-8"></script>
+<!-- controllers -->
+<script src="app/posts/posts.controller.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/settings/settings.controller.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- posts module -->
-<script src="app/posts/subSelect.controller.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/posts/displayPosts.controller.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Remove Before Production -->
 <script src="app/vendor/live.js" type="text/javascript" charset="utf-8"></script>
+
 
 </body>
 </html>

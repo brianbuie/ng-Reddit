@@ -5,15 +5,24 @@
     	.module('app')
         .service('Settings', Settings);
 
-    Settings.$inject = ['$rootScope']
+    Settings.$inject = ['$http']
 
-    function Settings($rootScope) {
+    function Settings($http) {
 
-        $rootScope.subreddit      = ""
-        $rootScope.thread         = ""
-        $rootScope.sound          = false
-        $rootScope.timeout        = 10000
-    
-        console.log($rootScope)
+        var values = {}
+
+        // todo: load config.json file
+        
+        values = 
+        {
+            subreddit : "",
+            thread : "",
+            sound : false,
+            timeout : 10000,
+            delay : 0
+        }
+
+        return values
+
     }
 })();

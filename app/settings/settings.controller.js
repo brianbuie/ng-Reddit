@@ -5,15 +5,16 @@
         .module('app')
         .controller('SettingsCtrl', SettingsCtrl);
 
-    SettingsCtrl.$inject = ['$scope']
+    SettingsCtrl.$inject = ['Settings']
 
-    function SettingsCtrl($scope) {
+    function SettingsCtrl(Settings) {
+    	var vm = this
+    	vm.paneState = "closed"
+		vm.togglePane = togglePane
+		vm.settings = Settings
 
-    	$scope.values = {
-    		subreddit : "",
-    		thread : "",
-    		sound : false,
-    		timeout: 10000
-    	}
+		function togglePane() {
+			vm.paneState = vm.paneState === "closed" ? "open" : "closed";
+		}
 	}
 })();

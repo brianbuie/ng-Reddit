@@ -177,6 +177,9 @@ a:focus, button:focus, input:focus{
 .form-inline input[type="text"]{
 	flex-grow: 1;
 	border-width: 0;
+}
+
+#postsContainer .form-inline input[type="text"]{
 	padding-left: 0;
 }
 
@@ -207,7 +210,7 @@ header.waiting .subName{
 	overflow: hidden;
 }
 
-header:hover .tabContainer,
+header:not(.waiting):hover .tabContainer,
 .tabContainer:hover{
 	max-height: 10em;
 }
