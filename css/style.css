@@ -143,7 +143,7 @@ a:focus, button:focus, input:focus{
 
 /* FORMS */
 
-.subName,
+header .title,
 .form-inline input[type="text"], 
 .form-inline button,
 .form-inline label{
@@ -152,7 +152,7 @@ a:focus, button:focus, input:focus{
 	line-height: 1.25;
 }
 
-.subName{
+header .title{
 	cursor: text;
 	color: #F73906;
 }
@@ -194,7 +194,7 @@ header:not(.waiting) form{
 	display: none;
 }
 
-header.waiting .subName{
+header.waiting .title{
 	display: none;
 }
 
@@ -278,18 +278,6 @@ header:not(.waiting) .tabContainer:hover{
 
 }
 
-#posts .post.active .postTitle{
-	/* font-weight: bold; */
-}
-
-#posts .post.removed{
-	opacity: 0.4;
-}
-
-#posts .post.removed.active{
-	opacity: 1;
-}
-
 #posts{
 	max-height: 1000em;
 	overflow: hidden;
@@ -305,81 +293,14 @@ header:not(.waiting) .tabContainer:hover{
 
 /* COMMENTS */
 
-.activePost-title{
-	padding-right: 25px;
+#commentsContainer header .title{
+	color: #555;
+	font-weight: normal;
+	font-size: 125%;
 }
 
-.activePost-title .title{
+#commentsContainer header .title .remove{
+	float: right;
+	padding: 0.2em;
 	color: #555;
 }
-
-.activePost-title .score{
-	margin-right: 15px;
-}
-
-#removeActive{
-	position: absolute;
-	top: 20px;
-	right: 5px;
-	color: #888;
-}
-
-.activePost-content{
-	margin-bottom: 20px;
-}
-
-#comments>.comment{
-	background-color: #fcfcfc;
-	margin: 10px 0;
-	padding: 15px;
-}
-
-.comment{
-	margin: 10px;
-}
-
-.comment .comment{
-	padding-left: 20px;
-}
-
-.comment .body{
-	margin: 0 0 10px 0;
-}
-
-.comment .body p, .activePost-content p{
-	margin-bottom: 10px;
-}
-
-.meta{
-	margin-bottom: 5px;
-	display: flex;
-	align-items: center;
-}
-
-.meta .score-big{
-	margin-right: 10px;
-	font-weight: bold;
-	font-size: 16px;	
-}
-
-/* username */
-.meta b{
-	font-weight: bold;
-	font-size: 80%;
-}
-
-.OP{
-	background-color: #0055DF;
-	color: #fff;
-	border-radius: 4px;
-	font-size: 80%;
-	padding: 2px 5px;
-	margin-left: 5px;
-}
-
-.meta .flair{
-	margin-left: 10px;
-	font-size: 70%;
-	color: #888;
-}
-

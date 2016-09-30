@@ -22,11 +22,8 @@
 		<ng-include src="'app/posts/posts.html'"> </ng-include>
 	</div>
 
-	<div id="commentsContainer" class="container">
-		<form class="form-inline" id="threadSelect">
-			<input type="text" name="thread" placeholder="Thread URL" />
-			<button type="submit">Go!</button>
-		</form>
+	<div id="commentsContainer" class="container" ng-controller="CommentsCtrl as vm">
+		<ng-include src="'app/comments/comments.html'"> </ng-include>
 	</div>
 </section>
 
@@ -54,6 +51,7 @@
 
 <!-- controllers -->
 <script src="app/posts/posts.controller.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/comments/comments.controller.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/settings/settings.controller.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Remove Before Production -->

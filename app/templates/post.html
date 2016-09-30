@@ -1,8 +1,8 @@
 <div 
 	ng-repeat="(key, value) in vm.posts"
 	class="post" 
-	ng-class="{active : vm.activePost === key}" 
-	ng-click="vm.activePost = key"
+	ng-class="{active : vm.settings.thread === value.permalink}" 
+	ng-click="vm.settings.thread = value.permalink; vm.settings.threadTitle = value.title;"
 >
 	<div class="postStats">
 		<h2 class="score">{{ value.score | kthousand }}</h2>

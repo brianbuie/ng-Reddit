@@ -5,18 +5,16 @@
     	.module('app')
         .service('Settings', Settings);
 
-    Settings.$inject = ['$http']
-
-    function Settings($http) {
+    function Settings() {
 
         var values = {}
 
         // todo: load config.json file
-        
+
         values = 
         {
-            subreddit : "",
             thread : "",
+            threadTitle: "",
             sound : false,
             timeout : 10000,
             delay : 0
