@@ -1,10 +1,10 @@
 <div class="tabContainer material">
 	<button 
-		ng-repeat="option in tab.tabOptions" 
+		ng-repeat="option in vm.sortOptions" 
 		class="tab" 
-		ng-class="{active : tab.isSet(option)}" 
-		ng-click="tab.setTab(option); vm.setSort(option)"
+		ng-class="{active : vm.sort === option}" 
+		ng-click="vm.setSort(option)"
 	>
-		{{option}}
+		{{ option }}
 	</button>
 </div>

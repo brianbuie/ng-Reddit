@@ -5,69 +5,82 @@
         .module('app')
         .controller('PostsCtrl', PostsCtrl)
 
-    PostsCtrl.$inject = ['Settings']
+    PostsCtrl.$inject = ['$http', '$timeout', 'Settings']
 
-    function PostsCtrl(Settings) {
+    function PostsCtrl($http, $timeout, Settings) {
         var vm = this
-        vm.entry = ""
+        
+        // properties
+        vm.entry = "" // subSelectForm text input value
         vm.error = ""
-        vm.sort = ""
-        vm.settings = Settings
+        vm.sortOptions = ["new", "hot", "top"]
+        vm.sort = vm.sortOptions[0]
+        vm.posts = {}
+        vm.settings = Settings // settings service
+
+        // methods
         vm.setSub = setSub
         vm.removeSub = removeSub
         vm.setSort = setSort
-        vm.posts = []
+        vm.getPosts = getPosts
 
         function setSub() {
+            // if value in subSelectForm text input
+            // set current subreddit
+            // clear form entry and any possible error message
+            // start getting posts
             if(vm.entry){
                 vm.subreddit = vm.entry
                 vm.entry = ""
                 vm.error = ""
             }
-            console.log(vm)
-            validateSub()
+            getPosts() 
         }
 
         function removeSub(){
+            // set form input to subreddit (seamless switch)
+            // remove posts and subreddit
             vm.entry = vm.subreddit
+            vm.posts = {}
             vm.subreddit = ""
         }
 
-        function validateSub(){
-            if(false){
-                vm.entry = vm.subreddit
-                vm.error = "That's not a valid subreddit"
-                vm.subreddit = ""
+        function setSort(option){
+            // if the option selected isn't already the current sort option
+            // set current sort option
+            // remove all current posts
+            // get posts
+            if(vm.sort !== option){
+                vm.sort = option
+                vm.posts = {}
+                vm.getPosts()
             }
         }
 
-        function setSort(option){
-            // vm.sort !== option ? remove posts and get new ones
-            vm.sort = option
-            console.log(vm)
+        function getPosts(){
+            // if subreddit is set (prevents function from looping after subreddit has been removed)
+            if(vm.subreddit){
+                // create url from reddit url, subreddit, and sort
+                var url = 'https://www.reddit.com/r/' + vm.subreddit + '/' + vm.sort + '.json'
+                // perform ajax request
+                $http.get(url).then(function(response){
+                    // check again to make sure subreddit is still set
+                    if(vm.subreddit){
+                        //translate data into more shallow and usable object
+                        var values = response.data.data.children
+                        // set temp container, so new posts aren't appended to the end of vm.posts
+                        var temp = {}
+                        // loop through response and set each post to it's own keyed object in temp object
+                        angular.forEach(values, function(value){
+                            temp[value.data.id] = value.data
+                        })
+                        // set posts to temp object
+                        vm.posts = temp
+                        // set timer to get posts again, time based on timeout value in settings
+                        $timeout(vm.getPosts, vm.settings.timeout)
+                    }
+                })
+            }
         }
-
-        // temporary
-        vm.posts = [
-            {   
-                id : 'a1',
-                score : 13,
-                comments: 25,
-                title: 'This is the title of a post'
-            },
-            {   
-                id : 'a2',
-                score : 56,
-                comments: 43,
-                title: 'This is another awesome post'
-            },
-            {   
-                id : 'a3',
-                score : 0,
-                comments: 67,
-                title: 'This post sucks'
-            },
-        ]
-
     }
 })()
