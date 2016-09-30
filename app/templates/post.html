@@ -1,12 +1,12 @@
 <div 
 	ng-repeat="(key, value) in vm.posts"
 	class="post" 
-	ng-class="{active : vm.activePost == key}" 
+	ng-class="{active : vm.activePost === key}" 
 	ng-click="vm.activePost = key"
 >
 	<div class="postStats">
-		<h1 class="score">{{ value.score }}</h1>
-		<p class="comments">{{ value.num_comments }}</p>
+		<h2 class="score">{{ value.score | kthousand }}</h2>
+		<p class="comments">{{ value.num_comments | kthousand }}</p>
 	</div>
 	<h4 class="postTitle">{{ value.title }}</h4>
 </div>

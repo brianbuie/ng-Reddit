@@ -244,14 +244,17 @@ header:not(.waiting) .tabContainer:hover{
 #posts .post{
 	display: flex;
 	align-items: center;
-	padding: 0.5em 0.3em;
-	margin: 0;
+	padding: 0.75em 0.3em;
 	cursor: pointer;
+	border: 1px solid #eee;
+	border-left: 0;
+	border-right: 0;
+
 }
 
 .postStats{
 	text-align: center;
-	width: 13%;
+	width: 15%;
 }
 
 .postStats .score{
