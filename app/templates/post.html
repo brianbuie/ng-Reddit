@@ -1,12 +1,13 @@
 <div 
 	ng-repeat="(key, value) in vm.posts"
-	class="post" 
-	ng-class="{active : vm.settings.thread === value.permalink}" 
-	ng-click="vm.settings.thread = value.permalink; vm.settings.threadTitle = value.title;"
+	class="container flexer post" 
+	ng-class="{active : vm.settings.thread.permalink === value.permalink}" 
+	ng-click="vm.settings.thread = value"
 >
-	<div class="postStats">
-		<h2 class="score">{{ value.score | kthousand }}</h2>
-		<p class="comments">{{ value.num_comments | kthousand }}</p>
+	<div class="stats center">
+		<h2>{{ value.score | kthousand }}</h2>
+		<p>{{ value.num_comments | kthousand }}</p>
+		<img src="content/snoo-outlined.svg" />
 	</div>
-	<h4 class="postTitle">{{ value.title }}</h4>
+	<h4>{{ value.title }}</h4>
 </div>

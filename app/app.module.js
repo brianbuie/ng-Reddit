@@ -3,7 +3,7 @@
 
     angular.module('app', [
         
-        // list modules here
+        'ngSanitize'
 
     ]);
 

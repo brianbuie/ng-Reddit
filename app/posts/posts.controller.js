@@ -89,7 +89,7 @@
                         // set temp container so posts object can be replaced on completion
                         var temp = {}
 
-                        // loop through response and set each post to it's own keyed object in temp object
+                        // loop through response and set each post to its own keyed object in temp object
                         angular.forEach(values, function(value){
                             temp[value.data.id] = value.data
                         })
@@ -100,7 +100,6 @@
                         // set timer to get posts again, time based on timeout value in settings
                         // assigned to vm.timeoutPromise so $timeout.cancel can reference it
                         vm.timeoutPromise = $timeout(vm.getPosts, vm.settings.timeout)
-                        console.log('finished')
                     }
                 })
             }

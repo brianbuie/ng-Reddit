@@ -1,17 +1,36 @@
 <header class="material" ng-class="{waiting : !vm.settings.thread}">
-	<div class="title">
-		<a href="" ng-click="vm.removeThread()" class="remove"><i class="fa fa-close"></i></a>
-		{{ vm.settings.threadTitle }}
+	<div class="flexer container">
+		<div class="stats center">
+			<h2>{{ vm.settings.thread.score | kthousand }}</h2>
+			<p>{{ vm.settings.thread.num_comments | kthousand }}</p>
+		</div>
+		<h1 class="flex-grow">
+			{{ vm.settings.thread.title }}
+		</h1>
+		<a href="" ng-click="vm.removeThread()" class="close">
+			<i class="fa fa-close"></i>
+		</a>
 	</div>
-	<div class="threadText">
-		{{ vm.settings.thread.selftext_html }}
+	<div class="meta container material {{vm.settings.thread.author_flair_css_class}}" ng-class="">
+		<span class="author">
+			{{ vm.settings.thread.author }}
+		</span>
+		<span class="op">
+			OP
+		</span>
+		<span class="flair" ng-if="vm.settings.thread.author_flair_text">
+			{{ vm.settings.thread.author_flair_text }}
+		</span>
 	</div>
-	<form class="form-inline" ng-submit="vm.setThread()">
+	<article class="container" ng-if="vm.settings.thread.selftext_html" ng-bind-html="vm.settings.thread.selftext_html | html">
+	</article>
+	<form class="form-inline flexer" ng-submit="vm.setThread()">
 		<input type="text" placeholder="Thread URL" ng-model="vm.entry" autocomplete="false"/>
 		<button type="submit">Go!</button>
 	</form>
 	<span class="error">{{ vm.error }}</span>
-	<tabs></tabs>
+	<tabs class="material"></tabs>
 </header>
-<div class="material" ng-class="{minimized : !vm.settings.subreddit}">
-</div>
+<section class="material" ng-class="{minimized : !vm.comments}">
+	<ng-include src="'app/templates/comment.html'"> </ng-include>
+</section>

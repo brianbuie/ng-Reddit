@@ -16,15 +16,16 @@
 
 <ng-include src="'app/settings/settingsPane.html'"></ng-include>
 
-<section id="content">
+<section id="content" class="flexer">
 
-	<div id="postsContainer" class="container" ng-controller="PostsCtrl as vm">
+	<div id="posts" class="container" ng-controller="PostsCtrl as vm">
 		<ng-include src="'app/posts/posts.html'"> </ng-include>
 	</div>
 
-	<div id="commentsContainer" class="container" ng-controller="CommentsCtrl as vm">
+	<div id="comments" class="container flex-grow" ng-controller="CommentsCtrl as vm">
 		<ng-include src="'app/comments/comments.html'"> </ng-include>
 	</div>
+
 </section>
 
 
@@ -38,25 +39,31 @@
 </div>
 
 <!-- bootstrapping -->
-<!-- <script src="app/vendor/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script> -->
-<script src="app/vendor/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="node_modules/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- core module -->
 <script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- directives, services, and filters -->
-<script src="app/services/tabs.directive.js" type="text/javascript" charset="utf-8"></script>
+<!-- services -->
 <script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- directives -->
+<script src="app/services/tabs.directive.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/services/comment.directive.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- filters -->
 <script src="app/filters/kthousand.filter.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/filters/html.filter.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/filters/plural.filter.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- controllers -->
 <script src="app/posts/posts.controller.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/comments/comments.controller.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/settings/settings.controller.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- Remove Before Production -->
-<script src="app/vendor/live.js" type="text/javascript" charset="utf-8"></script>
-
+<!-- Remove before launch -->
+<script src="node_modules/livejs/live.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

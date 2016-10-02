@@ -1,0 +1,190 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'fast-live-reload' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'fast-live-reload', null ]
+7 verbose cache add spec fast-live-reload
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'fast-live-reload',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'fast-live-reload',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed fast-live-reload@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for fast-live-reload
+11 info addNameTag [ 'fast-live-reload', 'latest' ]
+12 silly mapToRegistry name fast-live-reload
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/fast-live-reload
+16 verbose addNameTag registry:https://registry.npmjs.org/fast-live-reload not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/fast-live-reload
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 2:47:28 PM
+20 verbose request id e686b85ec6bf8808
+21 http request GET https://registry.npmjs.org/fast-live-reload
+22 http 200 https://registry.npmjs.org/fast-live-reload
+23 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 verbose headers   etag: '"695S4AWQ7LYFOBJDPBKDPP6TS"',
+23 verbose headers   'content-type': 'application/json',
+23 verbose headers   'content-encoding': 'gzip',
+23 verbose headers   'cache-control': 'max-age=300',
+23 verbose headers   'content-length': '10715',
+23 verbose headers   'accept-ranges': 'bytes',
+23 verbose headers   date: 'Sat, 01 Oct 2016 19:47:28 GMT',
+23 verbose headers   via: '1.1 varnish',
+23 verbose headers   age: '0',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'x-served-by': 'cache-jfk8120-JFK',
+23 verbose headers   'x-cache': 'MISS',
+23 verbose headers   'x-cache-hits': '0',
+23 verbose headers   'x-timer': 'S1475351248.648181,VS0,VE116',
+23 verbose headers   vary: 'Accept-Encoding' }
+24 silly get cb [ 200,
+24 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly get     etag: '"695S4AWQ7LYFOBJDPBKDPP6TS"',
+24 silly get     'content-type': 'application/json',
+24 silly get     'content-encoding': 'gzip',
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     'content-length': '10715',
+24 silly get     'accept-ranges': 'bytes',
+24 silly get     date: 'Sat, 01 Oct 2016 19:47:28 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-jfk8120-JFK',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1475351248.648181,VS0,VE116',
+24 silly get     vary: 'Accept-Encoding' } ]
+25 verbose get saving fast-live-reload to /Users/brianbuie1/.npm/registry.npmjs.org/fast-live-reload/.cache.json
+26 silly addNameTag next cb for fast-live-reload with tag latest
+27 silly addNamed fast-live-reload@2.7.0
+28 verbose addNamed "2.7.0" is a plain semver version for fast-live-reload
+29 silly mapToRegistry name fast-live-reload
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/fast-live-reload
+33 verbose addRemoteTarball https://registry.npmjs.org/fast-live-reload/-/fast-live-reload-2.7.0.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/fast-live-reload/-/fast-live-reload-2.7.0.tgz',
+34 verbose addRemoteTarball   '2bcdc95955f3945566b3ceaed0142002ef87e2a9' ]
+35 info retry fetch attempt 1 at 2:47:28 PM
+36 info attempt registry request try #1 at 2:47:28 PM
+37 http fetch GET https://registry.npmjs.org/fast-live-reload/-/fast-live-reload-2.7.0.tgz
+38 http fetch 200 https://registry.npmjs.org/fast-live-reload/-/fast-live-reload-2.7.0.tgz
+39 silly fetchAndShaCheck shasum 2bcdc95955f3945566b3ceaed0142002ef87e2a9
+40 verbose addTmpTarball /var/folders/gc/2vq2c86106q234zym43zh4zh0000gn/T/npm-20983-efb2c40a/registry.npmjs.org/fast-live-reload/-/fast-live-reload-2.7.0.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for fast-live-reload@2.7.0
+42 silly cache afterAdd fast-live-reload@2.7.0
+43 verbose afterAdd /Users/brianbuie1/.npm/fast-live-reload/2.7.0/package/package.json not in flight; writing
+44 verbose afterAdd /Users/brianbuie1/.npm/fast-live-reload/2.7.0/package/package.json written
+45 silly install resolved [ { name: 'fast-live-reload',
+45 silly install resolved     description: 'The swiss army knife of live reloading that works with all the browsers.',
+45 silly install resolved     author: { name: 'Bogdan Mustiata', email: 'bogdan.mustiata@gmail.com' },
+45 silly install resolved     contributors: [ [Object] ],
+45 silly install resolved     version: '2.7.0',
+45 silly install resolved     dependencies:
+45 silly install resolved      { chalk: '1.0.0',
+45 silly install resolved        'cookie-parser': '1.3.4',
+45 silly install resolved        express: '4.12.2',
+45 silly install resolved        'express-handlebars': '3.0.0',
+45 silly install resolved        'express-http-proxy': '0.6.0',
+45 silly install resolved        'express-ws': '2.0.0',
+45 silly install resolved        glob: '5.0.14',
+45 silly install resolved        handlebars: '3.0.3',
+45 silly install resolved        'once-many': '0.1.0',
+45 silly install resolved        sane: '1.3.4',
+45 silly install resolved        'superb-class': '0.2.3',
+45 silly install resolved        tamper: '0.1.0' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { grunt: '0.4.5',
+45 silly install resolved        'grunt-contrib-clean': '0.6.0',
+45 silly install resolved        'grunt-contrib-compass': '1.0.1',
+45 silly install resolved        'grunt-contrib-concat': '0.5.1',
+45 silly install resolved        'grunt-sync': '0.2.3' },
+45 silly install resolved     keywords: [],
+45 silly install resolved     main: './lib/fast-live-reload.js',
+45 silly install resolved     bin:
+45 silly install resolved      { 'fast-live-reload': './lib/fast-live-reload.js',
+45 silly install resolved        flr: './lib/fast-live-reload.js' },
+45 silly install resolved     bugs: { url: 'https://github.com/bmustiata/fast-live-reload/issues' },
+45 silly install resolved     licenses: [ [Object] ],
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'git+https://github.com/bmustiata/fast-live-reload.git' },
+45 silly install resolved     homepage: 'http://blog.ciplogic.com',
+45 silly install resolved     gitHead: '20ddf337f3173232f9bf8e9c79a8ded93e0d9062',
+45 silly install resolved     _id: 'fast-live-reload@2.7.0',
+45 silly install resolved     scripts: {},
+45 silly install resolved     _shasum: '2bcdc95955f3945566b3ceaed0142002ef87e2a9',
+45 silly install resolved     _from: 'fast-live-reload@latest',
+45 silly install resolved     _npmVersion: '3.10.3',
+45 silly install resolved     _nodeVersion: '6.3.0',
+45 silly install resolved     _npmUser: { name: 'bmustiata', email: 'bogdan.mustiata@gmail.com' },
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '2bcdc95955f3945566b3ceaed0142002ef87e2a9',
+45 silly install resolved        tarball: 'https://registry.npmjs.org/fast-live-reload/-/fast-live-reload-2.7.0.tgz' },
+45 silly install resolved     maintainers: [ [Object], [Object] ],
+45 silly install resolved     _npmOperationalInternal:
+45 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+45 silly install resolved        tmp: 'tmp/fast-live-reload-2.7.0.tgz_1471473778192_0.3471548384986818' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/fast-live-reload/-/fast-live-reload-2.7.0.tgz' } ]
+46 info install fast-live-reload@2.7.0 into /usr/local/lib
+47 info installOne fast-live-reload@2.7.0
+48 verbose installOne of fast-live-reload to /usr/local/lib not in flight; installing
+49 verbose lock using /Users/brianbuie1/.npm/_locks/fast-live-reload-1c9de0f078d080cb.lock for /usr/local/lib/node_modules/fast-live-reload
+50 silly install write writing fast-live-reload 2.7.0 to /usr/local/lib/node_modules/fast-live-reload
+51 verbose unbuild lib/node_modules/fast-live-reload
+52 silly gentlyRm /usr/local/lib/node_modules/fast-live-reload is being purged from base /usr/local
+53 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/fast-live-reload
+54 verbose tar unpack /Users/brianbuie1/.npm/fast-live-reload/2.7.0/package.tgz
+55 verbose tar unpacking to /usr/local/lib/node_modules/fast-live-reload
+56 silly gentlyRm /usr/local/lib/node_modules/fast-live-reload is being purged
+57 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/fast-live-reload
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 error tar.unpack untar error /Users/brianbuie1/.npm/fast-live-reload/2.7.0/package.tgz
+60 verbose unlock done using /Users/brianbuie1/.npm/_locks/fast-live-reload-1c9de0f078d080cb.lock for /usr/local/lib/node_modules/fast-live-reload
+61 verbose fstream_path /usr/local/lib/node_modules/fast-live-reload
+62 verbose fstream_type Directory
+63 verbose fstream_class DirWriter
+64 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/fast-live-reload'
+64 verbose stack     at Error (native)
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+65 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+66 verbose cwd /Users/brianbuie1/Documents/Projects/Webdev/ng-reddit
+67 error Darwin 14.5.0
+68 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "fast-live-reload"
+69 error node v4.2.6
+70 error npm  v2.14.12
+71 error path /usr/local/lib/node_modules/fast-live-reload
+72 error code EACCES
+73 error errno -13
+74 error syscall mkdir
+75 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/fast-live-reload'
+75 error     at Error (native)
+75 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/fast-live-reload']
+75 error   errno: -13,
+75 error   code: 'EACCES',
+75 error   syscall: 'mkdir',
+75 error   path: '/usr/local/lib/node_modules/fast-live-reload',
+75 error   fstream_type: 'Directory',
+75 error   fstream_path: '/usr/local/lib/node_modules/fast-live-reload',
+75 error   fstream_class: 'DirWriter',
+75 error   fstream_stack:
+75 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+75 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+75 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+76 error Please try running this command again as root/Administrator.
+77 verbose exit [ -13, true ]
+78 verbose unbuild lib/node_modules/fast-live-reload
+79 silly gentlyRm /usr/local/lib/node_modules/fast-live-reload is being purged from base /usr/local
+80 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/fast-live-reload

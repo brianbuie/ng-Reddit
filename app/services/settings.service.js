@@ -14,7 +14,6 @@
         values = 
         {
             thread : "",
-            threadTitle: "",
             sound : false,
             timeout : 10000,
             delay : 0

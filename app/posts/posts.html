@@ -1,15 +1,17 @@
 <header class="material" ng-class="{waiting : !vm.subreddit}">
-	<div class="title" ng-click="vm.removeSub()">
-		r/{{ vm.subreddit }}
+	<div class="container">
+		<h2 class="title" ng-click="vm.removeSub()">
+			r/{{ vm.subreddit }}
+		</h2>
 	</div>
-	<form class="form-inline" id="subSelect" ng-submit="vm.setSub()">
+	<form class="form-inline flexer" ng-submit="vm.setSub()">
 		<label>r/</label>
-		<input type="text" id="subSelectEntry" placeholder="Subreddit" ng-model="vm.entry" autofocus autocomplete="false"/>
+		<input type="text" placeholder="Subreddit" ng-model="vm.entry" autofocus autocomplete="false"/>
 		<button type="submit">Go!</button>
 	</form>
 	<span class="error">{{ vm.error }}</span>
-	<tabs></tabs>
+	<tabs class="material"></tabs>
 </header>
-<div id="posts" class="material" ng-class="{minimized : !vm.subreddit}">
+<section class="material" ng-class="{minimized : !vm.subreddit}">
 	<ng-include src="'app/templates/post.html'"> </ng-include>
-</div>
+</section>

@@ -1,10 +1,8 @@
-<div class="tabContainer material">
-	<button 
-		ng-repeat="option in vm.sortOptions" 
-		class="tab" 
-		ng-class="{active : vm.sort === option}" 
-		ng-click="vm.setSort(option)"
-	>
-		{{ option }}
-	</button>
-</div>
+<a 	href="" 
+	ng-repeat="option in vm.sortOptions" 
+	class="tab" 
+	ng-class="{active : vm.sort === option}" 
+	ng-click="vm.setSort(option)"
+>
+	{{ option }}
+</a>

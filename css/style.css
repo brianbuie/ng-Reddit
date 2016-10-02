@@ -1,6 +1,6 @@
 @import url('reset.css');
 
-/* CORE */
+/* Core Components */
 
 body{
 	background: #ddd;
@@ -15,47 +15,28 @@ strong{
 }
 
 h1, h2, h3, h4{
-	font-weight: bold;
-	margin: 20px 0 10px 0;
+	margin: 0;
 }
 
 h1{
-	font-size: 22px;
+	font-size: 1.5em;
 }
 
 h2{
-	font-size: 20px;
+	font-size: 1.35em;
+	font-weight: bold;
 }
 
 h3{
-	font-size: 18px;
+	font-size: 1.2em;
 }
 
 h4{
-	font-size: 16px;
-}
-
-button{
-	border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    -webkit-appearance: none;
-    cursor: pointer;
-    font-size: inherit;
+	font-size: 1.1em;
 }
 
 a{
 	color: #F73906;
-	text-decoration: none;
-}
-
-a:focus, button:focus, input:focus{
-	outline: none !important;
 }
 
 .center{
@@ -63,7 +44,7 @@ a:focus, button:focus, input:focus{
 }
 
 .hidden{
-	display: none !important;
+	display: none;
 }
 
 .material{
@@ -71,8 +52,198 @@ a:focus, button:focus, input:focus{
 	box-shadow: 0 0 3px rgba(0,0,0,0.12);
 }
 
+.container{
+	padding: 0.75em;
+}
+
+.flexer{
+	display: flex;
+}
+
+.flex-grow{
+	flex-grow: 1;
+}
+
+button{
+	background-color: #fff;
+	color: #F73906;
+	transition: all .2s ease;
+}
+
+button:hover{
+	background-color: #F73906;
+	color: #fff;
+}
+
+.close{
+	padding: 0 0.25em;
+	color: #999;
+	font-size: 125%;
+}
 
 
+/* Layout */
+
+#posts{
+	width: 40%;
+}
+
+#comments{
+	width: 60%;
+}
+
+
+/* Forms */
+
+header input[type="text"], 
+header button,
+header label{
+	padding: 0.75em;
+	font-size: 1.25em;
+	line-height: 1.25;
+}
+
+header input[type="text"]{
+	flex-grow: 1;
+}
+
+
+/* Form replacement */
+
+header:not(.waiting) form{
+	display: none;
+}
+
+header.waiting>*:not(form){
+	display: none;
+}
+
+
+/* Subreddit title/form switch style match*/
+
+#posts header input[type="text"]{
+	padding-left: 0;
+}
+
+#posts header label{
+	padding-right: 0;
+}
+
+#posts header .title{
+	cursor: text;
+	color: #F73906;
+}
+
+
+/* TABS */
+
+tabs{
+	display: flex;
+	transition: all .5s ease;
+	max-height: 0;
+	overflow: hidden;
+}
+
+header:not(.waiting):hover tabs,
+header:not(.waiting) tabs:hover{
+	max-height: 10em;
+}
+
+.tab{
+	flex-grow: 1;
+	padding: 0.6em;
+	color: #888;
+	text-align: center;
+}
+
+.tab.active{
+	padding-bottom: 0.3em;
+	border-bottom: 0.3em solid #F73906;
+	color: #F73906;
+	cursor: default;
+}
+
+.tab:not(.active):hover{
+	background-color: #eee;
+}
+
+
+/* Content hidden on minimize */
+
+section, 
+article{
+	max-height: 9000em;
+	overflow: hidden;
+	transition: all .4s ease;
+}
+
+.minimized{
+	max-height: 0;
+}
+
+
+/* POSTS COLUMN */
+
+.post{
+	align-items: center;
+	padding-left: 0.3em;
+	cursor: pointer;
+	border-top: 1px solid #ddd;
+}
+
+.post .stats{
+	width: 13%;
+}
+
+.post h4{
+	width: 87%;
+}
+
+.post.active{
+	padding-left: 0;
+	border-left: 0.3em solid #F73906;
+	background-color: #eee;
+}
+
+.post.active h2,
+.post.active p{
+	display: none;
+}
+
+.post .stats img{
+	max-width: 60%;
+}
+
+.post:not(.active) .stats img{
+	display: none;
+}
+
+
+
+/* COMMENTS */
+
+#comments header .stats{
+	font-size: 125%;
+	padding: 0 1em;
+}
+
+.author{
+	font-weight: bold;
+}
+
+.flair{
+	margin-left: 0.15em;
+}
+
+.op, .flair{
+	font-size: 90%;
+}
+
+.op{
+	padding: 0 0.25em;
+	background-color: #555;
+	color: white;
+}
 
 
 /* SETTINGS */
@@ -117,190 +288,4 @@ a:focus, button:focus, input:focus{
 .open #settings{
 	max-height: 100em;
 	padding: 2em;
-}
-
-
-
-/* MAIN CONTENT */
-
-#content{
-	display: flex;
-}
-
-.container{
-	padding: 0.75em;
-}
-
-#postsContainer{
-	width: 40%;
-	flex-grow: 0;
-}
-
-#commentsContainer{
-	width: 60%;
-}
-
-
-/* FORMS */
-
-header .title,
-.form-inline input[type="text"], 
-.form-inline button,
-.form-inline label{
-	padding: 0.75em;
-	font-size: 1.25em;
-	line-height: 1.25;
-}
-
-header .title{
-	cursor: text;
-	color: #F73906;
-}
-
-.form-inline{
-	margin: 0 auto;
-	display: flex;
-}
-
-.form-inline button{
-	background-color: #fff;
-	color: #F73906;
-	transition: all .2s ease;
-	cursor: pointer;
-}
-
-.form-inline button:hover{
-	background-color: #F73906;
-	color: #fff;
-}
-
-.form-inline input[type="text"]{
-	flex-grow: 1;
-	border-width: 0;
-}
-
-#postsContainer .form-inline input[type="text"]{
-	padding-left: 0;
-}
-
-.form-inline label{
-	padding-right: 0;
-}
-
-
-/* Form replacement */
-
-header:not(.waiting) form{
-	display: none;
-}
-
-header.waiting .title{
-	display: none;
-}
-
-
-/* TABS */
-
-.tabContainer{
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	max-height: 0;
-	transition: all .5s ease;
-	overflow: hidden;
-}
-
-header:not(.waiting):hover .tabContainer,
-header:not(.waiting) .tabContainer:hover{
-	max-height: 10em;
-}
-
-.tab{
-	flex-grow: 1;
-	padding: 0.6em;
-	background-color: #fff;
-	color: #888;
-	text-align: center;
-}
-
-.tab:hover:not(.active){
-	background-color: #eee;
-	cursor: pointer;
-}
-
-.tab.active{
-	padding-bottom: 0.3em;
-	border-bottom: 0.3em solid #F73906;
-	color: #F73906;
-	cursor: initial;
-}
-
-
-
-
-
-/* POSTS COLUMN */
-
-#posts .post{
-	display: flex;
-	align-items: center;
-	padding: 0.75em 0.3em;
-	cursor: pointer;
-	border: 1px solid #eee;
-	border-left: 0;
-	border-right: 0;
-
-}
-
-.postStats{
-	text-align: center;
-	width: 15%;
-}
-
-.postStats .score{
-	margin: 0;
-}
-
-.postStats .comments{
-	font-size: 14px;
-}
-
-#posts .post .postTitle{
-	margin: 0;
-	width: 87%;
-	font-weight: normal;
-}
-
-#posts .post.active{
-	padding-left: 0;
-	border-left: 0.3em solid #F73906;
-	background-color: #eee;
-
-}
-
-#posts{
-	max-height: 1000em;
-	overflow: hidden;
-	transition: all .4s ease;
-}
-
-#posts.minimized{
-	max-height: 0;
-}
-
-
-
-
-/* COMMENTS */
-
-#commentsContainer header .title{
-	color: #555;
-	font-weight: normal;
-	font-size: 125%;
-}
-
-#commentsContainer header .title .remove{
-	float: right;
-	padding: 0.2em;
-	color: #555;
 }

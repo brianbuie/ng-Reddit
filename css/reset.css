@@ -42,3 +42,31 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+button{
+	border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    -webkit-appearance: none;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+input[type="text"]{
+	border-width: 0;
+}
+
+a:focus, 
+button:focus, 
+input:focus{
+	outline: none !important;
+}
+
+a{
+	text-decoration: none;
+}

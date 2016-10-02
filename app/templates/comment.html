@@ -1,0 +1,10 @@
+<div 
+	ng-repeat="(key, comment) in vm.comments"
+	class="container flexer comment"
+	ng-click="vm.settings.thread = value"
+>
+	<div class="stats center">
+		<h2>{{ comment.score | kthousand }}</h2>
+		<p>{{ value.num_comments | kthousand }}</p>
+	</div>
+</div>
