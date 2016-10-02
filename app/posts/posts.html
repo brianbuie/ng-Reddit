@@ -9,9 +9,9 @@
 		<input type="text" placeholder="Subreddit" ng-model="vm.entry" autofocus autocomplete="false"/>
 		<button type="submit">Go!</button>
 	</form>
-	<span class="error">{{ vm.error }}</span>
 	<tabs class="material"></tabs>
 </header>
+<span class="error">{{ vm.error }}</span>
 <section class="material" ng-class="{minimized : !vm.subreddit}">
 	<ng-include src="'app/templates/post.html'"> </ng-include>
 </section>

@@ -78,7 +78,7 @@
                 var url = 'https://www.reddit.com/r/' + vm.subreddit + '/' + vm.sort + '.json'
 
                 // perform ajax request
-                $http.get(url).then(function(response){
+                $http.get(url).then(function successCallback(response){
 
                     // check again to make sure subreddit is still set and instance generated uniqueId is still equal to active syncId
                     if(vm.subreddit){
@@ -101,6 +101,9 @@
                         // assigned to vm.timeoutPromise so $timeout.cancel can reference it
                         vm.timeoutPromise = $timeout(vm.getPosts, vm.settings.timeout)
                     }
+                }, function errorCallback(response){
+                    vm.subreddit = ""
+                    vm.error = "There was an error :( try again"
                 })
             }
         }

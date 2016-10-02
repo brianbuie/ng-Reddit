@@ -34,9 +34,10 @@
             // start getting comments
             if(vm.entry){
                 vm.cleanUp()
-                vm.settings.thread.permalink = vm.entry
+                // vm.settings.thread.permalink = vm.entry
                 vm.entry = ""
-                vm.getComments()
+                vm.error = "sorry, this function hasn't been added yet. Select a post from the left side to view comments"
+                // vm.getComments()
             }
         }
 

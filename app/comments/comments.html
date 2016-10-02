@@ -28,9 +28,9 @@
 		<input type="text" placeholder="Thread URL" ng-model="vm.entry" autocomplete="false"/>
 		<button type="submit">Go!</button>
 	</form>
-	<span class="error">{{ vm.error }}</span>
 	<tabs class="material"></tabs>
 </header>
+<span class="error">{{ vm.error }}</span>
 <section ng-class="{minimized : !vm.comments}">
 	<div class="material topLevelComment" ng-repeat="singleComment in vm.comments">
 		<comment comment="singleComment"></comment>
