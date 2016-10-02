@@ -8,7 +8,16 @@
         function comment(){
         	return{
         		restrict: "E",
-        		templateUrl: "app/templates/tabs.html"
+        		templateUrl: "app/templates/comment.html",
+                scope: {
+                    comment: '='
+                }
+                // scope: {},
+                // bindToController: {
+                //     comment: '='
+                // },
+                // controller: CommentsCtrl,
+                // controllerAs: 'vm'
         	}
         }
 

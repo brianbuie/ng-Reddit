@@ -11,8 +11,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
 </head>
-<body ng-controller="SettingsCtrl as settings">
-
+<body>
 
 <ng-include src="'app/settings/settingsPane.html'"></ng-include>
 
@@ -29,15 +28,6 @@
 </section>
 
 
-
-
-
-<div id="stats" class="hidden">
-	<h5>Total: <span id="postsAmount">0</span></h5>
-	<h5>Request time: <span id="processTime">0</span></h5>
-	<h5>List check: <span id="listCheck">0</span></h5>
-</div>
-
 <!-- bootstrapping -->
 <script src="node_modules/angular/angular.js" type="text/javascript" charset="utf-8"></script>
 <script src="node_modules/angular-sanitize/angular-sanitize.js" type="text/javascript" charset="utf-8"></script>
@@ -49,8 +39,8 @@
 <script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- directives -->
-<script src="app/services/tabs.directive.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/services/comment.directive.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/directives/tabs.directive.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/directives/comment.directive.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- filters -->
 <script src="app/filters/kthousand.filter.js" type="text/javascript" charset="utf-8"></script>

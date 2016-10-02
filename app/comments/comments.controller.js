@@ -25,6 +25,7 @@
         vm.setSort = setSort
         vm.cleanUp = cleanUp
         vm.getComments = getComments
+        vm.nestReplies = nestReplies
 
         function setThread() {
             // if value in form text input
@@ -65,40 +66,65 @@
         }
 
         function getComments(){
-
             // if thread is set (prevents function from looping after thread has been removed)
             if(vm.settings.thread){
-
-                // create url from reddit url, subreddit, and sort
                 var url = 'https://www.reddit.com/' + vm.settings.thread.permalink + '.json?sort=' + vm.sort
-
-                // perform ajax request
                 $http.get(url).then(function(response){
 
-                    // check again to make sure thread is still set
+                    // make sure thread hasn't been removed since sending request
                     if(vm.settings.thread){
-
-                        console.log(response);
 
                         //translate data into more shallow and usable object
                         vm.settings.thread = response.data[0].data.children[0].data
                         var comments = response.data[1].data.children
 
-                        // set temp container, so new posts aren't appended to the end of vm.posts
+                        // object for processed comments, so vm.comments can be replaced all at once
                         var temp = {}
 
                         // loop through response and set each post to it's own keyed object in temp object
+                        // iterate through responses to make shallow
                         angular.forEach(comments, function(comment){
                             temp[comment.data.id] = comment.data
+                            if(comment.data.replies){
+                                comment.data.replies = vm.nestReplies(comment.data.replies)
+                            }
                         })
                         // set posts to temp object
                         vm.comments = temp
+
+                        console.log(vm.comments)
 
                         // set timer to get posts again, time based on timeout value in settings
                         vm.timeoutPromise = $timeout(vm.getComments, vm.settings.timeout)
                     }
                 })
             }
+        }
+
+        function nestReplies(replies){
+            // iterates through all replies and makes them the same depth as the rest of the comments/replies
+            // allows for directive in view to iterate through replies and process the same as normal comments
+            
+            // if the replies property doesn't have replies, return nothing
+            if(!replies.data.children){ return }
+
+            // create temp object to hold reformated replies
+            var tempReplies = {}
+
+            // loop through replies
+            angular.forEach(replies.data.children, function(reply){
+
+                // if comment has no author (been deleted or removed), return nothing
+                if(!reply.data.author){ return }
+
+                tempReplies[reply.data.id] = reply.data
+
+                // if the reply has replies, recurse through those
+                if(reply.data.replies){
+                    reply.data.replies = vm.nestReplies(reply.data.replies)
+                }
+            })
+            return tempReplies
         }
     }
 })()

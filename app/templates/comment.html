@@ -1,10 +1,20 @@
-<div 
-	ng-repeat="(key, comment) in vm.comments"
-	class="container flexer comment"
-	ng-click="vm.settings.thread = value"
->
+<div class="container flexer comment {{comment.author_flair_css_class}}" id="comment-{{comment.id}}">
 	<div class="stats center">
 		<h2>{{ comment.score | kthousand }}</h2>
-		<p>{{ value.num_comments | kthousand }}</p>
+	</div>
+	<div>
+		<div>
+			<span class="author">
+				{{ comment.author }}
+			</span>
+			<span class="flair" ng-if="comment.author_flair_text">
+				{{ comment.author_flair_text }}
+			</span>
+		</div>
+		<div ng-bind-html="comment.body_html | html">
+		</div>
+		<div ng-repeat="singleComment in comment.replies">
+			<comment comment="singleComment"></comment>
+		</div>
 	</div>
 </div>

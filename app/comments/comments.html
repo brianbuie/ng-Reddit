@@ -32,5 +32,7 @@
 	<tabs class="material"></tabs>
 </header>
 <section class="material" ng-class="{minimized : !vm.comments}">
-	<ng-include src="'app/templates/comment.html'"> </ng-include>
+	<div ng-repeat="singleComment in vm.comments">
+		<comment comment="singleComment"></comment>
+	</div>
 </section>
