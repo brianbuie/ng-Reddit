@@ -5,9 +5,9 @@
         .module('app')
         .controller('CommentsCtrl', CommentsCtrl)
 
-    CommentsCtrl.$inject = ['$http', '$timeout', 'Settings']
+    CommentsCtrl.$inject = ['$http', '$timeout', '$scope', 'Settings']
 
-    function CommentsCtrl($http, $timeout, Settings) {
+    function CommentsCtrl($http, $timeout, $scope, Settings) {
         var vm = this
         
         // properties
@@ -65,6 +65,13 @@
             vm.error = ""
         }
 
+        $scope.$watch(angular.bind(this, function(){
+            return this.settings.thread
+        }), function(value){
+            vm.cleanUp()
+            vm.getComments()
+        })
+
         function getComments(){
             // if thread is set (prevents function from looping after thread has been removed)
             if(vm.settings.thread){
@@ -75,15 +82,15 @@
                     if(vm.settings.thread){
 
                         //translate data into more shallow and usable object
-                        vm.settings.thread = response.data[0].data.children[0].data
-                        var comments = response.data[1].data.children
+                        // vm.settings.thread = response.data[0].data.children[0].data
+                        var rawComments = response.data[1].data.children
 
                         // object for processed comments, so vm.comments can be replaced all at once
                         var temp = {}
 
                         // loop through response and set each post to it's own keyed object in temp object
                         // iterate through responses to make shallow
-                        angular.forEach(comments, function(comment){
+                        angular.forEach(rawComments, function(comment){
                             temp[comment.data.id] = comment.data
                             if(comment.data.replies){
                                 comment.data.replies = vm.nestReplies(comment.data.replies)
@@ -91,8 +98,6 @@
                         })
                         // set posts to temp object
                         vm.comments = temp
-
-                        console.log(vm.comments)
 
                         // set timer to get posts again, time based on timeout value in settings
                         vm.timeoutPromise = $timeout(vm.getComments, vm.settings.timeout)
@@ -104,7 +109,7 @@
         function nestReplies(replies){
             // iterates through all replies and makes them the same depth as the rest of the comments/replies
             // allows for directive in view to iterate through replies and process the same as normal comments
-            
+
             // if the replies property doesn't have replies, return nothing
             if(!replies.data.children){ return }
 

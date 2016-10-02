@@ -31,8 +31,8 @@
 	<span class="error">{{ vm.error }}</span>
 	<tabs class="material"></tabs>
 </header>
-<section class="material" ng-class="{minimized : !vm.comments}">
-	<div ng-repeat="singleComment in vm.comments">
+<section ng-class="{minimized : !vm.comments}">
+	<div class="material topLevelComment" ng-repeat="singleComment in vm.comments">
 		<comment comment="singleComment"></comment>
 	</div>
 </section>

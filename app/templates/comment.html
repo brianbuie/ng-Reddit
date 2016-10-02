@@ -1,8 +1,8 @@
-<div class="container flexer comment {{comment.author_flair_css_class}}" id="comment-{{comment.id}}">
-	<div class="stats center">
-		<h2>{{ comment.score | kthousand }}</h2>
-	</div>
-	<div>
+<div class="comment container {{comment.author_flair_css_class}}" id="comment-{{comment.id}}">
+	<div class="meta flexer">
+		<div class="stats">
+			<h2>{{ comment.score | kthousand }}</h2>
+		</div>
 		<div>
 			<span class="author">
 				{{ comment.author }}
@@ -11,9 +11,11 @@
 				{{ comment.author_flair_text }}
 			</span>
 		</div>
+	</div>
+	<div>
 		<div ng-bind-html="comment.body_html | html">
 		</div>
-		<div ng-repeat="singleComment in comment.replies">
+		<div class="reply" ng-repeat="singleComment in comment.replies">
 			<comment comment="singleComment"></comment>
 		</div>
 	</div>

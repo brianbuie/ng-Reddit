@@ -245,10 +245,38 @@ article{
 	color: white;
 }
 
+.comment .stats{
+	font-size: 85%;
+	padding-right: 0.75em;
+}
+
+.topLevelComment{
+	margin: 0.75em 0;
+}
+
+.reply{
+	margin-left: 0.75em;
+	border-left: 1px solid #ddd;
+}
+
+.comment{
+	padding-bottom: 0;
+	margin-bottom: 0.75em;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* SETTINGS */
 
-#settingsContainer{
+/* #settingsContainer{
 	position: fixed;
 	bottom: 0;
 	overflow: hidden;
@@ -288,4 +316,4 @@ article{
 .open #settings{
 	max-height: 100em;
 	padding: 2em;
-}
+} */
