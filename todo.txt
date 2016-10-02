@@ -1,0 +1,29 @@
+CRUCIAL DEV
+
+// Thread URL form
+
+// Minimize Post self_text
+
+// Post Link & Link to Reddit comments page
+
+// Settings panel
+
+
+BUGS & ISSUES
+
+// PostsCtrl and CommentsCtrl are very similar and very heavy
+
+
+FEATURES TO ADD
+
+// Chat style comment thread
+
+// Comment Filters (Post filters?)
+
+// load default settings from JSON file
+
+// NBA icon flair and username/team colors
+
+// Notification sound
+
+// UI Animations for new posts/comments

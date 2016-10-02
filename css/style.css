@@ -237,6 +237,7 @@ article{
 
 .flair{
 	margin-left: 0.15em;
+	color: #999;
 }
 
 .op, .flair{
@@ -261,7 +262,6 @@ article{
 
 .reply{
 	margin-left: 0.75em;
-	border-left: 1px solid #ddd;
 }
 
 .comment{

@@ -10,6 +10,9 @@
 			<span class="flair" ng-if="comment.author_flair_text">
 				{{ comment.author_flair_text }}
 			</span>
+			<span class="op" ng-if="comment.author === vm.settings.thread.author">
+				OP
+			</span>
 		</div>
 	</div>
 	<div>
