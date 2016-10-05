@@ -1,12 +1,12 @@
 CRUCIAL DEV
 
-// Thread URL form
-
-// Minimize Post self_text
+// Minimize Post self_text & individual comments/replies
 
 // Post Link & Link to Reddit comments page
 
 // Settings panel
+
+// highlight OP in thread (need to bind directive to CommentsCtrl)
 
 
 BUGS & ISSUES

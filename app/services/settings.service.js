@@ -13,7 +13,8 @@
 
         values = 
         {
-            thread : "",
+            threadUrl : "",
+            threadId: "",
             sound : false,
             timeout : 10000,
             delay : 0

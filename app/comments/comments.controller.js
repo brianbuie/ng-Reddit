@@ -16,6 +16,7 @@
         vm.sortOptions = ["new", "hot", "top"]
         vm.sort = vm.sortOptions[0]
         vm.comments = {}
+        vm.thread = {}
         vm.settings = Settings // settings service
         vm.timeoutPromise = ""
 
@@ -34,17 +35,18 @@
             // start getting comments
             if(vm.entry){
                 vm.cleanUp()
-                // vm.settings.thread.permalink = vm.entry
+                vm.settings.threadUrl = vm.entry
                 vm.entry = ""
-                vm.error = "sorry, this function hasn't been added yet. Select a post from the left side to view comments"
-                // vm.getComments()
+                vm.error = ""
+                vm.getComments()
             }
         }
 
         function removeThread(){
             // remove comments and thread
             vm.cleanUp()
-            vm.settings.thread = ""
+            vm.settings.threadUrl = ""
+            vm.settings.threadId = ""
         }
 
         function setSort(option){
@@ -67,23 +69,26 @@
         }
 
         $scope.$watch(angular.bind(this, function(){
-            return this.settings.thread
+            return this.settings.threadUrl
         }), function(value){
             vm.cleanUp()
+            vm.thread = {}
             vm.getComments()
         })
 
         function getComments(){
             // if thread is set (prevents function from looping after thread has been removed)
-            if(vm.settings.thread){
-                var url = 'https://www.reddit.com/' + vm.settings.thread.permalink + '.json?sort=' + vm.sort
+            if(vm.settings.threadUrl){
+                var url = vm.settings.threadUrl + '.json?sort=' + vm.sort
                 $http.get(url).then(function(response){
 
                     // make sure thread hasn't been removed since sending request
-                    if(vm.settings.thread){
+                    if(vm.settings.threadUrl){
 
                         //translate data into more shallow and usable object
-                        // vm.settings.thread = response.data[0].data.children[0].data
+                        vm.thread = response.data[0].data.children[0].data
+
+                        vm.settings.threadId = vm.thread.id
                         var rawComments = response.data[1].data.children
 
                         // object for processed comments, so vm.comments can be replaced all at once

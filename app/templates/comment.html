@@ -1,4 +1,4 @@
-<div class="comment container {{comment.author_flair_css_class}}" id="comment-{{comment.id}}">
+<div class="comment container {{comment.author_flair_css_class}}">
 	<div class="meta flexer">
 		<div class="stats">
 			<h2>{{ comment.score | kthousand }}</h2>
@@ -10,9 +10,10 @@
 			<span class="flair" ng-if="comment.author_flair_text">
 				{{ comment.author_flair_text }}
 			</span>
-			<span class="op" ng-if="comment.author === vm.settings.thread.author">
+			<span class="op" ng-if="comment.author === vm.thread.author">
 				OP
 			</span>
+			{{ vm.thread.author }}
 		</div>
 	</div>
 	<div>

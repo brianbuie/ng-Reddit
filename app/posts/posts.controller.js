@@ -25,6 +25,11 @@
         vm.setSort = setSort
         vm.cleanUp = cleanUp
         vm.getPosts = getPosts
+        vm.setThread = setThread
+
+        function setThread(permalink){
+            vm.settings.threadUrl = 'https://www.reddit.com/' + permalink
+        }
 
         function setSub() {
             // if value in subSelectForm text input
@@ -103,7 +108,7 @@
                     }
                 }, function errorCallback(response){
                     vm.subreddit = ""
-                    vm.error = "There was an error :( try again"
+                    vm.error = "Are you sure that's a subreddit?"
                 })
             }
         }

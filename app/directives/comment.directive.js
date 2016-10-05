@@ -12,12 +12,6 @@
                 scope: {
                     comment: '='
                 }
-                // scope: {},
-                // bindToController: {
-                //     comment: '='
-                // },
-                // controller: CommentsCtrl,
-                // controllerAs: 'vm'
         	}
         }
 

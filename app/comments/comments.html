@@ -1,29 +1,29 @@
-<header class="material" ng-class="{waiting : !vm.settings.thread}">
+<header class="material" ng-class="{waiting : !vm.thread.title}">
 	<div class="flexer container">
 		<div class="stats center">
-			<h2>{{ vm.settings.thread.score | kthousand }}</h2>
-			<p>{{ vm.settings.thread.num_comments | kthousand }}</p>
+			<h2>{{ vm.thread.score | kthousand }}</h2>
+			<p>{{ vm.thread.num_comments | kthousand }}</p>
 		</div>
 		<h1 class="flex-grow">
-			{{ vm.settings.thread.title }}
+			{{ vm.thread.title }}
 		</h1>
 		<a href="" ng-click="vm.removeThread()" class="close">
 			<i class="fa fa-close"></i>
 		</a>
 	</div>
-	<div class="meta container material {{vm.settings.thread.author_flair_css_class}}" ng-class="">
+	<div class="meta container material {{vm.thread.author_flair_css_class}}" ng-class="">
 		posted by 
 		<span class="author">
-			{{ vm.settings.thread.author }}
+			{{ vm.thread.author }}
 		</span>
 		<span class="op">
 			OP
 		</span>
-		<span class="flair" ng-if="vm.settings.thread.author_flair_text">
-			{{ vm.settings.thread.author_flair_text }}
+		<span class="flair" ng-if="vm.thread.author_flair_text">
+			{{ vm.thread.author_flair_text }}
 		</span>
 	</div>
-	<article class="container" ng-if="vm.settings.thread.selftext_html" ng-bind-html="vm.settings.thread.selftext_html | html">
+	<article class="container" ng-if="vm.thread.selftext_html" ng-bind-html="vm.thread.selftext_html | html">
 	</article>
 	<form class="form-inline flexer" ng-submit="vm.setThread()">
 		<input type="text" placeholder="Thread URL" ng-model="vm.entry" autocomplete="false"/>
