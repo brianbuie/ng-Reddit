@@ -1,7 +1,5 @@
 CRUCIAL DEV
 
-// Minimize Post self_text & individual comments/replies
-
 // Post Link & Link to Reddit comments page
 
 // Settings panel
@@ -12,6 +10,8 @@ CRUCIAL DEV
 BUGS & ISSUES
 
 // PostsCtrl and CommentsCtrl are very similar and very heavy
+
+// Posts and comments aren't ordered correctly since they're properties bound to object, switching to array forces DOM refresh on all posts/comments
 
 
 FEATURES TO ADD
@@ -25,5 +25,3 @@ FEATURES TO ADD
 // NBA icon flair and username/team colors
 
 // Notification sound
-
-// UI Animations for new posts/comments
