@@ -38,8 +38,8 @@
 	<tabs class="material"></tabs>
 </header>
 <span class="error">{{ vm.error }}</span>
-<section ng-class="{minimized : !vm.comments}">
-	<div class="material topLevelComment animateIn collapser flexer" ng-repeat="singleComment in vm.comments">
+<section>
+	<div class="material topLevelComment fadeIn collapser flexer" ng-repeat="singleComment in vm.comments">
 		<input type="checkbox" id="comment-{{singleComment.id}}">
 		<label for="comment-{{singleComment.id}}"><i class="fa fa-angle-down"></i></label>
 		<comment comment="singleComment" class="flex-grow"></comment>

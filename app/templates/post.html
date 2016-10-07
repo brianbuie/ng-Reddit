@@ -1,6 +1,6 @@
 <div 
 	ng-repeat="(key, value) in vm.posts"
-	class="animateIn container flexer post" 
+	class="fadeIn container flexer post" 
 	ng-class="{inactive : vm.settings.threadId === value.id}" 
 	ng-click="vm.setThread(value.permalink)"
 >

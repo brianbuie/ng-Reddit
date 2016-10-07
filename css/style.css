@@ -260,11 +260,11 @@ header:not(.waiting) tabs:hover{
 
 /* Animations */
 
-.animateIn{
-	animation: animateIn 0.3s ease;
+.fadeIn{
+	animation: fadeIn 0.3s ease;
 	position: relative;
 }
-@keyframes animateIn{
+@keyframes fadeIn{
 	0%{
 		opacity: 0;
 		max-height: 0;
@@ -277,32 +277,6 @@ header:not(.waiting) tabs:hover{
 	100%{
 		opacity: 1;
 		left: 0;
-	}
-}
-
-.minimized{
-	overflow: hidden;
-	animation: minimize 0.4s cubic-bezier(0, 1, 0, 1);
-}
-@keyframes minimize{
-	0%{
-		max-height: 9000px;
-	}
-	100%{
-		max-height: 0;
-	}
-}
-
-.maximized{
-	overflow: hidden;
-	animation: maximize 0.4s cubic-bezier(0, 1, 0, 1);
-}
-@keyframes maximize{
-	0%{
-		max-height: 0;
-	}
-	100%{
-		max-height: 9000px;
 	}
 }
 

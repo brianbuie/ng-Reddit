@@ -19,7 +19,7 @@
 	<div class="collapsable">
 		<div ng-bind-html="comment.body_html | html">
 		</div>
-		<div class="reply animateIn" ng-repeat="singleComment in comment.replies">
+		<div class="reply fadeIn" ng-repeat="singleComment in comment.replies">
 			<comment comment="singleComment"></comment>
 		</div>
 	</div>
