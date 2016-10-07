@@ -15,7 +15,7 @@
         vm.error = ""
         vm.sortOptions = ["new", "hot", "top"]
         vm.sort = vm.sortOptions[0]
-        vm.posts = {}
+        vm.posts = []
         vm.settings = Settings // settings service
         vm.timeoutPromise = ""
 
@@ -70,7 +70,7 @@
         function cleanUp(){
             // cancel timeout and delete posts
             $timeout.cancel(vm.timeoutPromise)
-            vm.posts = {}
+            vm.posts = []
             vm.error = ""
         }
 
@@ -92,11 +92,11 @@
                         var values = response.data.data.children
 
                         // set temp container so posts object can be replaced on completion
-                        var temp = {}
+                        var temp = []
 
                         // loop through response and set each post to its own keyed object in temp object
                         angular.forEach(values, function(value){
-                            temp[value.data.id] = value.data
+                            temp.push(value.data)
                         })
 
                         // set posts to temp object
