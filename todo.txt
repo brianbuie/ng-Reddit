@@ -1,10 +1,8 @@
 CRUCIAL DEV
 
-// Post Link & Link to Reddit comments page
-
 // Settings panel
 
-// highlight OP in thread (need to bind directive to CommentsCtrl)
+// highlight OP in thread (probably need to bind directive to CommentsCtrl)
 
 
 BUGS & ISSUES

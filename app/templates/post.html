@@ -1,13 +1,13 @@
 <div 
-	ng-repeat="(key, value) in vm.posts"
+	ng-repeat="(key, post) in vm.posts"
 	class="fadeIn container flexer post" 
-	ng-class="{inactive : vm.settings.threadId === value.id}" 
-	ng-click="vm.setThread(value.permalink)"
+	ng-class="{inactive : vm.settings.threadId === post.id}" 
+	ng-click="vm.setThread(post.permalink)"
 >
 	<div class="stats center">
-		<h2>{{ value.score | kthousand }}</h2>
-		<p>{{ value.num_comments | kthousand }}</p>
+		<h2>{{ post.score | kthousand }}</h2>
+		<p>{{ post.num_comments | kthousand }}</p>
 		<img src="content/snoo-outlined.svg" />
 	</div>
-	<h4>{{ value.title }}</h4>
+	<h4>{{ post.title }}</h4>
 </div>

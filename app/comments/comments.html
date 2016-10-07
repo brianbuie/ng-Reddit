@@ -5,7 +5,7 @@
 			<p>{{ vm.thread.num_comments | kthousand }}</p>
 		</div>
 		<h1 class="flex-grow">
-			{{ vm.thread.title }}
+			<a href="{{vm.thread.url}}" target="_blank">{{ vm.thread.title }}</a>
 		</h1>
 		<a href="" ng-click="vm.removeThread()" class="close">
 			<i class="fa fa-close"></i>
