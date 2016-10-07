@@ -1,9 +1,9 @@
 <div class="comment container {{comment.author_flair_css_class}}">
-	<div class="meta flexer">
+	<div class="meta flexer semiCollapsable">
 		<div class="stats">
 			<h2>{{ comment.score | kthousand }}</h2>
 		</div>
-		<div>
+		<div class="flex-grow">
 			<span class="author">
 				{{ comment.author }}
 			</span>
@@ -16,10 +16,10 @@
 			{{ vm.thread.author }}
 		</div>
 	</div>
-	<div>
+	<div class="collapsable">
 		<div ng-bind-html="comment.body_html | html">
 		</div>
-		<div class="reply" ng-repeat="singleComment in comment.replies">
+		<div class="reply animateIn" ng-repeat="singleComment in comment.replies">
 			<comment comment="singleComment"></comment>
 		</div>
 	</div>

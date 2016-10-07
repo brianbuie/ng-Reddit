@@ -1,7 +1,7 @@
 <div 
 	ng-repeat="(key, value) in vm.posts"
-	class="container flexer post" 
-	ng-class="{active : vm.settings.threadId === value.id}" 
+	class="animateIn container flexer post" 
+	ng-class="{inactive : vm.settings.threadId === value.id}" 
 	ng-click="vm.setThread(value.permalink)"
 >
 	<div class="stats center">

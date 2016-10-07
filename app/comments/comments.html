@@ -11,20 +11,26 @@
 			<i class="fa fa-close"></i>
 		</a>
 	</div>
-	<div class="meta container material {{vm.thread.author_flair_css_class}}" ng-class="">
-		posted by 
-		<span class="author">
-			{{ vm.thread.author }}
-		</span>
-		<span class="op">
-			OP
-		</span>
-		<span class="flair" ng-if="vm.thread.author_flair_text">
-			{{ vm.thread.author_flair_text }}
-		</span>
+	<div class="collapser">
+		<input type="checkbox" id="selfTextCollapse" ng-if="vm.thread.selftext_html">
+		<label for="selfTextCollapse" ng-if="vm.thread.selftext_html"><i class="fa fa-angle-down"></i></label>
+		<div class="flexer">
+			<div class="meta container material flex-grow {{vm.thread.author_flair_css_class}}">
+				posted by 
+				<span class="author">
+					{{ vm.thread.author }}
+				</span>
+				<span class="op">
+					OP
+				</span>
+				<span class="flair" ng-if="vm.thread.author_flair_text">
+					{{ vm.thread.author_flair_text }}
+				</span>
+			</div>
+		</div>
+		<article class="container inactive collapsable" ng-if="vm.thread.selftext_html" ng-bind-html="vm.thread.selftext_html | html">
+		</article>
 	</div>
-	<article class="container" ng-if="vm.thread.selftext_html" ng-bind-html="vm.thread.selftext_html | html">
-	</article>
 	<form class="form-inline flexer" ng-submit="vm.setThread()">
 		<input type="text" placeholder="Thread URL" ng-model="vm.entry" autocomplete="false"/>
 		<button type="submit">Go!</button>
@@ -33,7 +39,9 @@
 </header>
 <span class="error">{{ vm.error }}</span>
 <section ng-class="{minimized : !vm.comments}">
-	<div class="material topLevelComment" ng-repeat="singleComment in vm.comments">
-		<comment comment="singleComment"></comment>
+	<div class="material topLevelComment animateIn collapser flexer" ng-repeat="singleComment in vm.comments">
+		<input type="checkbox" id="comment-{{singleComment.id}}">
+		<label for="comment-{{singleComment.id}}"><i class="fa fa-angle-down"></i></label>
+		<comment comment="singleComment" class="flex-grow"></comment>
 	</div>
 </section>

@@ -12,6 +12,6 @@
 	<tabs class="material"></tabs>
 </header>
 <span class="error">{{ vm.error }}</span>
-<section class="material" ng-class="{minimized : !vm.subreddit}">
+<section class="material " ng-class="{minimized : !vm.subreddit, maximized : vm.subreddit}">
 	<ng-include src="'app/templates/post.html'"> </ng-include>
 </section>
