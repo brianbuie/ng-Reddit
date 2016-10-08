@@ -1,8 +1,11 @@
 <header class="material" ng-class="{waiting : !vm.subreddit}">
 	<div class="container">
-		<h2 class="title" ng-click="vm.removeSub()">
+		<h2 class="title">
 			r/{{ vm.subreddit }}
 		</h2>
+		<a href="" ng-click="vm.removeSub()" class="close">
+			<i class="fa fa-close"></i>
+		</a>
 	</div>
 	<form class="form-inline flexer" ng-submit="vm.setSub()">
 		<label>r/</label>

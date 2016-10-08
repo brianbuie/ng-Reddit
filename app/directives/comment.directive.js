@@ -10,7 +10,8 @@
         		restrict: "E",
         		templateUrl: "app/templates/comment.html",
                 scope: {
-                    comment: '='
+                    comment: '=',
+                    op: '='
                 }
         	}
         }

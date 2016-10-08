@@ -50,7 +50,7 @@
             // set form input to subreddit (seamless switch)
             // remove posts and subreddit
             vm.removePosts()
-            vm.entry = vm.subreddit
+            vm.entry = ""
             vm.subreddit = ""
         }
 

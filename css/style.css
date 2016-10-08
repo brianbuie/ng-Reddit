@@ -94,7 +94,7 @@ button:hover{
 	padding: 0.2em;
 	cursor: pointer;
 	position: absolute;
-	top: 0.2em;
+	top: 0.3em;
 	right: 0.2em;
 }
 
@@ -255,6 +255,7 @@ header:not(.waiting) tabs:hover{
 	padding: 0 0.25em;
 	background-color: #555;
 	color: white;
+	display: inline-block;
 }
 
 .comment .stats{

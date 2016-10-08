@@ -7,20 +7,19 @@
 			<span class="author">
 				{{ comment.author }}
 			</span>
+			<span class="op" ng-if="comment.author === op">
+				OP
+			</span>
 			<span class="flair" ng-if="comment.author_flair_text">
 				{{ comment.author_flair_text }}
 			</span>
-			<span class="op" ng-if="comment.author === vm.post.author">
-				OP
-			</span>
-			{{ vm.post.author }}
 		</div>
 	</div>
 	<div class="collapsable">
 		<div ng-bind-html="comment.body_html | html">
 		</div>
 		<div class="reply fadeIn" ng-repeat="singleComment in comment.replies track by singleComment.id">
-			<comment comment="singleComment"></comment>
+			<comment comment="singleComment" op="op"></comment>
 		</div>
 	</div>
 </div>

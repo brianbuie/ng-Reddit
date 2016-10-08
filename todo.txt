@@ -2,8 +2,6 @@ CRUCIAL DEV
 
 // Settings panel for each column
 
-// highlight OP in thread (probably need to bind directive to CommentsCtrl)
-
 
 BUGS & ISSUES
 
