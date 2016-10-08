@@ -15,7 +15,7 @@
         vm.error = ""
         vm.sortOptions = ["new", "hot", "top"]
         vm.sort = vm.sortOptions[0]
-        vm.comments = {}
+        vm.comments = []
         vm.thread = {}
         vm.settings = Settings // settings service
         vm.timeoutPromise = ""
@@ -64,7 +64,7 @@
         function cleanUp(){
             // cancel timeout and delete comments
             $timeout.cancel(vm.timeoutPromise)
-            vm.comments = {}
+            vm.comments = []
             vm.error = ""
         }
 
@@ -92,12 +92,12 @@
                         var rawComments = response.data[1].data.children
 
                         // object for processed comments, so vm.comments can be replaced all at once
-                        var temp = {}
+                        var temp = []
 
                         // loop through response and set each post to it's own keyed object in temp object
                         // iterate through responses to make shallow
                         angular.forEach(rawComments, function(comment){
-                            temp[comment.data.id] = comment.data
+                            temp.push(comment.data)
                             if(comment.data.replies){
                                 comment.data.replies = vm.nestReplies(comment.data.replies)
                             }
@@ -120,7 +120,7 @@
             if(!replies.data.children){ return }
 
             // create temp object to hold reformated replies
-            var tempReplies = {}
+            var tempReplies = []
 
             // loop through replies
             angular.forEach(replies.data.children, function(reply){
@@ -128,7 +128,7 @@
                 // if comment has no author (been deleted or removed), return nothing
                 if(!reply.data.author){ return }
 
-                tempReplies[reply.data.id] = reply.data
+                tempReplies.push(reply.data)
 
                 // if the reply has replies, recurse through those
                 if(reply.data.replies){

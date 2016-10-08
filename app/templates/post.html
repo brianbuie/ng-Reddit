@@ -1,5 +1,5 @@
 <div 
-	ng-repeat="(key, post) in vm.posts"
+	ng-repeat="post in vm.posts track by post.id"
 	class="fadeIn container flexer post" 
 	ng-class="{inactive : vm.settings.threadId === post.id}" 
 	ng-click="vm.setThread(post.permalink)"

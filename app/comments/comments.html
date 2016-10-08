@@ -39,9 +39,9 @@
 </header>
 <span class="error">{{ vm.error }}</span>
 <section>
-	<div class="material topLevelComment fadeIn collapser flexer" ng-repeat="singleComment in vm.comments">
-		<input type="checkbox" id="comment-{{singleComment.id}}">
-		<label for="comment-{{singleComment.id}}"><i class="fa fa-angle-down"></i></label>
+	<div class="material topLevelComment fadeIn collapser flexer" ng-repeat="singleComment in vm.comments track by singleComment.id">
+		<input type="checkbox" id="collapse-{{singleComment.id}}">
+		<label for="collapse-{{singleComment.id}}"><i class="fa fa-angle-down"></i></label>
 		<comment comment="singleComment" class="flex-grow"></comment>
 	</div>
 </section>
