@@ -1,37 +1,37 @@
-<header class="material" ng-class="{waiting : !vm.post.title}">
+<header class="material" ng-class="{waiting : !vm.head}">
 	<div class="flexer container">
 		<div class="stats center">
-			<h2>{{ vm.post.score | kthousand }}</h2>
-			<p>{{ vm.post.num_comments | kthousand }}</p>
+			<h2>{{ vm.head.score | kthousand }}</h2>
+			<p>{{ vm.head.num_comments | kthousand }}</p>
 		</div>
 		<h1 class="flex-grow">
-			<a href="{{vm.post.url}}" target="_blank">{{ vm.post.title }}</a>
+			<a href="{{vm.head.url}}" target="_blank">{{ vm.head.title }}</a>
 		</h1>
-		<a href="" ng-click="vm.removePost()" class="close">
+		<a href="" ng-click="vm.unsetHead()" class="close">
 			<i class="fa fa-close"></i>
 		</a>
 	</div>
 	<div class="collapser">
-		<input type="checkbox" id="selfTextCollapse" ng-if="vm.post.selftext_html">
-		<label for="selfTextCollapse" ng-if="vm.post.selftext_html"><i class="fa fa-angle-down"></i></label>
+		<input type="checkbox" id="selfTextCollapse" ng-if="vm.head.selftext_html">
+		<label for="selfTextCollapse" ng-if="vm.head.selftext_html"><i class="fa fa-angle-down"></i></label>
 		<div class="flexer">
-			<div class="meta container material flex-grow {{vm.post.author_flair_css_class}}">
+			<div class="meta container material flex-grow {{vm.head.author_flair_css_class}}">
 				posted by 
 				<span class="author">
-					{{ vm.post.author }}
+					{{ vm.head.author }}
 				</span>
 				<span class="op">
 					OP
 				</span>
-				<span class="flair" ng-if="vm.post.author_flair_text">
-					{{ vm.post.author_flair_text }}
+				<span class="flair" ng-if="vm.head.author_flair_text">
+					{{ vm.head.author_flair_text }}
 				</span>
 			</div>
 		</div>
-		<article class="container inactive collapsable" ng-if="vm.post.selftext_html" ng-bind-html="vm.post.selftext_html | html">
+		<article class="container inactive collapsable" ng-if="vm.head.selftext_html" ng-bind-html="vm.head.selftext_html | html">
 		</article>
 	</div>
-	<form class="form-inline flexer" ng-submit="vm.setPost()">
+	<form class="form-inline flexer" ng-submit="vm.setHead()">
 		<input type="text" placeholder="post URL" ng-model="vm.entry" autocomplete="false"/>
 		<button type="submit">Go!</button>
 	</form>
@@ -39,9 +39,9 @@
 </header>
 <span class="error">{{ vm.error }}</span>
 <section>
-	<div class="material topLevelComment fadeIn collapser flexer" ng-repeat="singleComment in vm.comments track by singleComment.id">
+	<div class="material topLevelComment fadeIn collapser flexer" ng-repeat="singleComment in vm.collection track by singleComment.id">
 		<input type="checkbox" id="collapse-{{singleComment.id}}">
 		<label for="collapse-{{singleComment.id}}"><i class="fa fa-angle-down"></i></label>
-		<comment comment="singleComment" op="vm.post.author" class="flex-grow"></comment>
+		<comment comment="singleComment" op="vm.head.author" class="flex-grow"></comment>
 	</div>
 </section>

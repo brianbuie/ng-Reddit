@@ -1,8 +1,8 @@
 <div 
-	ng-repeat="post in vm.posts track by post.id"
+	ng-repeat="post in vm.collection track by post.id"
 	class="fadeIn container flexer post" 
-	ng-class="{inactive : vm.settings.postId === post.id}" 
-	ng-click="vm.setPost(post.permalink)"
+	ng-class="{inactive : vm.global.postId === post.id}" 
+	ng-click="vm.setData('postUrl', 'https://www.reddit.com' + post.permalink)"
 >
 	<div class="stats center">
 		<h2>{{ post.score | kthousand }}</h2>

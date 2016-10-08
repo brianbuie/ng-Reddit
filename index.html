@@ -18,11 +18,13 @@
 
 <section id="content" class="flexer">
 
-	<div id="posts" class="container" ng-controller="PostsCtrl as vm">
+	<div id="posts" class="container" ng-controller="CoreCtrl as vm">
+		{{ vm.setControllerType('posts') }}
 		<ng-include src="'app/posts/posts.html'"> </ng-include>
 	</div>
 
-	<div id="comments" class="container flex-grow" ng-controller="CommentsCtrl as vm">
+	<div id="comments" class="container flex-grow" ng-controller="CoreCtrl as vm">
+		{{ vm.setControllerType('comments') }}
 		<ng-include src="'app/comments/comments.html'"> </ng-include>
 	</div>
 
@@ -36,6 +38,9 @@
 <!-- core module -->
 <script src="app/app.module.js" type="text/javascript" charset="utf-8"></script>
 
+<!-- controllers -->
+<script src="app/core.controller.js" type="text/javascript" charset="utf-8"></script>
+
 <!-- services -->
 <script src="app/services/settings.service.js" type="text/javascript" charset="utf-8"></script>
 
@@ -47,10 +52,6 @@
 <script src="app/filters/kthousand.filter.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/filters/html.filter.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/filters/plural.filter.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- controllers -->
-<script src="app/posts/posts.controller.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/comments/comments.controller.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Remove before launch -->
 <script src="node_modules/livejs/live.js" type="text/javascript" charset="utf-8"></script>
