@@ -23,12 +23,12 @@
         vm.setSub = setSub
         vm.removeSub = removeSub
         vm.setSort = setSort
-        vm.cleanUp = cleanUp
+        vm.removePosts = removePosts
         vm.getPosts = getPosts
-        vm.setThread = setThread
+        vm.setPost = setPost
 
-        function setThread(permalink){
-            vm.settings.threadUrl = 'https://www.reddit.com/' + permalink
+        function setPost(permalink){
+            vm.settings.postUrl = 'https://www.reddit.com/' + permalink
         }
 
         function setSub() {
@@ -38,7 +38,7 @@
             // clear form entry and any possible error message
             // start getting posts
             if(vm.entry){
-                vm.cleanUp()
+                vm.removePosts()
                 vm.subreddit = vm.entry
                 vm.entry = ""
                 vm.getPosts()
@@ -49,7 +49,7 @@
             // cancel running timeout instance (prevent duplicate)
             // set form input to subreddit (seamless switch)
             // remove posts and subreddit
-            vm.cleanUp()
+            vm.removePosts()
             vm.entry = vm.subreddit
             vm.subreddit = ""
         }
@@ -61,13 +61,13 @@
             // remove all current posts
             // get posts
             if(vm.sort !== option){
-                vm.cleanUp()
+                vm.removePosts()
                 vm.sort = option
                 vm.getPosts()
             }
         }
 
-        function cleanUp(){
+        function removePosts(){
             // cancel timeout and delete posts
             $timeout.cancel(vm.timeoutPromise)
             vm.posts = []

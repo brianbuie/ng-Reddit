@@ -16,37 +16,37 @@
         vm.sortOptions = ["new", "hot", "top"]
         vm.sort = vm.sortOptions[0]
         vm.comments = []
-        vm.thread = {}
+        vm.post = {}
         vm.settings = Settings // settings service
         vm.timeoutPromise = ""
 
         // methods
-        vm.setThread = setThread
-        vm.removeThread = removeThread
+        vm.setPost = setPost
+        vm.removePost = removePost
         vm.setSort = setSort
-        vm.cleanUp = cleanUp
+        vm.removeComments = removeComments
         vm.getComments = getComments
         vm.nestReplies = nestReplies
 
-        function setThread() {
+        function setPost() {
             // if value in form text input
-            // set current thread
+            // set current post
             // clear form entry and any possible error message
             // start getting comments
             if(vm.entry){
-                vm.cleanUp()
-                vm.settings.threadUrl = vm.entry
+                vm.removeComments()
+                vm.settings.postUrl = vm.entry
                 vm.entry = ""
                 vm.error = ""
                 vm.getComments()
             }
         }
 
-        function removeThread(){
-            // remove comments and thread
-            vm.cleanUp()
-            vm.settings.threadUrl = ""
-            vm.settings.threadId = ""
+        function removePost(){
+            // remove comments and post
+            vm.removeComments()
+            vm.settings.postUrl = ""
+            vm.settings.postId = ""
         }
 
         function setSort(option){
@@ -55,13 +55,13 @@
             // remove all current comments
             // get comments
             if(vm.sort !== option){
-                vm.cleanUp()
+                vm.removeComments()
                 vm.sort = option
                 vm.getComments()
             }
         }
 
-        function cleanUp(){
+        function removeComments(){
             // cancel timeout and delete comments
             $timeout.cancel(vm.timeoutPromise)
             vm.comments = []
@@ -69,26 +69,26 @@
         }
 
         $scope.$watch(angular.bind(this, function(){
-            return this.settings.threadUrl
+            return this.settings.postUrl
         }), function(value){
-            vm.cleanUp()
-            vm.thread = {}
+            vm.removeComments()
+            vm.post = {}
             vm.getComments()
         })
 
         function getComments(){
-            // if thread is set (prevents function from looping after thread has been removed)
-            if(vm.settings.threadUrl){
-                var url = vm.settings.threadUrl + '.json?sort=' + vm.sort
+            // if post is set (prevents function from looping after post has been removed)
+            if(vm.settings.postUrl){
+                var url = vm.settings.postUrl + '.json?sort=' + vm.sort
                 $http.get(url).then(function(response){
 
-                    // make sure thread hasn't been removed since sending request
-                    if(vm.settings.threadUrl){
+                    // make sure post hasn't been removed since sending request
+                    if(vm.settings.postUrl){
 
                         //translate data into more shallow and usable object
-                        vm.thread = response.data[0].data.children[0].data
+                        vm.post = response.data[0].data.children[0].data
 
-                        vm.settings.threadId = vm.thread.id
+                        vm.settings.postId = vm.post.id
                         var rawComments = response.data[1].data.children
 
                         // object for processed comments, so vm.comments can be replaced all at once
@@ -97,9 +97,11 @@
                         // loop through response and set each post to it's own keyed object in temp object
                         // iterate through responses to make shallow
                         angular.forEach(rawComments, function(comment){
-                            temp.push(comment.data)
-                            if(comment.data.replies){
-                                comment.data.replies = vm.nestReplies(comment.data.replies)
+                            if(comment.data.author){
+                                temp.push(comment.data)
+                                if(comment.data.replies){
+                                    comment.data.replies = vm.nestReplies(comment.data.replies)
+                                }
                             }
                         })
                         // set posts to temp object

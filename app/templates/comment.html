@@ -10,10 +10,10 @@
 			<span class="flair" ng-if="comment.author_flair_text">
 				{{ comment.author_flair_text }}
 			</span>
-			<span class="op" ng-if="comment.author === vm.thread.author">
+			<span class="op" ng-if="comment.author === vm.post.author">
 				OP
 			</span>
-			{{ vm.thread.author }}
+			{{ vm.post.author }}
 		</div>
 	</div>
 	<div class="collapsable">

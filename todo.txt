@@ -1,6 +1,6 @@
 CRUCIAL DEV
 
-// Settings panel
+// Settings panel for each column
 
 // highlight OP in thread (probably need to bind directive to CommentsCtrl)
 
@@ -8,8 +8,6 @@ CRUCIAL DEV
 BUGS & ISSUES
 
 // PostsCtrl and CommentsCtrl are very similar and very heavy
-
-// Posts and comments aren't ordered correctly since they're properties bound to object, switching to array forces DOM refresh on all posts/comments
 
 
 FEATURES TO ADD
