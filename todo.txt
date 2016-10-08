@@ -5,8 +5,6 @@ CRUCIAL DEV
 
 BUGS & ISSUES
 
-// PostsCtrl and CommentsCtrl are very similar and very heavy
-
 
 FEATURES TO ADD
 

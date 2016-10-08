@@ -20,12 +20,12 @@
 
 	<div id="posts" class="container" ng-controller="CoreCtrl as vm">
 		{{ vm.setControllerType('posts') }}
-		<ng-include src="'app/posts/posts.html'"> </ng-include>
+		<ng-include src="'app/templates/posts.html'"> </ng-include>
 	</div>
 
 	<div id="comments" class="container flex-grow" ng-controller="CoreCtrl as vm">
 		{{ vm.setControllerType('comments') }}
-		<ng-include src="'app/comments/comments.html'"> </ng-include>
+		<ng-include src="'app/templates/comments.html'"> </ng-include>
 	</div>
 
 </section>
