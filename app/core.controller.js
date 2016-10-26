@@ -156,7 +156,7 @@
                 var url = vm.url + '.json?sort=' + vm.sort
             }
             $http.get( url ).then(function successCallback(response){
-                if(!vm.url){ return } 
+                if(!vm.url){ return }
                 if(vm.controllerType === "posts"){
                     var rawCollection = response.data.data.children
                 }

@@ -12,8 +12,8 @@
 		</a>
 	</div>
 	<div class="collapser">
-		<input type="checkbox" id="selfTextCollapse" ng-if="vm.head.selftext_html">
-		<label for="selfTextCollapse" ng-if="vm.head.selftext_html"><i class="fa fa-angle-down"></i></label>
+		<input type="checkbox" id="selfTextCollapse">
+		<label for="selfTextCollapse"><i class="fa fa-angle-down"></i></label>
 		<div class="flexer">
 			<div class="meta container material flex-grow {{vm.head.author_flair_css_class}}">
 				posted by 
@@ -23,12 +23,15 @@
 				<span class="op">
 					OP
 				</span>
-				<span class="flair" ng-if="vm.head.author_flair_text">
-					{{ vm.head.author_flair_text }}
+				<span class="flair" ng-if="vm.head.author_flair_css_class">
+					{{ vm.head.author_flair_css_class }}
 				</span>
 			</div>
 		</div>
 		<article class="container inactive collapsable" ng-if="vm.head.selftext_html" ng-bind-html="vm.head.selftext_html | html">
+		</article>
+		<article class="container inactive collapsable" ng-if="!vm.head.selftext_html && vm.head.url">
+			<a href="{{ vm.head.url }}" target="_blank">{{ vm.head.url }}</a>
 		</article>
 	</div>
 	<form class="form-inline flexer" ng-submit="vm.setHead()">
