@@ -8,12 +8,12 @@
 			<a href="{{vm.head.url}}" target="_blank">{{ vm.head.title }}</a>
 		</h1>
 		<a href="" ng-click="vm.unsetHead()" class="close">
-			<i class="fa fa-close"></i>
+			<i class="material-icons">clear</i>
 		</a>
 	</div>
 	<div class="collapser">
 		<input type="checkbox" id="selfTextCollapse">
-		<label for="selfTextCollapse"><i class="fa fa-angle-down"></i></label>
+		<label for="selfTextCollapse"><i class="material-icons">keyboard_arrow_down</i></label>
 		<div class="flexer">
 			<div class="meta container material flex-grow {{vm.head.author_flair_css_class}}">
 				posted by 
@@ -24,7 +24,7 @@
 					OP
 				</span>
 				<span class="flair" ng-if="vm.head.author_flair_css_class">
-					{{ vm.head.author_flair_css_class }}
+					{{ vm.head.author_flair_text }}
 				</span>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 <section>
 	<div class="material topLevelComment fadeIn collapser flexer" ng-repeat="singleComment in vm.collection track by singleComment.id">
 		<input type="checkbox" id="collapse-{{singleComment.id}}">
-		<label for="collapse-{{singleComment.id}}"><i class="fa fa-angle-down"></i></label>
+		<label for="collapse-{{singleComment.id}}"><i class="material-icons">keyboard_arrow_down</i></label>
 		<comment comment="singleComment" op="vm.head.author" class="flex-grow"></comment>
 	</div>
 </section>

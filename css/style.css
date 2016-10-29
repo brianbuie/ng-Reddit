@@ -2,10 +2,13 @@
 
 /* Core Components */
 
+html{
+	font-size: 12px;
+}
+
 body{
 	background: #ddd;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
 	line-height: 1.4;
 	color: #333;
 }
@@ -20,7 +23,7 @@ h1, h2, h3, h4{
 
 h1{
 	font-size: 1.5em;
-	padding-right: 1em;
+	padding-right: 2em;
 }
 
 h2{
@@ -66,7 +69,7 @@ blockquote{
 }
 
 .container{
-	padding: 0.75em;
+	padding: 1rem;
 }
 
 .flexer{
@@ -94,8 +97,14 @@ button:hover{
 	padding: 0.2em;
 	cursor: pointer;
 	position: absolute;
-	top: 0.3em;
-	right: 0.2em;
+	top: 1rem;
+	right: 1rem;
+}
+
+.material-icons{
+	font-size: 1.4rem;
+	line-height: 0;
+
 }
 
 .error{
@@ -263,9 +272,14 @@ header:not(.waiting) tabs:hover{
 	padding-right: 0.75em;
 }
 
+.comment .score{
+	line-height: 1;
+}
+
 .topLevelComment{
-	margin: 0.75em 0;
-	padding-bottom: 0.75em;
+	margin: 0.75rem 0;
+	padding-bottom: 0.75rem;
+	padding-right: 2.5rem;
 }
 
 .reply{
@@ -274,10 +288,15 @@ header:not(.waiting) tabs:hover{
 
 .comment{
 	padding-bottom: 0;
+	padding-right: 0;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	word-break: break-word;
 	hyphens: auto;
+}
+
+.comment .md{
+	padding-top: 0.5rem;
 }
 
 /* Animations */
@@ -311,12 +330,12 @@ header:not(.waiting) tabs:hover{
 	position: relative;
 }
 .collapser label{
-	font-size: 120%;
+	color: #999;
 	padding: 0.2em;
 	cursor: pointer;
 	position: absolute;
-	top: 0.2em;
-	right: 0.2em;
+	top: 0.75rem;
+	right: 0.75rem;
 	transition: all 0.2s ease;
 }
 .collapsable{
@@ -337,55 +356,6 @@ header:not(.waiting) tabs:hover{
 }
 .collapser input[type="checkbox"]:checked ~ label{
 	transform: rotate(90deg);
+	right: 1.1rem;
+	top: 0.7rem;
 }
-
-
-
-
-
-
-
-
-/* SETTINGS */
-
-/* #settingsContainer{
-	position: fixed;
-	bottom: 0;
-	overflow: hidden;
-	width: 100%;
-}
-
-#logoContainer{
-	position: relative;
-	left: 1em;
-	display: inline-block;
-	line-height: 0;
-	padding: 1em;
-	transition: all 0.2s ease-out;
-}
-
-#logoContainer img{
-	width: 2.5em;
-}
-
-#logoContainer:hover{
-	cursor: pointer;
-	padding-right: 1em;
-}
-
-#settings{
-	max-height: 0;
-	transition: all 0.2s ease-out;
-	padding: 0 2em;
-}
-
-.closed #logoContainer:hover + #settings, 
-.closed #settings:hover{
-	max-height: 2em;
-	padding-top: 2em;
-}
-
-.open #settings{
-	max-height: 100em;
-	padding: 2em;
-} */
