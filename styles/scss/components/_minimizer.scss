@@ -1,0 +1,38 @@
+/* Minimize Checkbox Toggle */
+
+.collapser input[type="checkbox"]{
+	display: none;
+}
+.collapser{
+	position: relative;
+}
+.collapser label{
+	color: #999;
+	padding: 0.2em;
+	cursor: pointer;
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	transition: all 0.2s ease;
+}
+.collapsable{
+	overflow: hidden;
+	max-height: 9000px;
+	transition: max-height 0.2s cubic-bezier(0, 1, 0, 1), padding 0.2s ease;
+}
+.collapser input[type="checkbox"]:checked ~ * .collapsable,
+.collapser input[type="checkbox"]:checked ~ .collapsable{
+	max-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.collapser input[type="checkbox"]:checked ~ * .semiCollapsable,
+.collapser input[type="checkbox"]:checked ~ .semiCollapsable{
+	font-size: 80%;
+	transition-delay: 0.15s;
+}
+.collapser input[type="checkbox"]:checked ~ label{
+	transform: rotate(90deg);
+	right: 1.1rem;
+	top: 0.7rem;
+}

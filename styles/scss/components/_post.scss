@@ -1,0 +1,32 @@
+.post{
+	align-items: center;
+	padding-left: 0.3em;
+	cursor: pointer;
+	border-top: 1px solid #ddd;
+}
+
+.post .stats{
+	width: 13%;
+}
+
+.post h4{
+	width: 87%;
+}
+
+.post.inactive{
+	padding-left: 0;
+	border-left: 0.3em solid #F73906;
+}
+
+.post.inactive h2,
+.post.inactive p{
+	display: none;
+}
+
+.post .stats img{
+	max-width: 60%;
+}
+
+.post:not(.inactive) .stats img{
+	display: none;
+}

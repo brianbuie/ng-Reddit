@@ -2,3 +2,5 @@
 .DS_Store
 .DS_Store?
 Thubs.db
+*.css.map
+.sass-cache

@@ -1,0 +1,112 @@
+html{
+	font-size: 12px;
+}
+
+body{
+	background: #ddd;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.4;
+	color: #333;
+}
+
+strong{
+	font-weight: bold;
+}
+
+h1, h2, h3, h4{
+	margin: 0;
+}
+
+h1{
+	font-size: 1.5em;
+	padding-right: 2em;
+}
+
+h2{
+	font-size: 1.35em;
+	font-weight: bold;
+}
+
+h3{
+	font-size: 1.2em;
+}
+
+h4{
+	font-size: 1.1em;
+}
+
+a{
+	color: #F73906;
+}
+
+header{
+	position: relative;
+}
+
+blockquote{
+	padding: 0 0.75em;
+	margin: 0.75em 0;
+	opacity: 0.7;
+	border-left: 0.25em solid grey;
+	font-style: italic;
+}
+
+.center{
+	text-align: center;
+}
+
+.hidden{
+	display: none;
+}
+
+.material{
+	background-color: #fcfcfc;
+	box-shadow: 0 0 3px rgba(0,0,0,0.12);
+}
+
+.container{
+	padding: 1rem;
+}
+
+.flexer{
+	display: flex;
+}
+
+.flex-grow{
+	flex-grow: 1;
+}
+
+button{
+	background-color: #fff;
+	color: #F73906;
+	transition: all .2s ease;
+}
+
+button:hover{
+	background-color: #F73906;
+	color: #fff;
+}
+
+.close{
+	color: #999;
+	font-size: 120%;
+	padding: 0.2em;
+	cursor: pointer;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+.material-icons{
+	font-size: 1.4rem;
+	line-height: 0;
+
+}
+
+.error{
+	color: red;
+}
+
+.inactive{
+	background-color: #eee;
+}

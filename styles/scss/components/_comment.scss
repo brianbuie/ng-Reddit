@@ -1,0 +1,51 @@
+.author{
+	font-weight: bold;
+}
+
+.flair{
+	margin-left: 0.15em;
+	color: #999;
+}
+
+.op, .flair{
+	font-size: 90%;
+}
+
+.op{
+	padding: 0 0.25em;
+	background-color: #555;
+	color: white;
+	display: inline-block;
+}
+
+.comment .stats{
+	font-size: 85%;
+	padding-right: 0.75em;
+}
+
+.comment .score{
+	line-height: 1;
+}
+
+.topLevelComment{
+	margin: 0.75rem 0;
+	padding-bottom: 0.75rem;
+	padding-right: 2.5rem;
+}
+
+.reply{
+	margin-left: 0.75em;
+}
+
+.comment{
+	padding-bottom: 0;
+	padding-right: 0;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+.comment .md{
+	padding-top: 0.5rem;
+}
