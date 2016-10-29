@@ -17,3 +17,7 @@ FEATURES TO ADD
 // NBA icon flair and username/team colors
 
 // Notification sound
+
+// Comment delay
+
+// display comments one by one over time determined by normal request time
