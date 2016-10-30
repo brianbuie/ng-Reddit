@@ -1,3 +1,238 @@
-.meta[class*=' 76ers']{
-	
+$no-color: #ffffff;
+
+$teams: (
+	Hawks: (
+		primary-fore	: #E03A3E,
+		primary-mid		: #C3D600,
+		primary-back	: #000000,
+		alternate-fore	: #000000,
+		alternate-mid	: #C3D600,
+		alternate-back	: #E03A3E
+	),
+	Celtics: (
+		primary-fore	: #008348,
+		primary-mid		: $no-color,
+		primary-back	: #FFFFFF,
+		alternate-fore	: #FFFFFF,
+		alternate-mid	: $no-color,
+		alternate-back	: #008348
+	),
+	Nets: (
+		primary-fore	: #000000,
+		primary-mid		: $no-color,
+		primary-back	: #FFFFFF,
+		alternate-fore	: #FFFFFF,
+		alternate-mid	: $no-color,
+		alternate-back	: #000000
+	),
+	Hornets: (
+		primary-fore	: #008CA8,
+		primary-mid		: $no-color,
+		primary-back	: #1D1160,
+		alternate-fore	: #1D1160,
+		alternate-mid	: $no-color,
+		alternate-back	: #008CA8
+	),
+	Bulls: (
+		primary-fore	: #CE1141,
+		primary-mid		: #FFFFFF,
+		primary-back	: #000000,
+		alternate-fore	: #000000,
+		alternate-mid	: #FFFFFF,
+		alternate-back	: #CE1141
+	),
+	Cavaliers: (
+		primary-fore	: #860038,
+		primary-mid		: #FDBB30,
+		primary-back	: #002D62,
+		alternate-fore	: #FDBB30,
+		alternate-mid	: $no-color,
+		alternate-back	: #860038
+	),
+	Mavericks: (
+		primary-fore	: #007DC5,
+		primary-mid		: #C4CED3,
+		primary-back	: #20385B,
+		alternate-fore	: #C4CED3,
+		alternate-mid	: #FFFFFF,
+		alternate-back	: #007DC5
+	),
+	Nuggets: (
+		primary-fore	: #4FA8FF,
+		primary-mid		: #FFB20F,
+		primary-back	: #004770,
+		alternate-fore	: #FFB20F,
+		alternate-mid	: #004770,
+		alternate-back	: #4FA8FF
+	),
+	Pistons: (
+		primary-fore	: #ED174C,
+		primary-mid		: #FFFFFF,
+		primary-back	: #006BB6,
+		alternate-fore	: #ED174C,
+		alternate-mid	: #001F70,
+		alternate-back	: #FFFFFF
+	),
+	Warriors: (
+		primary-fore	: #FDB927,
+		primary-mid		: $no-color,
+		primary-back	: #006BB6,
+		alternate-fore	: #006BB6,
+		alternate-mid	: #FDB927,
+		alternate-back	: #FFFFFF
+	),
+	Rockets: (
+		primary-fore	: #CE1141,
+		primary-mid		: $no-color,
+		primary-back	: #FFFFFF,
+		alternate-fore	: #FFFFFF,
+		alternate-mid	: #FDB927,
+		alternate-back	: #CE1141
+	),
+	// Pacers: (
+	// 	primary-fore	: #FFC633,
+	// 	primary-mid		: ,
+	// 	primary-back	: ,
+	// 	alternate-fore	: #00275D,
+	// 	alternate-mid	: ,
+	// 	alternate-back	: #FFC633
+	// ),
+	// Clippers: (
+	// 	primary-fore	: ,
+	// 	primary-mid		: ,
+	// 	primary-back	: ,
+	// 	alternate-fore	: ,
+	// 	alternate-mid	: ,
+	// 	alternate-back	: 
+	// ),
+	// Lakers: (
+	// 	primary-fore	: ,
+	// 	primary-mid		: ,
+	// 	primary-back	: ,
+	// 	alternate-fore	: ,
+	// 	alternate-mid	: ,
+	// 	alternate-back	: 
+	// ),
+	// Grizzlies: (
+	// 	primary-fore	: ,
+	// 	primary-mid		: ,
+	// 	primary-back	: ,
+	// 	alternate-fore	: ,
+	// 	alternate-mid	: ,
+	// 	alternate-back	: 
+	// ),
+	// Heat: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Bucks: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Timberwolves: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Pelicans: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Knicks: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Thunder: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Magic: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// 76ers: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Suns: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Blazers: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Kings: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Spurs: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Raptors: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Jazz: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+	// Wizards: (
+	// 	primary		: ,
+	// 	secondary	: ,
+	// 	tertiary	: ,
+	// 	light-bkg	: ,
+	// 	dark-bkg	: 
+	// ),
+);
+
+
+@each $team, $colors in $teams {
+	.meta[class*=" #{$team}"]{
+		color: map-get($colors, primary-fore);
+		// background-color: map-get($colors, primary-back);
+		border-bottom: 2px solid map-get($colors, primary-back);
+	}
 }
