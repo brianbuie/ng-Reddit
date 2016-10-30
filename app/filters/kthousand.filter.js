@@ -12,12 +12,13 @@
     	return function(number){
     		// parseInt in case number is passed as string
     		// if number is larger than 1000, divide by 1000, round to 1 decimal and append 'k'
-    		var temp = parseInt(number)
-    		if(temp > 1000){
-    			temp = temp/1000
-    			return temp.toFixed(1) + 'k'
-    		}
-    		return temp
+    		var num = parseInt(number)
+    		if(num > 999){
+    			num = (num/1000).toFixed(1) + 'k'
+    		} else {
+                num = num.toString()
+            }
+    		return num
     	}
     }
 })()
