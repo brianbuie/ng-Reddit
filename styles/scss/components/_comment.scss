@@ -2,27 +2,28 @@
 	display: inline-block;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 0.5rem;
-}
-
-.comment .meta{
-	border: 1px solid #ccc;
+	padding-bottom: 0;
 }
 
 .author{
 	display: inline-block;
+	font-weight: bold;
+	padding: $md-space 0 $md-space $xl-space;
 }
 
 .flair{
-	margin-left: 0.15em;
+	margin-left: $sm-space;
 	color: $faded-text;
 }
 
 @each $team, $colors in $teams {
-	.comment .meta[class*=" #{$team}"]{
-		color: map-get($colors, foreground);
-		background-color: map-get($colors, background);
-		border: none;
+	.meta[class*=" #{$team}"]{
+		.author{
+			padding-right: $xl-space;
+			color: map-get($colors, foreground);
+			background-color: map-get($colors, background);
+			text-shadow: 1px 1px 0 map-get($colors, shadow);
+		}
 		.flair{
 			display: none;
 		}
@@ -34,23 +35,28 @@
 }
 
 .op{
-	padding: 0 0.35em;
-	background-color: #555;
+	padding: 0 $sm-space;
+	background-color: black;
 	border: 1px solid white;
 	color: white;
 	display: inline-block;
-	margin-left: 5px;
+	margin: 0 $sm-space;
 }
 
 .comment .score{
 	line-height: 0;
-	margin-right: 5px;
+	margin-left: $sm-space;
 	font-size: 110%;
 	font-weight: bold;
 }
 
+.comment .body{
+	padding: $xl-space;
+	padding-top: $md-space;
+}
+
 .topLevelComment{
-	margin: 0.75rem 0;
+	margin: $lg-space 0;
 }
 
 .reply{

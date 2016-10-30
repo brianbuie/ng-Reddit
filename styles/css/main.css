@@ -307,244 +307,277 @@ header.waiting > *:not(form) {
   display: inline-block;
   align-items: center;
   justify-content: flex-start;
-  padding: 0.5rem; }
-
-.comment .meta {
-  border: 1px solid #ccc; }
+  padding-bottom: 0; }
 
 .author {
-  display: inline-block; }
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5rem 0 0.5rem 1rem; }
 
 .flair {
-  margin-left: 0.15em;
+  margin-left: 0.25rem;
   color: #999; }
 
-.comment .meta[class*=" Hawks"] {
-  color: #C3D600;
+.meta[class*=" ATL"] .author {
+  padding-right: 1rem;
+  color: #000000;
   background-color: #E03A3E;
-  border: none; }
-  .comment .meta[class*=" Hawks"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 #C3D600; }
+.meta[class*=" ATL"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Celtics"] {
-  color: #FFFFFF;
-  background-color: #008348;
-  border: none; }
-  .comment .meta[class*=" Celtics"] .flair {
-    display: none; }
-
-.comment .meta[class*=" Nets"] {
+.meta[class*=" BKN"] .author {
+  padding-right: 1rem;
   color: #FFFFFF;
   background-color: #000000;
-  border: none; }
-  .comment .meta[class*=" Nets"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" BKN"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Hornets"] {
+.meta[class*=" BOS"] .author {
+  padding-right: 1rem;
+  color: #FFFFFF;
+  background-color: #008348;
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" BOS"] .flair {
+  display: none; }
+
+.meta[class*=" CHA"] .author {
+  padding-right: 1rem;
   color: #008CA8;
   background-color: #1D1160;
-  border: none; }
-  .comment .meta[class*=" Hornets"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 #FFFFFF; }
+.meta[class*=" CHA"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Bulls"] {
+.meta[class*=" CHI"] .author {
+  padding-right: 1rem;
   color: #FFFFFF;
   background-color: #CE1141;
-  border: none; }
-  .comment .meta[class*=" Bulls"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 #000000; }
+.meta[class*=" CHI"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Cavaliers"] {
+.meta[class*=" CLE"] .author {
+  padding-right: 1rem;
   color: #860038;
   background-color: #FDBB30;
-  border: none; }
-  .comment .meta[class*=" Cavaliers"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 #002D62; }
+.meta[class*=" CLE"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Mavericks"] {
+.meta[class*=" DAL"] .author {
+  padding-right: 1rem;
   color: #007DC5;
   background-color: #20385B;
-  border: none; }
-  .comment .meta[class*=" Mavericks"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" DAL"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Nuggets"] {
+.meta[class*=" DEN"] .author {
+  padding-right: 1rem;
   color: #FFB20F;
   background-color: #4FA8FF;
-  border: none; }
-  .comment .meta[class*=" Nuggets"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" DEN"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Pistons"] {
+.meta[class*=" DET"] .author {
+  padding-right: 1rem;
   color: #ED174C;
   background-color: #006BB6;
-  border: none; }
-  .comment .meta[class*=" Pistons"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" DET"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Warriors"] {
+.meta[class*=" GSW"] .author {
+  padding-right: 1rem;
   color: #FDB927;
   background-color: #006BB6;
-  border: none; }
-  .comment .meta[class*=" Warriors"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" GSW"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Rockets"] {
+.meta[class*=" HOU"] .author {
+  padding-right: 1rem;
   color: #CE1141;
   background-color: #C4CED3;
-  border: none; }
-  .comment .meta[class*=" Rockets"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" HOU"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Pacers"] {
+.meta[class*=" IND"] .author {
+  padding-right: 1rem;
   color: #FFC633;
   background-color: #00275D;
-  border: none; }
-  .comment .meta[class*=" Pacers"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" IND"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Clippers"] {
+.meta[class*=" LAC"] .author {
+  padding-right: 1rem;
   color: #00285D;
   background-color: #ED174C;
-  border: none; }
-  .comment .meta[class*=" Clippers"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" LAC"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Lakers"] {
-  color: #552582;
-  background-color: #FDB927;
-  border: none; }
-  .comment .meta[class*=" Lakers"] .flair {
-    display: none; }
+.meta[class*=" LAL"] .author {
+  padding-right: 1rem;
+  color: #FDB927;
+  background-color: #552582;
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" LAL"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Grizzlies"] {
+.meta[class*=" MEM"] .author {
+  padding-right: 1rem;
   color: #BBD1E4;
   background-color: #6189B9;
-  border: none; }
-  .comment .meta[class*=" Grizzlies"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" MEM"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Heat"] {
+.meta[class*=" MIA"] .author {
+  padding-right: 1rem;
   color: #FFFFFF;
   background-color: #98002E;
-  border: none; }
-  .comment .meta[class*=" Heat"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" MIA"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Bucks"] {
+.meta[class*=" MIL"] .author {
+  padding-right: 1rem;
   color: #EEE1C6;
   background-color: #00471B;
-  border: none; }
-  .comment .meta[class*=" Bucks"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" MIL"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Timberwolves"] {
+.meta[class*=" MIN"] .author {
+  padding-right: 1rem;
   color: #C4CED3;
   background-color: #005083;
-  border: none; }
-  .comment .meta[class*=" Timberwolves"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" MIN"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Pelicans"] {
+.meta[class*=" NOP"] .author {
+  padding-right: 1rem;
   color: #B4975A;
   background-color: #002B5C;
-  border: none; }
-  .comment .meta[class*=" Pelicans"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" NOP"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Knicks"] {
+.meta[class*=" NYK"] .author {
+  padding-right: 1rem;
   color: #F58426;
   background-color: #006BB6;
-  border: none; }
-  .comment .meta[class*=" Knicks"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" NYK"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Thunder"] {
+.meta[class*=" OKC"] .author {
+  padding-right: 1rem;
   color: #007DC3;
   background-color: #F05133;
-  border: none; }
-  .comment .meta[class*=" Thunder"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" OKC"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Magic"] {
+.meta[class*=" ORL"] .author {
+  padding-right: 1rem;
   color: #C4CED3;
   background-color: #007DC5;
-  border: none; }
-  .comment .meta[class*=" Magic"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" ORL"] .flair {
+  display: none; }
 
-.comment .meta[class*=" 76ers"] {
+.meta[class*=" PHI"] .author {
+  padding-right: 1rem;
   color: #FFFFFF;
   background-color: #006BB6;
-  border: none; }
-  .comment .meta[class*=" 76ers"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" PHI"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Suns"] {
+.meta[class*=" PHX"] .author {
+  padding-right: 1rem;
   color: #E56020;
   background-color: #1D1160;
-  border: none; }
-  .comment .meta[class*=" Suns"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" PHX"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Blazers"] {
+.meta[class*=" POR"] .author {
+  padding-right: 1rem;
   color: #F0163A;
   background-color: #B6BFBF;
-  border: none; }
-  .comment .meta[class*=" Blazers"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" POR"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Kings"] {
+.meta[class*=" SAC"] .author {
+  padding-right: 1rem;
   color: #FFFFFF;
   background-color: #724C9F;
-  border: none; }
-  .comment .meta[class*=" Kings"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" SAC"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Spurs"] {
+.meta[class*=" SAS"] .author {
+  padding-right: 1rem;
   color: #000000;
   background-color: #B6BFBF;
-  border: none; }
-  .comment .meta[class*=" Spurs"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" SAS"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Raptors"] {
+.meta[class*=" TOR"] .author {
+  padding-right: 1rem;
   color: #C4CED3;
   background-color: #CE1141;
-  border: none; }
-  .comment .meta[class*=" Raptors"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" TOR"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Jazz"] {
+.meta[class*=" UTA"] .author {
+  padding-right: 1rem;
   color: #F9A01B;
   background-color: #00471B;
-  border: none; }
-  .comment .meta[class*=" Jazz"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" UTA"] .flair {
+  display: none; }
 
-.comment .meta[class*=" Wizards"] {
+.meta[class*=" WSH"] .author {
+  padding-right: 1rem;
   color: #002566;
   background-color: #F5002F;
-  border: none; }
-  .comment .meta[class*=" Wizards"] .flair {
-    display: none; }
+  text-shadow: 1px 1px 0 transparent; }
+.meta[class*=" WSH"] .flair {
+  display: none; }
 
 .op, .flair {
   font-size: 90%; }
 
 .op {
-  padding: 0 0.35em;
-  background-color: #555;
+  padding: 0 0.25rem;
+  background-color: black;
   border: 1px solid white;
   color: white;
   display: inline-block;
-  margin-left: 5px; }
+  margin: 0 0.25rem; }
 
 .comment .score {
   line-height: 0;
-  margin-right: 5px;
+  margin-left: 0.25rem;
   font-size: 110%;
   font-weight: bold; }
+
+.comment .body {
+  padding: 1rem;
+  padding-top: 0.5rem; }
 
 .topLevelComment {
   margin: 0.75rem 0; }
