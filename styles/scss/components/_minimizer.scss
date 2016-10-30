@@ -7,7 +7,7 @@
 	position: relative;
 }
 .collapser label{
-	color: #999;
+	color: $faded-text;
 	padding: 0.2em;
 	cursor: pointer;
 	position: absolute;
@@ -34,5 +34,5 @@
 .collapser input[type="checkbox"]:checked ~ label{
 	transform: rotate(90deg);
 	right: 1.1rem;
-	top: 0.7rem;
+	top: 0.3rem;
 }

@@ -1,9 +1,10 @@
 /* Utility classes */
 @import 'utility/reset';
+@import 'utility/colors';
+@import 'utility/sizes';
 @import 'utility/core';
 @import 'utility/layout';
 @import 'utility/animations';
-@import 'utility/colors';
 
 /* Components */
 @import 'components/minimizer';

@@ -227,12 +227,3 @@ $teams: (
 	// 	dark-bkg	: 
 	// ),
 );
-
-
-@each $team, $colors in $teams {
-	.meta[class*=" #{$team}"]{
-		color: map-get($colors, primary-fore);
-		// background-color: map-get($colors, primary-back);
-		border-bottom: 2px solid map-get($colors, primary-back);
-	}
-}

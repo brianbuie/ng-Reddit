@@ -1,24 +1,22 @@
-<div class="comment container">
+<div class="comment">
 	<div class="meta flexer semiCollapsable {{comment.author_flair_css_class}}">
-		<div class="stats">
-			<h2 class="score">{{ comment.score | kthousand }}</h2>
-		</div>
-		<div class="flex-grow">
-			<span class="author">
-				{{ comment.author }}
-			</span>
-			<span class="op" ng-if="comment.author === op">
-				OP
-			</span>
-			<span class="flair" ng-if="comment.author_flair_css_class">
-				{{ comment.author_flair_text }}
-			</span>
-		</div>
+		<span class="score">
+			{{ comment.score | kthousand }}
+		</span>
+		<span class="author">
+			{{ comment.author }}
+		</span>
+		<span class="op" ng-if="comment.author === op">
+			OP
+		</span>
+		<span class="flair" ng-if="comment.author_flair_css_class">
+			{{ comment.author_flair_text }}
+		</span>
 	</div>
 	<div class="collapsable">
-		<div ng-bind-html="comment.body_html | html">
+		<div ng-bind-html="comment.body_html | html" class="container">
 		</div>
-		<div class="reply fadeIn" ng-repeat="singleComment in comment.replies track by singleComment.id">
+		<div class="reply container fadeIn" ng-repeat="singleComment in comment.replies track by singleComment.id">
 			<comment comment="singleComment" op="op"></comment>
 		</div>
 	</div>
