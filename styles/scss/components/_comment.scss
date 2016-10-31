@@ -1,28 +1,43 @@
 .meta{
-	display: inline-block;
+	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	padding-bottom: 0;
 }
-
-.author{
-	display: inline-block;
-	font-weight: bold;
-	padding: $md-space 0 $md-space $xl-space;
-}
-
-.flair{
-	margin-left: $sm-space;
-	color: $faded-text;
+.user{
+	flex-grow: 0;
+	padding: 0 $xl-space;
+	display: flex;
+	align-items: center;
+	.author{
+		display: inline-block;
+		padding: $md-space 0;
+		font-weight: bold;
+	}
+	svg{
+		height: 1.65rem;
+		display: block;
+		width: auto;
+		margin-right: $lg-space;
+	}
+	.flair{
+		display: inline-block;
+		margin-left: $sm-space;
+		color: $faded-text;
+	}
 }
 
 @each $team, $colors in $teams {
 	.meta[class*=" #{$team}"]{
-		.author{
+		.user{
 			padding-right: $xl-space;
 			color: map-get($colors, foreground);
 			background-color: map-get($colors, background);
-			text-shadow: 1px 1px 0 map-get($colors, shadow);
+			border-bottom: 1px solid map-get($colors, border);
+		
+			svg .primary{
+				fill: map-get($colors, logo);
+			}
 		}
 		.flair{
 			display: none;
@@ -44,8 +59,8 @@
 }
 
 .comment .score{
-	line-height: 0;
-	margin-left: $sm-space;
+	flex-grow: 0;
+	margin-left: $lg-space;
 	font-size: 110%;
 	font-weight: bold;
 }
