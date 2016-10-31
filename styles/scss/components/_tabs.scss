@@ -16,17 +16,17 @@ header:not(.waiting) tabs:hover{
 .tab{
 	flex-grow: 1;
 	padding: 0.6em;
-	color: #888;
+	color: $default-text;
 	text-align: center;
 }
 
 .tab.active{
 	padding-bottom: 0.3em;
-	border-bottom: 0.3em solid #F73906;
-	color: #F73906;
+	border-bottom: 0.3em solid $brand;
+	color: $brand;
 	cursor: default;
 }
 
 .tab:not(.active):hover{
-	background-color: #eee;
+	background-color: $faded-bkg;
 }

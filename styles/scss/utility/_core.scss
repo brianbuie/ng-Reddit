@@ -6,7 +6,7 @@ body{
 	background: #ddd;
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.4;
-	color: #333;
+	color: $default-text;
 }
 
 strong{
@@ -36,7 +36,7 @@ h4{
 }
 
 a{
-	color: #F73906;
+	color: $brand;
 }
 
 header{
@@ -60,7 +60,7 @@ blockquote{
 }
 
 .material{
-	background-color: #fcfcfc;
+	background-color: $material-bkg;
 	box-shadow: 0 0 3px rgba(0,0,0,0.12);
 }
 
@@ -77,18 +77,18 @@ blockquote{
 }
 
 button{
-	background-color: #fff;
-	color: #F73906;
+	background-color: $material-bkg;
+	color: $brand;
 	transition: all .2s ease;
 }
 
 button:hover{
-	background-color: #F73906;
-	color: #fff;
+	background-color: $brand;
+	color: $material-bkg;
 }
 
 .close{
-	color: #999;
+	color: $faded-text;
 	font-size: 120%;
 	padding: 0.2em;
 	cursor: pointer;
@@ -100,7 +100,6 @@ button:hover{
 .material-icons{
 	font-size: 1.4rem;
 	line-height: 0;
-
 }
 
 .error{
@@ -108,5 +107,5 @@ button:hover{
 }
 
 .inactive{
-	background-color: #eee;
+	background-color: $faded-bkg;
 }
