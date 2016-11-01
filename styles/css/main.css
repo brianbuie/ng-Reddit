@@ -311,7 +311,7 @@ header.waiting > *:not(form) {
 
 .user {
   flex-grow: 0;
-  padding: 0 1rem;
+  padding: 0 1rem 0 0.25rem;
   display: flex;
   align-items: center; }
   .user .author {
@@ -325,7 +325,7 @@ header.waiting > *:not(form) {
     margin-right: 0.75rem; }
   .user .flair {
     display: inline-block;
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
     color: #999; }
 
 .meta[class*=" ATL"] .user {
@@ -333,7 +333,7 @@ header.waiting > *:not(form) {
   color: #FFFFFF;
   background-color: #E03A3E;
   border-bottom: 1px solid #C3D600; }
-  .meta[class*=" ATL"] .user svg .primary {
+  .meta[class*=" ATL"] .user svg path {
     fill: #FFFFFF; }
 .meta[class*=" ATL"] .flair {
   display: none; }
@@ -343,7 +343,7 @@ header.waiting > *:not(form) {
   color: #FFFFFF;
   background-color: #000000;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" BKN"] .user svg .primary {
+  .meta[class*=" BKN"] .user svg path {
     fill: #FFFFFF; }
 .meta[class*=" BKN"] .flair {
   display: none; }
@@ -353,8 +353,8 @@ header.waiting > *:not(form) {
   color: #FFFFFF;
   background-color: #008348;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" BOS"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" BOS"] .user svg path {
+    fill: #FFFFFF; }
 .meta[class*=" BOS"] .flair {
   display: none; }
 
@@ -363,18 +363,18 @@ header.waiting > *:not(form) {
   color: #008CA8;
   background-color: #1D1160;
   border-bottom: 1px solid #FFFFFF; }
-  .meta[class*=" CHA"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" CHA"] .user svg path {
+    fill: #008CA8; }
 .meta[class*=" CHA"] .flair {
   display: none; }
 
 .meta[class*=" CHI"] .user {
   padding-right: 1rem;
-  color: #FFFFFF;
-  background-color: #CE1141;
+  color: #CE1141;
+  background-color: #000000;
   border-bottom: 1px solid #000000; }
-  .meta[class*=" CHI"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" CHI"] .user svg path {
+    fill: #CE1141; }
 .meta[class*=" CHI"] .flair {
   display: none; }
 
@@ -383,8 +383,8 @@ header.waiting > *:not(form) {
   color: #860038;
   background-color: #FDBB30;
   border-bottom: 1px solid #002D62; }
-  .meta[class*=" CLE"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" CLE"] .user svg path {
+    fill: #860038; }
 .meta[class*=" CLE"] .flair {
   display: none; }
 
@@ -393,8 +393,8 @@ header.waiting > *:not(form) {
   color: #007DC5;
   background-color: #20385B;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" DAL"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" DAL"] .user svg path {
+    fill: #007DC5; }
 .meta[class*=" DAL"] .flair {
   display: none; }
 
@@ -403,8 +403,8 @@ header.waiting > *:not(form) {
   color: #FFB20F;
   background-color: #4FA8FF;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" DEN"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" DEN"] .user svg path {
+    fill: #FFB20F; }
 .meta[class*=" DEN"] .flair {
   display: none; }
 
@@ -413,8 +413,8 @@ header.waiting > *:not(form) {
   color: #ED174C;
   background-color: #006BB6;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" DET"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" DET"] .user svg path {
+    fill: #ED174C; }
 .meta[class*=" DET"] .flair {
   display: none; }
 
@@ -423,8 +423,8 @@ header.waiting > *:not(form) {
   color: #FDB927;
   background-color: #006BB6;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" GSW"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" GSW"] .user svg path {
+    fill: #FDB927; }
 .meta[class*=" GSW"] .flair {
   display: none; }
 
@@ -433,8 +433,8 @@ header.waiting > *:not(form) {
   color: #CE1141;
   background-color: #C4CED3;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" HOU"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" HOU"] .user svg path {
+    fill: #CE1141; }
 .meta[class*=" HOU"] .flair {
   display: none; }
 
@@ -443,18 +443,18 @@ header.waiting > *:not(form) {
   color: #FFC633;
   background-color: #00275D;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" IND"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" IND"] .user svg path {
+    fill: #FFC633; }
 .meta[class*=" IND"] .flair {
   display: none; }
 
 .meta[class*=" LAC"] .user {
   padding-right: 1rem;
-  color: #00285D;
-  background-color: #ED174C;
+  color: #ED174C;
+  background-color: #FFFFFF;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" LAC"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" LAC"] .user svg path {
+    fill: #ED174C; }
 .meta[class*=" LAC"] .flair {
   display: none; }
 
@@ -463,18 +463,18 @@ header.waiting > *:not(form) {
   color: #FDB927;
   background-color: #552582;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" LAL"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" LAL"] .user svg path {
+    fill: #FDB927; }
 .meta[class*=" LAL"] .flair {
   display: none; }
 
 .meta[class*=" MEM"] .user {
   padding-right: 1rem;
-  color: #BBD1E4;
-  background-color: #6189B9;
+  color: #6189B9;
+  background-color: #23375B;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" MEM"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" MEM"] .user svg path {
+    fill: #6189B9; }
 .meta[class*=" MEM"] .flair {
   display: none; }
 
@@ -483,8 +483,8 @@ header.waiting > *:not(form) {
   color: #FFFFFF;
   background-color: #98002E;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" MIA"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" MIA"] .user svg path {
+    fill: #FFFFFF; }
 .meta[class*=" MIA"] .flair {
   display: none; }
 
@@ -493,8 +493,8 @@ header.waiting > *:not(form) {
   color: #EEE1C6;
   background-color: #00471B;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" MIL"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" MIL"] .user svg path {
+    fill: #EEE1C6; }
 .meta[class*=" MIL"] .flair {
   display: none; }
 
@@ -503,8 +503,8 @@ header.waiting > *:not(form) {
   color: #C4CED3;
   background-color: #005083;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" MIN"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" MIN"] .user svg path {
+    fill: #C4CED3; }
 .meta[class*=" MIN"] .flair {
   display: none; }
 
@@ -513,8 +513,8 @@ header.waiting > *:not(form) {
   color: #B4975A;
   background-color: #002B5C;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" NOP"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" NOP"] .user svg path {
+    fill: #B4975A; }
 .meta[class*=" NOP"] .flair {
   display: none; }
 
@@ -523,8 +523,8 @@ header.waiting > *:not(form) {
   color: #F58426;
   background-color: #006BB6;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" NYK"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" NYK"] .user svg path {
+    fill: #F58426; }
 .meta[class*=" NYK"] .flair {
   display: none; }
 
@@ -533,8 +533,8 @@ header.waiting > *:not(form) {
   color: #007DC3;
   background-color: #F05133;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" OKC"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" OKC"] .user svg path {
+    fill: #007DC3; }
 .meta[class*=" OKC"] .flair {
   display: none; }
 
@@ -543,8 +543,8 @@ header.waiting > *:not(form) {
   color: #C4CED3;
   background-color: #007DC5;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" ORL"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" ORL"] .user svg path {
+    fill: #C4CED3; }
 .meta[class*=" ORL"] .flair {
   display: none; }
 
@@ -553,8 +553,8 @@ header.waiting > *:not(form) {
   color: #FFFFFF;
   background-color: #006BB6;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" PHI"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" PHI"] .user svg path {
+    fill: #FFFFFF; }
 .meta[class*=" PHI"] .flair {
   display: none; }
 
@@ -563,8 +563,8 @@ header.waiting > *:not(form) {
   color: #E56020;
   background-color: #1D1160;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" PHX"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" PHX"] .user svg path {
+    fill: #E56020; }
 .meta[class*=" PHX"] .flair {
   display: none; }
 
@@ -573,8 +573,8 @@ header.waiting > *:not(form) {
   color: #F0163A;
   background-color: #B6BFBF;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" POR"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" POR"] .user svg path {
+    fill: #F0163A; }
 .meta[class*=" POR"] .flair {
   display: none; }
 
@@ -583,8 +583,8 @@ header.waiting > *:not(form) {
   color: #FFFFFF;
   background-color: #724C9F;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" SAC"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" SAC"] .user svg path {
+    fill: #FFFFFF; }
 .meta[class*=" SAC"] .flair {
   display: none; }
 
@@ -593,8 +593,8 @@ header.waiting > *:not(form) {
   color: #000000;
   background-color: #B6BFBF;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" SAS"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" SAS"] .user svg path {
+    fill: #000000; }
 .meta[class*=" SAS"] .flair {
   display: none; }
 
@@ -603,18 +603,18 @@ header.waiting > *:not(form) {
   color: #C4CED3;
   background-color: #CE1141;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" TOR"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" TOR"] .user svg path {
+    fill: #C4CED3; }
 .meta[class*=" TOR"] .flair {
   display: none; }
 
 .meta[class*=" UTA"] .user {
   padding-right: 1rem;
   color: #F9A01B;
-  background-color: #00471B;
+  background-color: #002B5C;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" UTA"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" UTA"] .user svg path {
+    fill: #F9A01B; }
 .meta[class*=" UTA"] .flair {
   display: none; }
 
@@ -623,8 +623,8 @@ header.waiting > *:not(form) {
   color: #002566;
   background-color: #F5002F;
   border-bottom: 1px solid transparent; }
-  .meta[class*=" WSH"] .user svg .primary {
-    fill: transparent; }
+  .meta[class*=" WSH"] .user svg path {
+    fill: #002566; }
 .meta[class*=" WSH"] .flair {
   display: none; }
 

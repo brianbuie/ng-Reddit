@@ -6,7 +6,7 @@
 }
 .user{
 	flex-grow: 0;
-	padding: 0 $xl-space;
+	padding: 0 $xl-space 0 $sm-space;
 	display: flex;
 	align-items: center;
 	.author{
@@ -22,7 +22,7 @@
 	}
 	.flair{
 		display: inline-block;
-		margin-left: $sm-space;
+		margin-left: $md-space;
 		color: $faded-text;
 	}
 }
@@ -35,8 +35,8 @@
 			background-color: map-get($colors, background);
 			border-bottom: 1px solid map-get($colors, border);
 		
-			svg .primary{
-				fill: map-get($colors, logo);
+			svg path{
+				fill: map-get($colors, foreground);
 			}
 		}
 		.flair{

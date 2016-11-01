@@ -10,8 +10,8 @@
     	// converts various r/nba flairs to team's 3 letter abbreviation
 
     	return function(author_flair_css_class){
-            var flair = author_flair_css_class
-            if(!flair) return
+            var flair = ""
+            if(!author_flair_css_class) return
 
             // all teams and valid reddit flair aliases
             var teams = {
@@ -51,7 +51,7 @@
                     var alias = teams[team][aliasKey]
                     // if the alias is found within the flair
                     // set the flair to the team abbreviation that alias belongs to
-                    if( flair.toLowerCase().indexOf(alias.toLowerCase()) > -1 ){
+                    if( author_flair_css_class.toLowerCase().indexOf(alias.toLowerCase()) > -1 ){
                         flair = team
                     }
                 }

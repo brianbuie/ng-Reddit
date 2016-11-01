@@ -2,8 +2,8 @@
 	<div class="meta flexer semiCollapsable {{comment.author_flair_css_class | nbaflair}}">
 		<div class="user">
 			<ng-include 
-				ng-init="svgUrl = 'media/teams/' + (comment.author_flair_css_class | nbaflair) + '.svg'" 
-				src="svgUrl" ng-if="comment.author_flair_css_class"> 
+				ng-init="svgUrl = 'media/teams/' + (comment.author_flair_css_class | nbaflair).toLowerCase() + '.svg'" 
+				src="svgUrl" ng-if="comment.author_flair_css_class | nbaflair"> 
 			</ng-include>
 			<div class="author">
 				{{ comment.author }}
