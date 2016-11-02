@@ -15,17 +15,22 @@
 		<input type="checkbox" id="selfTextCollapse">
 		<label for="selfTextCollapse"><i class="material-icons">keyboard_arrow_down</i></label>
 		<div class="flexer">
-			<div class="meta container material flex-grow {{vm.head.author_flair_css_class | nbaflair}}">
-				posted by 
-				<span class="author">
-					{{ vm.head.author }}
-				</span>
-				<span class="op">
-					OP
-				</span>
-				<span class="flair" ng-if="vm.head.author_flair_css_class">
-					{{ vm.head.author_flair_text }}
-				</span>
+			<div class="meta material flex-grow {{vm.head.author_flair_css_class | nbaflair}}">
+				<div class="user">
+					<ng-include 
+						ng-init="svgUrl = 'media/teams/' + (vm.head.author_flair_css_class | nbaflair).toLowerCase() + '.svg'" 
+						src="svgUrl" ng-if="vm.head.author_flair_css_class | nbaflair"> 
+					</ng-include>
+					<div class="author">
+						{{ vm.head.author }}
+					</div>
+					<div class="op">
+						OP
+					</div>
+					<span class="flair" ng-if="vm.head.author_flair_text">
+						{{ vm.head.author_flair_text }}
+					</span>
+				</div>
 			</div>
 		</div>
 		<article class="container inactive collapsable" ng-if="vm.head.selftext_html" ng-bind-html="vm.head.selftext_html | html">

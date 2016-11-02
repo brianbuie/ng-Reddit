@@ -1,6 +1,9 @@
 <div class="comment">
 	<div class="meta flexer semiCollapsable {{comment.author_flair_css_class | nbaflair}}">
 		<div class="user">
+			<div class="score">
+				{{ comment.score | kthousand }}
+			</div>
 			<ng-include 
 				ng-init="svgUrl = 'media/teams/' + (comment.author_flair_css_class | nbaflair).toLowerCase() + '.svg'" 
 				src="svgUrl" ng-if="comment.author_flair_css_class | nbaflair"> 
@@ -14,9 +17,6 @@
 			<span class="flair" ng-if="comment.author_flair_css_class">
 				{{ comment.author_flair_text }}
 			</span>
-		</div>
-		<div class="score">
-			{{ comment.score | kthousand }}
 		</div>
 	</div>
 	<div class="collapsable">

@@ -94,6 +94,7 @@
             }, function(){
             if(vm.controllerType === "comments"){
                 vm.url = vm.global.postUrl
+                vm.head = ""
                 vm.removeCollection()
                 vm.getCollection()
             }

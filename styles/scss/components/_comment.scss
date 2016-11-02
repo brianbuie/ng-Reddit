@@ -2,41 +2,57 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	padding-bottom: 0;
+}
+header .user{
+	padding-left: $md-space;
 }
 .user{
 	flex-grow: 0;
-	padding: 0 $xl-space 0 $sm-space;
 	display: flex;
 	align-items: center;
+
+	.score{
+		padding: 0 $md-space 0 $xl-space;
+		font-weight: bold;
+	}
 	.author{
 		display: inline-block;
-		padding: $md-space 0;
+		padding: $md-space $xl-space $md-space $md-space;
 		font-weight: bold;
 	}
 	svg{
 		height: 1.65rem;
 		display: block;
 		width: auto;
-		margin-right: $lg-space;
+		padding: 0 $sm-space;
 	}
 	.flair{
 		display: inline-block;
-		margin-left: $md-space;
 		color: $faded-text;
+		font-size: 90%;
+		line-height: 1;
+	}
+	.op{
+		font-size: 90%;
+		padding: 0 $sm-space;
+		background-color: $default-text;
+		color: $material-bkg;
+		display: inline-block;
+		margin-right: $lg-space;
 	}
 }
 
 @each $team, $colors in $teams {
-	.meta[class*=" #{$team}"]{
+	.meta.#{$team}{
 		.user{
-			padding-right: $xl-space;
 			color: map-get($colors, foreground);
 			background-color: map-get($colors, background);
-			border-bottom: 1px solid map-get($colors, border);
-		
 			svg path{
 				fill: map-get($colors, foreground);
+			}
+			.op{
+				color: map-get($colors, background);
+				background-color: map-get($colors, foreground);
 			}
 		}
 		.flair{
@@ -45,29 +61,16 @@
 	}
 }
 
-.op, .flair{
-	font-size: 90%;
-}
+.comment{
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
 
-.op{
-	padding: 0 $sm-space;
-	background-color: black;
-	border: 1px solid white;
-	color: white;
-	display: inline-block;
-	margin: 0 $sm-space;
-}
-
-.comment .score{
-	flex-grow: 0;
-	margin-left: $lg-space;
-	font-size: 110%;
-	font-weight: bold;
-}
-
-.comment .body{
-	padding: $xl-space;
-	padding-top: $md-space;
+	.body{
+		padding: $xl-space;
+		padding-top: $md-space;
+	}
 }
 
 .topLevelComment{
@@ -79,9 +82,3 @@
 	padding-top: 0;
 }
 
-.comment{
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	word-break: break-word;
-	hyphens: auto;
-}
