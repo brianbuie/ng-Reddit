@@ -14,6 +14,7 @@ header .user{
 	.score{
 		padding: 0 $md-space 0 $xl-space;
 		font-weight: bold;
+		font-size: 120%;
 	}
 	.author{
 		display: inline-block;
@@ -22,7 +23,7 @@ header .user{
 	}
 	svg{
 		height: 1.65rem;
-		display: block;
+		display: none;
 		width: auto;
 		padding: 0 $sm-space;
 	}
@@ -43,12 +44,16 @@ header .user{
 }
 
 @each $team, $colors in $teams {
-	.meta.#{$team}{
+	.nba .meta.#{$team}{
 		.user{
 			color: map-get($colors, foreground);
 			background-color: map-get($colors, background);
-			svg path{
-				fill: map-get($colors, foreground);
+			svg{
+				display: block;
+
+				path{
+					fill: map-get($colors, foreground);
+				}
 			}
 			.op{
 				color: map-get($colors, background);

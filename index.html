@@ -25,7 +25,7 @@
 
 	<div id="comments" class="container flex-grow" ng-controller="CoreCtrl as vm">
 		{{ vm.setControllerType('comments') }}
-		<ng-include src="'app/templates/comments.html'"> </ng-include>
+		<ng-include src="'app/templates/comments.html'" ng-class="vm.head.subreddit"> </ng-include>
 	</div>
 
 </section>

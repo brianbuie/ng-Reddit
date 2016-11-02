@@ -317,14 +317,15 @@ header .user {
   align-items: center; }
   .user .score {
     padding: 0 0.5rem 0 1rem;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 120%; }
   .user .author {
     display: inline-block;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     font-weight: bold; }
   .user svg {
     height: 1.65rem;
-    display: block;
+    display: none;
     width: auto;
     padding: 0 0.25rem; }
   .user .flair {
@@ -340,334 +341,394 @@ header .user {
     display: inline-block;
     margin-right: 0.75rem; }
 
-.meta.ATL .user {
+.nba .meta.ATL .user {
   color: #FFFFFF;
   background-color: #E03A3E; }
-  .meta.ATL .user svg path {
-    fill: #FFFFFF; }
-  .meta.ATL .user .op {
+  .nba .meta.ATL .user svg {
+    display: block; }
+    .nba .meta.ATL .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.ATL .user .op {
     color: #E03A3E;
     background-color: #FFFFFF; }
-.meta.ATL .flair {
+.nba .meta.ATL .flair {
   display: none; }
 
-.meta.BKN .user {
+.nba .meta.BKN .user {
   color: #FFFFFF;
   background-color: #000000; }
-  .meta.BKN .user svg path {
-    fill: #FFFFFF; }
-  .meta.BKN .user .op {
+  .nba .meta.BKN .user svg {
+    display: block; }
+    .nba .meta.BKN .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.BKN .user .op {
     color: #000000;
     background-color: #FFFFFF; }
-.meta.BKN .flair {
+.nba .meta.BKN .flair {
   display: none; }
 
-.meta.BOS .user {
+.nba .meta.BOS .user {
   color: #FFFFFF;
   background-color: #008348; }
-  .meta.BOS .user svg path {
-    fill: #FFFFFF; }
-  .meta.BOS .user .op {
+  .nba .meta.BOS .user svg {
+    display: block; }
+    .nba .meta.BOS .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.BOS .user .op {
     color: #008348;
     background-color: #FFFFFF; }
-.meta.BOS .flair {
+.nba .meta.BOS .flair {
   display: none; }
 
-.meta.CHA .user {
+.nba .meta.CHA .user {
   color: #1D1160;
   background-color: #008CA8; }
-  .meta.CHA .user svg path {
-    fill: #1D1160; }
-  .meta.CHA .user .op {
+  .nba .meta.CHA .user svg {
+    display: block; }
+    .nba .meta.CHA .user svg path {
+      fill: #1D1160; }
+  .nba .meta.CHA .user .op {
     color: #008CA8;
     background-color: #1D1160; }
-.meta.CHA .flair {
+.nba .meta.CHA .flair {
   display: none; }
 
-.meta.CHI .user {
+.nba .meta.CHI .user {
   color: #FFFFFF;
   background-color: #CE1141; }
-  .meta.CHI .user svg path {
-    fill: #FFFFFF; }
-  .meta.CHI .user .op {
+  .nba .meta.CHI .user svg {
+    display: block; }
+    .nba .meta.CHI .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.CHI .user .op {
     color: #CE1141;
     background-color: #FFFFFF; }
-.meta.CHI .flair {
+.nba .meta.CHI .flair {
   display: none; }
 
-.meta.CLE .user {
+.nba .meta.CLE .user {
   color: #860038;
   background-color: #FDBB30; }
-  .meta.CLE .user svg path {
-    fill: #860038; }
-  .meta.CLE .user .op {
+  .nba .meta.CLE .user svg {
+    display: block; }
+    .nba .meta.CLE .user svg path {
+      fill: #860038; }
+  .nba .meta.CLE .user .op {
     color: #FDBB30;
     background-color: #860038; }
-.meta.CLE .flair {
+.nba .meta.CLE .flair {
   display: none; }
 
-.meta.DAL .user {
+.nba .meta.DAL .user {
   color: #007DC5;
   background-color: #C4CED3; }
-  .meta.DAL .user svg path {
-    fill: #007DC5; }
-  .meta.DAL .user .op {
+  .nba .meta.DAL .user svg {
+    display: block; }
+    .nba .meta.DAL .user svg path {
+      fill: #007DC5; }
+  .nba .meta.DAL .user .op {
     color: #C4CED3;
     background-color: #007DC5; }
-.meta.DAL .flair {
+.nba .meta.DAL .flair {
   display: none; }
 
-.meta.DEN .user {
+.nba .meta.DEN .user {
   color: #FFB20F;
   background-color: #4FA8FF; }
-  .meta.DEN .user svg path {
-    fill: #FFB20F; }
-  .meta.DEN .user .op {
+  .nba .meta.DEN .user svg {
+    display: block; }
+    .nba .meta.DEN .user svg path {
+      fill: #FFB20F; }
+  .nba .meta.DEN .user .op {
     color: #4FA8FF;
     background-color: #FFB20F; }
-.meta.DEN .flair {
+.nba .meta.DEN .flair {
   display: none; }
 
-.meta.DET .user {
+.nba .meta.DET .user {
   color: #FFFFFF;
   background-color: #006BB6; }
-  .meta.DET .user svg path {
-    fill: #FFFFFF; }
-  .meta.DET .user .op {
+  .nba .meta.DET .user svg {
+    display: block; }
+    .nba .meta.DET .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.DET .user .op {
     color: #006BB6;
     background-color: #FFFFFF; }
-.meta.DET .flair {
+.nba .meta.DET .flair {
   display: none; }
 
-.meta.GSW .user {
+.nba .meta.GSW .user {
   color: #FDB927;
   background-color: #006BB6; }
-  .meta.GSW .user svg path {
-    fill: #FDB927; }
-  .meta.GSW .user .op {
+  .nba .meta.GSW .user svg {
+    display: block; }
+    .nba .meta.GSW .user svg path {
+      fill: #FDB927; }
+  .nba .meta.GSW .user .op {
     color: #006BB6;
     background-color: #FDB927; }
-.meta.GSW .flair {
+.nba .meta.GSW .flair {
   display: none; }
 
-.meta.HOU .user {
+.nba .meta.HOU .user {
   color: #CE1141;
   background-color: #C4CED3; }
-  .meta.HOU .user svg path {
-    fill: #CE1141; }
-  .meta.HOU .user .op {
+  .nba .meta.HOU .user svg {
+    display: block; }
+    .nba .meta.HOU .user svg path {
+      fill: #CE1141; }
+  .nba .meta.HOU .user .op {
     color: #C4CED3;
     background-color: #CE1141; }
-.meta.HOU .flair {
+.nba .meta.HOU .flair {
   display: none; }
 
-.meta.IND .user {
+.nba .meta.IND .user {
   color: #FFC633;
   background-color: #00275D; }
-  .meta.IND .user svg path {
-    fill: #FFC633; }
-  .meta.IND .user .op {
+  .nba .meta.IND .user svg {
+    display: block; }
+    .nba .meta.IND .user svg path {
+      fill: #FFC633; }
+  .nba .meta.IND .user .op {
     color: #00275D;
     background-color: #FFC633; }
-.meta.IND .flair {
+.nba .meta.IND .flair {
   display: none; }
 
-.meta.LAC .user {
+.nba .meta.LAC .user {
   color: #ED174C;
   background-color: #FFFFFF; }
-  .meta.LAC .user svg path {
-    fill: #ED174C; }
-  .meta.LAC .user .op {
+  .nba .meta.LAC .user svg {
+    display: block; }
+    .nba .meta.LAC .user svg path {
+      fill: #ED174C; }
+  .nba .meta.LAC .user .op {
     color: #FFFFFF;
     background-color: #ED174C; }
-.meta.LAC .flair {
+.nba .meta.LAC .flair {
   display: none; }
 
-.meta.LAL .user {
+.nba .meta.LAL .user {
   color: #FDB927;
   background-color: #552582; }
-  .meta.LAL .user svg path {
-    fill: #FDB927; }
-  .meta.LAL .user .op {
+  .nba .meta.LAL .user svg {
+    display: block; }
+    .nba .meta.LAL .user svg path {
+      fill: #FDB927; }
+  .nba .meta.LAL .user .op {
     color: #552582;
     background-color: #FDB927; }
-.meta.LAL .flair {
+.nba .meta.LAL .flair {
   display: none; }
 
-.meta.MEM .user {
+.nba .meta.MEM .user {
   color: #6189B9;
   background-color: #23375B; }
-  .meta.MEM .user svg path {
-    fill: #6189B9; }
-  .meta.MEM .user .op {
+  .nba .meta.MEM .user svg {
+    display: block; }
+    .nba .meta.MEM .user svg path {
+      fill: #6189B9; }
+  .nba .meta.MEM .user .op {
     color: #23375B;
     background-color: #6189B9; }
-.meta.MEM .flair {
+.nba .meta.MEM .flair {
   display: none; }
 
-.meta.MIA .user {
+.nba .meta.MIA .user {
   color: #FFFFFF;
   background-color: #98002E; }
-  .meta.MIA .user svg path {
-    fill: #FFFFFF; }
-  .meta.MIA .user .op {
+  .nba .meta.MIA .user svg {
+    display: block; }
+    .nba .meta.MIA .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.MIA .user .op {
     color: #98002E;
     background-color: #FFFFFF; }
-.meta.MIA .flair {
+.nba .meta.MIA .flair {
   display: none; }
 
-.meta.MIL .user {
+.nba .meta.MIL .user {
   color: #EEE1C6;
   background-color: #00471B; }
-  .meta.MIL .user svg path {
-    fill: #EEE1C6; }
-  .meta.MIL .user .op {
+  .nba .meta.MIL .user svg {
+    display: block; }
+    .nba .meta.MIL .user svg path {
+      fill: #EEE1C6; }
+  .nba .meta.MIL .user .op {
     color: #00471B;
     background-color: #EEE1C6; }
-.meta.MIL .flair {
+.nba .meta.MIL .flair {
   display: none; }
 
-.meta.MIN .user {
+.nba .meta.MIN .user {
   color: #C4CED3;
   background-color: #005083; }
-  .meta.MIN .user svg path {
-    fill: #C4CED3; }
-  .meta.MIN .user .op {
+  .nba .meta.MIN .user svg {
+    display: block; }
+    .nba .meta.MIN .user svg path {
+      fill: #C4CED3; }
+  .nba .meta.MIN .user .op {
     color: #005083;
     background-color: #C4CED3; }
-.meta.MIN .flair {
+.nba .meta.MIN .flair {
   display: none; }
 
-.meta.NOP .user {
+.nba .meta.NOP .user {
   color: #B4975A;
   background-color: #002B5C; }
-  .meta.NOP .user svg path {
-    fill: #B4975A; }
-  .meta.NOP .user .op {
+  .nba .meta.NOP .user svg {
+    display: block; }
+    .nba .meta.NOP .user svg path {
+      fill: #B4975A; }
+  .nba .meta.NOP .user .op {
     color: #002B5C;
     background-color: #B4975A; }
-.meta.NOP .flair {
+.nba .meta.NOP .flair {
   display: none; }
 
-.meta.NYK .user {
+.nba .meta.NYK .user {
   color: #F58426;
   background-color: #006BB6; }
-  .meta.NYK .user svg path {
-    fill: #F58426; }
-  .meta.NYK .user .op {
+  .nba .meta.NYK .user svg {
+    display: block; }
+    .nba .meta.NYK .user svg path {
+      fill: #F58426; }
+  .nba .meta.NYK .user .op {
     color: #006BB6;
     background-color: #F58426; }
-.meta.NYK .flair {
+.nba .meta.NYK .flair {
   display: none; }
 
-.meta.OKC .user {
+.nba .meta.OKC .user {
   color: #002D62;
   background-color: #F05133; }
-  .meta.OKC .user svg path {
-    fill: #002D62; }
-  .meta.OKC .user .op {
+  .nba .meta.OKC .user svg {
+    display: block; }
+    .nba .meta.OKC .user svg path {
+      fill: #002D62; }
+  .nba .meta.OKC .user .op {
     color: #F05133;
     background-color: #002D62; }
-.meta.OKC .flair {
+.nba .meta.OKC .flair {
   display: none; }
 
-.meta.ORL .user {
+.nba .meta.ORL .user {
   color: #C4CED3;
   background-color: #007DC5; }
-  .meta.ORL .user svg path {
-    fill: #C4CED3; }
-  .meta.ORL .user .op {
+  .nba .meta.ORL .user svg {
+    display: block; }
+    .nba .meta.ORL .user svg path {
+      fill: #C4CED3; }
+  .nba .meta.ORL .user .op {
     color: #007DC5;
     background-color: #C4CED3; }
-.meta.ORL .flair {
+.nba .meta.ORL .flair {
   display: none; }
 
-.meta.PHI .user {
+.nba .meta.PHI .user {
   color: #FFFFFF;
   background-color: #006BB6; }
-  .meta.PHI .user svg path {
-    fill: #FFFFFF; }
-  .meta.PHI .user .op {
+  .nba .meta.PHI .user svg {
+    display: block; }
+    .nba .meta.PHI .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.PHI .user .op {
     color: #006BB6;
     background-color: #FFFFFF; }
-.meta.PHI .flair {
+.nba .meta.PHI .flair {
   display: none; }
 
-.meta.PHX .user {
+.nba .meta.PHX .user {
   color: #E56020;
   background-color: #1D1160; }
-  .meta.PHX .user svg path {
-    fill: #E56020; }
-  .meta.PHX .user .op {
+  .nba .meta.PHX .user svg {
+    display: block; }
+    .nba .meta.PHX .user svg path {
+      fill: #E56020; }
+  .nba .meta.PHX .user .op {
     color: #1D1160;
     background-color: #E56020; }
-.meta.PHX .flair {
+.nba .meta.PHX .flair {
   display: none; }
 
-.meta.POR .user {
+.nba .meta.POR .user {
   color: #F0163A;
   background-color: #B6BFBF; }
-  .meta.POR .user svg path {
-    fill: #F0163A; }
-  .meta.POR .user .op {
+  .nba .meta.POR .user svg {
+    display: block; }
+    .nba .meta.POR .user svg path {
+      fill: #F0163A; }
+  .nba .meta.POR .user .op {
     color: #B6BFBF;
     background-color: #F0163A; }
-.meta.POR .flair {
+.nba .meta.POR .flair {
   display: none; }
 
-.meta.SAC .user {
+.nba .meta.SAC .user {
   color: #FFFFFF;
   background-color: #724C9F; }
-  .meta.SAC .user svg path {
-    fill: #FFFFFF; }
-  .meta.SAC .user .op {
+  .nba .meta.SAC .user svg {
+    display: block; }
+    .nba .meta.SAC .user svg path {
+      fill: #FFFFFF; }
+  .nba .meta.SAC .user .op {
     color: #724C9F;
     background-color: #FFFFFF; }
-.meta.SAC .flair {
+.nba .meta.SAC .flair {
   display: none; }
 
-.meta.SAS .user {
+.nba .meta.SAS .user {
   color: #000000;
   background-color: #B6BFBF; }
-  .meta.SAS .user svg path {
-    fill: #000000; }
-  .meta.SAS .user .op {
+  .nba .meta.SAS .user svg {
+    display: block; }
+    .nba .meta.SAS .user svg path {
+      fill: #000000; }
+  .nba .meta.SAS .user .op {
     color: #B6BFBF;
     background-color: #000000; }
-.meta.SAS .flair {
+.nba .meta.SAS .flair {
   display: none; }
 
-.meta.TOR .user {
+.nba .meta.TOR .user {
   color: #C4CED3;
   background-color: #CE1141; }
-  .meta.TOR .user svg path {
-    fill: #C4CED3; }
-  .meta.TOR .user .op {
+  .nba .meta.TOR .user svg {
+    display: block; }
+    .nba .meta.TOR .user svg path {
+      fill: #C4CED3; }
+  .nba .meta.TOR .user .op {
     color: #CE1141;
     background-color: #C4CED3; }
-.meta.TOR .flair {
+.nba .meta.TOR .flair {
   display: none; }
 
-.meta.UTA .user {
+.nba .meta.UTA .user {
   color: #F9A01B;
   background-color: #002B5C; }
-  .meta.UTA .user svg path {
-    fill: #F9A01B; }
-  .meta.UTA .user .op {
+  .nba .meta.UTA .user svg {
+    display: block; }
+    .nba .meta.UTA .user svg path {
+      fill: #F9A01B; }
+  .nba .meta.UTA .user .op {
     color: #002B5C;
     background-color: #F9A01B; }
-.meta.UTA .flair {
+.nba .meta.UTA .flair {
   display: none; }
 
-.meta.WSH .user {
+.nba .meta.WSH .user {
   color: #002566;
   background-color: #F5002F; }
-  .meta.WSH .user svg path {
-    fill: #002566; }
-  .meta.WSH .user .op {
+  .nba .meta.WSH .user svg {
+    display: block; }
+    .nba .meta.WSH .user svg path {
+      fill: #002566; }
+  .nba .meta.WSH .user .op {
     color: #F5002F;
     background-color: #002566; }
-.meta.WSH .flair {
+.nba .meta.WSH .flair {
   display: none; }
 
 .comment {
