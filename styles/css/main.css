@@ -738,7 +738,8 @@ header .user {
   hyphens: auto; }
   .comment .body {
     padding: 1rem;
-    padding-top: 0.5rem; }
+    padding-top: 0.5rem;
+    font-size: 120%; }
 
 .topLevelComment {
   margin: 0.75rem 0; }
