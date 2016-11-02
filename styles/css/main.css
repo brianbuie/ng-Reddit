@@ -341,395 +341,635 @@ header .user {
     display: inline-block;
     margin-right: 0.75rem; }
 
-.nba .meta.ATL .user {
+.nba .meta.ATL .user,
+.nba .ATL > .meta .user {
   color: #FFFFFF;
   background-color: #E03A3E; }
-  .nba .meta.ATL .user svg {
+  .nba .meta.ATL .user svg,
+  .nba .ATL > .meta .user svg {
     display: block; }
-    .nba .meta.ATL .user svg path {
+    .nba .meta.ATL .user svg path,
+    .nba .ATL > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.ATL .user .op {
+  .nba .meta.ATL .user .op,
+  .nba .ATL > .meta .user .op {
     color: #E03A3E;
     background-color: #FFFFFF; }
-.nba .meta.ATL .flair {
+.nba .meta.ATL .flair,
+.nba .ATL > .meta .flair {
   display: none; }
 
-.nba .meta.BKN .user {
+.comment.ATL {
+  border: 1px solid #E03A3E; }
+
+.nba .meta.BKN .user,
+.nba .BKN > .meta .user {
   color: #FFFFFF;
   background-color: #000000; }
-  .nba .meta.BKN .user svg {
+  .nba .meta.BKN .user svg,
+  .nba .BKN > .meta .user svg {
     display: block; }
-    .nba .meta.BKN .user svg path {
+    .nba .meta.BKN .user svg path,
+    .nba .BKN > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.BKN .user .op {
+  .nba .meta.BKN .user .op,
+  .nba .BKN > .meta .user .op {
     color: #000000;
     background-color: #FFFFFF; }
-.nba .meta.BKN .flair {
+.nba .meta.BKN .flair,
+.nba .BKN > .meta .flair {
   display: none; }
 
-.nba .meta.BOS .user {
+.comment.BKN {
+  border: 1px solid #000000; }
+
+.nba .meta.BOS .user,
+.nba .BOS > .meta .user {
   color: #FFFFFF;
   background-color: #008348; }
-  .nba .meta.BOS .user svg {
+  .nba .meta.BOS .user svg,
+  .nba .BOS > .meta .user svg {
     display: block; }
-    .nba .meta.BOS .user svg path {
+    .nba .meta.BOS .user svg path,
+    .nba .BOS > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.BOS .user .op {
+  .nba .meta.BOS .user .op,
+  .nba .BOS > .meta .user .op {
     color: #008348;
     background-color: #FFFFFF; }
-.nba .meta.BOS .flair {
+.nba .meta.BOS .flair,
+.nba .BOS > .meta .flair {
   display: none; }
 
-.nba .meta.CHA .user {
+.comment.BOS {
+  border: 1px solid #008348; }
+
+.nba .meta.CHA .user,
+.nba .CHA > .meta .user {
   color: #1D1160;
   background-color: #008CA8; }
-  .nba .meta.CHA .user svg {
+  .nba .meta.CHA .user svg,
+  .nba .CHA > .meta .user svg {
     display: block; }
-    .nba .meta.CHA .user svg path {
+    .nba .meta.CHA .user svg path,
+    .nba .CHA > .meta .user svg path {
       fill: #1D1160; }
-  .nba .meta.CHA .user .op {
+  .nba .meta.CHA .user .op,
+  .nba .CHA > .meta .user .op {
     color: #008CA8;
     background-color: #1D1160; }
-.nba .meta.CHA .flair {
+.nba .meta.CHA .flair,
+.nba .CHA > .meta .flair {
   display: none; }
 
-.nba .meta.CHI .user {
+.comment.CHA {
+  border: 1px solid #008CA8; }
+
+.nba .meta.CHI .user,
+.nba .CHI > .meta .user {
   color: #FFFFFF;
   background-color: #CE1141; }
-  .nba .meta.CHI .user svg {
+  .nba .meta.CHI .user svg,
+  .nba .CHI > .meta .user svg {
     display: block; }
-    .nba .meta.CHI .user svg path {
+    .nba .meta.CHI .user svg path,
+    .nba .CHI > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.CHI .user .op {
+  .nba .meta.CHI .user .op,
+  .nba .CHI > .meta .user .op {
     color: #CE1141;
     background-color: #FFFFFF; }
-.nba .meta.CHI .flair {
+.nba .meta.CHI .flair,
+.nba .CHI > .meta .flair {
   display: none; }
 
-.nba .meta.CLE .user {
+.comment.CHI {
+  border: 1px solid #CE1141; }
+
+.nba .meta.CLE .user,
+.nba .CLE > .meta .user {
   color: #860038;
   background-color: #FDBB30; }
-  .nba .meta.CLE .user svg {
+  .nba .meta.CLE .user svg,
+  .nba .CLE > .meta .user svg {
     display: block; }
-    .nba .meta.CLE .user svg path {
+    .nba .meta.CLE .user svg path,
+    .nba .CLE > .meta .user svg path {
       fill: #860038; }
-  .nba .meta.CLE .user .op {
+  .nba .meta.CLE .user .op,
+  .nba .CLE > .meta .user .op {
     color: #FDBB30;
     background-color: #860038; }
-.nba .meta.CLE .flair {
+.nba .meta.CLE .flair,
+.nba .CLE > .meta .flair {
   display: none; }
 
-.nba .meta.DAL .user {
+.comment.CLE {
+  border: 1px solid #FDBB30; }
+
+.nba .meta.DAL .user,
+.nba .DAL > .meta .user {
   color: #007DC5;
   background-color: #C4CED3; }
-  .nba .meta.DAL .user svg {
+  .nba .meta.DAL .user svg,
+  .nba .DAL > .meta .user svg {
     display: block; }
-    .nba .meta.DAL .user svg path {
+    .nba .meta.DAL .user svg path,
+    .nba .DAL > .meta .user svg path {
       fill: #007DC5; }
-  .nba .meta.DAL .user .op {
+  .nba .meta.DAL .user .op,
+  .nba .DAL > .meta .user .op {
     color: #C4CED3;
     background-color: #007DC5; }
-.nba .meta.DAL .flair {
+.nba .meta.DAL .flair,
+.nba .DAL > .meta .flair {
   display: none; }
 
-.nba .meta.DEN .user {
+.comment.DAL {
+  border: 1px solid #C4CED3; }
+
+.nba .meta.DEN .user,
+.nba .DEN > .meta .user {
   color: #FFB20F;
   background-color: #4FA8FF; }
-  .nba .meta.DEN .user svg {
+  .nba .meta.DEN .user svg,
+  .nba .DEN > .meta .user svg {
     display: block; }
-    .nba .meta.DEN .user svg path {
+    .nba .meta.DEN .user svg path,
+    .nba .DEN > .meta .user svg path {
       fill: #FFB20F; }
-  .nba .meta.DEN .user .op {
+  .nba .meta.DEN .user .op,
+  .nba .DEN > .meta .user .op {
     color: #4FA8FF;
     background-color: #FFB20F; }
-.nba .meta.DEN .flair {
+.nba .meta.DEN .flair,
+.nba .DEN > .meta .flair {
   display: none; }
 
-.nba .meta.DET .user {
+.comment.DEN {
+  border: 1px solid #4FA8FF; }
+
+.nba .meta.DET .user,
+.nba .DET > .meta .user {
   color: #FFFFFF;
   background-color: #006BB6; }
-  .nba .meta.DET .user svg {
+  .nba .meta.DET .user svg,
+  .nba .DET > .meta .user svg {
     display: block; }
-    .nba .meta.DET .user svg path {
+    .nba .meta.DET .user svg path,
+    .nba .DET > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.DET .user .op {
+  .nba .meta.DET .user .op,
+  .nba .DET > .meta .user .op {
     color: #006BB6;
     background-color: #FFFFFF; }
-.nba .meta.DET .flair {
+.nba .meta.DET .flair,
+.nba .DET > .meta .flair {
   display: none; }
 
-.nba .meta.GSW .user {
+.comment.DET {
+  border: 1px solid #006BB6; }
+
+.nba .meta.GSW .user,
+.nba .GSW > .meta .user {
   color: #FDB927;
   background-color: #006BB6; }
-  .nba .meta.GSW .user svg {
+  .nba .meta.GSW .user svg,
+  .nba .GSW > .meta .user svg {
     display: block; }
-    .nba .meta.GSW .user svg path {
+    .nba .meta.GSW .user svg path,
+    .nba .GSW > .meta .user svg path {
       fill: #FDB927; }
-  .nba .meta.GSW .user .op {
+  .nba .meta.GSW .user .op,
+  .nba .GSW > .meta .user .op {
     color: #006BB6;
     background-color: #FDB927; }
-.nba .meta.GSW .flair {
+.nba .meta.GSW .flair,
+.nba .GSW > .meta .flair {
   display: none; }
 
-.nba .meta.HOU .user {
+.comment.GSW {
+  border: 1px solid #006BB6; }
+
+.nba .meta.HOU .user,
+.nba .HOU > .meta .user {
   color: #CE1141;
   background-color: #C4CED3; }
-  .nba .meta.HOU .user svg {
+  .nba .meta.HOU .user svg,
+  .nba .HOU > .meta .user svg {
     display: block; }
-    .nba .meta.HOU .user svg path {
+    .nba .meta.HOU .user svg path,
+    .nba .HOU > .meta .user svg path {
       fill: #CE1141; }
-  .nba .meta.HOU .user .op {
+  .nba .meta.HOU .user .op,
+  .nba .HOU > .meta .user .op {
     color: #C4CED3;
     background-color: #CE1141; }
-.nba .meta.HOU .flair {
+.nba .meta.HOU .flair,
+.nba .HOU > .meta .flair {
   display: none; }
 
-.nba .meta.IND .user {
+.comment.HOU {
+  border: 1px solid #C4CED3; }
+
+.nba .meta.IND .user,
+.nba .IND > .meta .user {
   color: #FFC633;
   background-color: #00275D; }
-  .nba .meta.IND .user svg {
+  .nba .meta.IND .user svg,
+  .nba .IND > .meta .user svg {
     display: block; }
-    .nba .meta.IND .user svg path {
+    .nba .meta.IND .user svg path,
+    .nba .IND > .meta .user svg path {
       fill: #FFC633; }
-  .nba .meta.IND .user .op {
+  .nba .meta.IND .user .op,
+  .nba .IND > .meta .user .op {
     color: #00275D;
     background-color: #FFC633; }
-.nba .meta.IND .flair {
+.nba .meta.IND .flair,
+.nba .IND > .meta .flair {
   display: none; }
 
-.nba .meta.LAC .user {
+.comment.IND {
+  border: 1px solid #00275D; }
+
+.nba .meta.LAC .user,
+.nba .LAC > .meta .user {
   color: #ED174C;
   background-color: #FFFFFF; }
-  .nba .meta.LAC .user svg {
+  .nba .meta.LAC .user svg,
+  .nba .LAC > .meta .user svg {
     display: block; }
-    .nba .meta.LAC .user svg path {
+    .nba .meta.LAC .user svg path,
+    .nba .LAC > .meta .user svg path {
       fill: #ED174C; }
-  .nba .meta.LAC .user .op {
+  .nba .meta.LAC .user .op,
+  .nba .LAC > .meta .user .op {
     color: #FFFFFF;
     background-color: #ED174C; }
-.nba .meta.LAC .flair {
+.nba .meta.LAC .flair,
+.nba .LAC > .meta .flair {
   display: none; }
 
-.nba .meta.LAL .user {
+.comment.LAC {
+  border: 1px solid #FFFFFF; }
+
+.nba .meta.LAL .user,
+.nba .LAL > .meta .user {
   color: #FDB927;
   background-color: #552582; }
-  .nba .meta.LAL .user svg {
+  .nba .meta.LAL .user svg,
+  .nba .LAL > .meta .user svg {
     display: block; }
-    .nba .meta.LAL .user svg path {
+    .nba .meta.LAL .user svg path,
+    .nba .LAL > .meta .user svg path {
       fill: #FDB927; }
-  .nba .meta.LAL .user .op {
+  .nba .meta.LAL .user .op,
+  .nba .LAL > .meta .user .op {
     color: #552582;
     background-color: #FDB927; }
-.nba .meta.LAL .flair {
+.nba .meta.LAL .flair,
+.nba .LAL > .meta .flair {
   display: none; }
 
-.nba .meta.MEM .user {
+.comment.LAL {
+  border: 1px solid #552582; }
+
+.nba .meta.MEM .user,
+.nba .MEM > .meta .user {
   color: #6189B9;
   background-color: #23375B; }
-  .nba .meta.MEM .user svg {
+  .nba .meta.MEM .user svg,
+  .nba .MEM > .meta .user svg {
     display: block; }
-    .nba .meta.MEM .user svg path {
+    .nba .meta.MEM .user svg path,
+    .nba .MEM > .meta .user svg path {
       fill: #6189B9; }
-  .nba .meta.MEM .user .op {
+  .nba .meta.MEM .user .op,
+  .nba .MEM > .meta .user .op {
     color: #23375B;
     background-color: #6189B9; }
-.nba .meta.MEM .flair {
+.nba .meta.MEM .flair,
+.nba .MEM > .meta .flair {
   display: none; }
 
-.nba .meta.MIA .user {
+.comment.MEM {
+  border: 1px solid #23375B; }
+
+.nba .meta.MIA .user,
+.nba .MIA > .meta .user {
   color: #FFFFFF;
   background-color: #98002E; }
-  .nba .meta.MIA .user svg {
+  .nba .meta.MIA .user svg,
+  .nba .MIA > .meta .user svg {
     display: block; }
-    .nba .meta.MIA .user svg path {
+    .nba .meta.MIA .user svg path,
+    .nba .MIA > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.MIA .user .op {
+  .nba .meta.MIA .user .op,
+  .nba .MIA > .meta .user .op {
     color: #98002E;
     background-color: #FFFFFF; }
-.nba .meta.MIA .flair {
+.nba .meta.MIA .flair,
+.nba .MIA > .meta .flair {
   display: none; }
 
-.nba .meta.MIL .user {
+.comment.MIA {
+  border: 1px solid #98002E; }
+
+.nba .meta.MIL .user,
+.nba .MIL > .meta .user {
   color: #EEE1C6;
   background-color: #00471B; }
-  .nba .meta.MIL .user svg {
+  .nba .meta.MIL .user svg,
+  .nba .MIL > .meta .user svg {
     display: block; }
-    .nba .meta.MIL .user svg path {
+    .nba .meta.MIL .user svg path,
+    .nba .MIL > .meta .user svg path {
       fill: #EEE1C6; }
-  .nba .meta.MIL .user .op {
+  .nba .meta.MIL .user .op,
+  .nba .MIL > .meta .user .op {
     color: #00471B;
     background-color: #EEE1C6; }
-.nba .meta.MIL .flair {
+.nba .meta.MIL .flair,
+.nba .MIL > .meta .flair {
   display: none; }
 
-.nba .meta.MIN .user {
+.comment.MIL {
+  border: 1px solid #00471B; }
+
+.nba .meta.MIN .user,
+.nba .MIN > .meta .user {
   color: #C4CED3;
   background-color: #005083; }
-  .nba .meta.MIN .user svg {
+  .nba .meta.MIN .user svg,
+  .nba .MIN > .meta .user svg {
     display: block; }
-    .nba .meta.MIN .user svg path {
+    .nba .meta.MIN .user svg path,
+    .nba .MIN > .meta .user svg path {
       fill: #C4CED3; }
-  .nba .meta.MIN .user .op {
+  .nba .meta.MIN .user .op,
+  .nba .MIN > .meta .user .op {
     color: #005083;
     background-color: #C4CED3; }
-.nba .meta.MIN .flair {
+.nba .meta.MIN .flair,
+.nba .MIN > .meta .flair {
   display: none; }
 
-.nba .meta.NOP .user {
+.comment.MIN {
+  border: 1px solid #005083; }
+
+.nba .meta.NOP .user,
+.nba .NOP > .meta .user {
   color: #B4975A;
   background-color: #002B5C; }
-  .nba .meta.NOP .user svg {
+  .nba .meta.NOP .user svg,
+  .nba .NOP > .meta .user svg {
     display: block; }
-    .nba .meta.NOP .user svg path {
+    .nba .meta.NOP .user svg path,
+    .nba .NOP > .meta .user svg path {
       fill: #B4975A; }
-  .nba .meta.NOP .user .op {
+  .nba .meta.NOP .user .op,
+  .nba .NOP > .meta .user .op {
     color: #002B5C;
     background-color: #B4975A; }
-.nba .meta.NOP .flair {
+.nba .meta.NOP .flair,
+.nba .NOP > .meta .flair {
   display: none; }
 
-.nba .meta.NYK .user {
+.comment.NOP {
+  border: 1px solid #002B5C; }
+
+.nba .meta.NYK .user,
+.nba .NYK > .meta .user {
   color: #F58426;
   background-color: #006BB6; }
-  .nba .meta.NYK .user svg {
+  .nba .meta.NYK .user svg,
+  .nba .NYK > .meta .user svg {
     display: block; }
-    .nba .meta.NYK .user svg path {
+    .nba .meta.NYK .user svg path,
+    .nba .NYK > .meta .user svg path {
       fill: #F58426; }
-  .nba .meta.NYK .user .op {
+  .nba .meta.NYK .user .op,
+  .nba .NYK > .meta .user .op {
     color: #006BB6;
     background-color: #F58426; }
-.nba .meta.NYK .flair {
+.nba .meta.NYK .flair,
+.nba .NYK > .meta .flair {
   display: none; }
 
-.nba .meta.OKC .user {
+.comment.NYK {
+  border: 1px solid #006BB6; }
+
+.nba .meta.OKC .user,
+.nba .OKC > .meta .user {
   color: #002D62;
   background-color: #F05133; }
-  .nba .meta.OKC .user svg {
+  .nba .meta.OKC .user svg,
+  .nba .OKC > .meta .user svg {
     display: block; }
-    .nba .meta.OKC .user svg path {
+    .nba .meta.OKC .user svg path,
+    .nba .OKC > .meta .user svg path {
       fill: #002D62; }
-  .nba .meta.OKC .user .op {
+  .nba .meta.OKC .user .op,
+  .nba .OKC > .meta .user .op {
     color: #F05133;
     background-color: #002D62; }
-.nba .meta.OKC .flair {
+.nba .meta.OKC .flair,
+.nba .OKC > .meta .flair {
   display: none; }
 
-.nba .meta.ORL .user {
+.comment.OKC {
+  border: 1px solid #F05133; }
+
+.nba .meta.ORL .user,
+.nba .ORL > .meta .user {
   color: #C4CED3;
   background-color: #007DC5; }
-  .nba .meta.ORL .user svg {
+  .nba .meta.ORL .user svg,
+  .nba .ORL > .meta .user svg {
     display: block; }
-    .nba .meta.ORL .user svg path {
+    .nba .meta.ORL .user svg path,
+    .nba .ORL > .meta .user svg path {
       fill: #C4CED3; }
-  .nba .meta.ORL .user .op {
+  .nba .meta.ORL .user .op,
+  .nba .ORL > .meta .user .op {
     color: #007DC5;
     background-color: #C4CED3; }
-.nba .meta.ORL .flair {
+.nba .meta.ORL .flair,
+.nba .ORL > .meta .flair {
   display: none; }
 
-.nba .meta.PHI .user {
+.comment.ORL {
+  border: 1px solid #007DC5; }
+
+.nba .meta.PHI .user,
+.nba .PHI > .meta .user {
   color: #FFFFFF;
   background-color: #006BB6; }
-  .nba .meta.PHI .user svg {
+  .nba .meta.PHI .user svg,
+  .nba .PHI > .meta .user svg {
     display: block; }
-    .nba .meta.PHI .user svg path {
+    .nba .meta.PHI .user svg path,
+    .nba .PHI > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.PHI .user .op {
+  .nba .meta.PHI .user .op,
+  .nba .PHI > .meta .user .op {
     color: #006BB6;
     background-color: #FFFFFF; }
-.nba .meta.PHI .flair {
+.nba .meta.PHI .flair,
+.nba .PHI > .meta .flair {
   display: none; }
 
-.nba .meta.PHX .user {
+.comment.PHI {
+  border: 1px solid #006BB6; }
+
+.nba .meta.PHX .user,
+.nba .PHX > .meta .user {
   color: #E56020;
   background-color: #1D1160; }
-  .nba .meta.PHX .user svg {
+  .nba .meta.PHX .user svg,
+  .nba .PHX > .meta .user svg {
     display: block; }
-    .nba .meta.PHX .user svg path {
+    .nba .meta.PHX .user svg path,
+    .nba .PHX > .meta .user svg path {
       fill: #E56020; }
-  .nba .meta.PHX .user .op {
+  .nba .meta.PHX .user .op,
+  .nba .PHX > .meta .user .op {
     color: #1D1160;
     background-color: #E56020; }
-.nba .meta.PHX .flair {
+.nba .meta.PHX .flair,
+.nba .PHX > .meta .flair {
   display: none; }
 
-.nba .meta.POR .user {
+.comment.PHX {
+  border: 1px solid #1D1160; }
+
+.nba .meta.POR .user,
+.nba .POR > .meta .user {
   color: #F0163A;
   background-color: #B6BFBF; }
-  .nba .meta.POR .user svg {
+  .nba .meta.POR .user svg,
+  .nba .POR > .meta .user svg {
     display: block; }
-    .nba .meta.POR .user svg path {
+    .nba .meta.POR .user svg path,
+    .nba .POR > .meta .user svg path {
       fill: #F0163A; }
-  .nba .meta.POR .user .op {
+  .nba .meta.POR .user .op,
+  .nba .POR > .meta .user .op {
     color: #B6BFBF;
     background-color: #F0163A; }
-.nba .meta.POR .flair {
+.nba .meta.POR .flair,
+.nba .POR > .meta .flair {
   display: none; }
 
-.nba .meta.SAC .user {
+.comment.POR {
+  border: 1px solid #B6BFBF; }
+
+.nba .meta.SAC .user,
+.nba .SAC > .meta .user {
   color: #FFFFFF;
   background-color: #724C9F; }
-  .nba .meta.SAC .user svg {
+  .nba .meta.SAC .user svg,
+  .nba .SAC > .meta .user svg {
     display: block; }
-    .nba .meta.SAC .user svg path {
+    .nba .meta.SAC .user svg path,
+    .nba .SAC > .meta .user svg path {
       fill: #FFFFFF; }
-  .nba .meta.SAC .user .op {
+  .nba .meta.SAC .user .op,
+  .nba .SAC > .meta .user .op {
     color: #724C9F;
     background-color: #FFFFFF; }
-.nba .meta.SAC .flair {
+.nba .meta.SAC .flair,
+.nba .SAC > .meta .flair {
   display: none; }
 
-.nba .meta.SAS .user {
+.comment.SAC {
+  border: 1px solid #724C9F; }
+
+.nba .meta.SAS .user,
+.nba .SAS > .meta .user {
   color: #000000;
   background-color: #B6BFBF; }
-  .nba .meta.SAS .user svg {
+  .nba .meta.SAS .user svg,
+  .nba .SAS > .meta .user svg {
     display: block; }
-    .nba .meta.SAS .user svg path {
+    .nba .meta.SAS .user svg path,
+    .nba .SAS > .meta .user svg path {
       fill: #000000; }
-  .nba .meta.SAS .user .op {
+  .nba .meta.SAS .user .op,
+  .nba .SAS > .meta .user .op {
     color: #B6BFBF;
     background-color: #000000; }
-.nba .meta.SAS .flair {
+.nba .meta.SAS .flair,
+.nba .SAS > .meta .flair {
   display: none; }
 
-.nba .meta.TOR .user {
+.comment.SAS {
+  border: 1px solid #B6BFBF; }
+
+.nba .meta.TOR .user,
+.nba .TOR > .meta .user {
   color: #C4CED3;
   background-color: #CE1141; }
-  .nba .meta.TOR .user svg {
+  .nba .meta.TOR .user svg,
+  .nba .TOR > .meta .user svg {
     display: block; }
-    .nba .meta.TOR .user svg path {
+    .nba .meta.TOR .user svg path,
+    .nba .TOR > .meta .user svg path {
       fill: #C4CED3; }
-  .nba .meta.TOR .user .op {
+  .nba .meta.TOR .user .op,
+  .nba .TOR > .meta .user .op {
     color: #CE1141;
     background-color: #C4CED3; }
-.nba .meta.TOR .flair {
+.nba .meta.TOR .flair,
+.nba .TOR > .meta .flair {
   display: none; }
 
-.nba .meta.UTA .user {
+.comment.TOR {
+  border: 1px solid #CE1141; }
+
+.nba .meta.UTA .user,
+.nba .UTA > .meta .user {
   color: #F9A01B;
   background-color: #002B5C; }
-  .nba .meta.UTA .user svg {
+  .nba .meta.UTA .user svg,
+  .nba .UTA > .meta .user svg {
     display: block; }
-    .nba .meta.UTA .user svg path {
+    .nba .meta.UTA .user svg path,
+    .nba .UTA > .meta .user svg path {
       fill: #F9A01B; }
-  .nba .meta.UTA .user .op {
+  .nba .meta.UTA .user .op,
+  .nba .UTA > .meta .user .op {
     color: #002B5C;
     background-color: #F9A01B; }
-.nba .meta.UTA .flair {
+.nba .meta.UTA .flair,
+.nba .UTA > .meta .flair {
   display: none; }
 
-.nba .meta.WSH .user {
+.comment.UTA {
+  border: 1px solid #002B5C; }
+
+.nba .meta.WSH .user,
+.nba .WSH > .meta .user {
   color: #002566;
   background-color: #F5002F; }
-  .nba .meta.WSH .user svg {
+  .nba .meta.WSH .user svg,
+  .nba .WSH > .meta .user svg {
     display: block; }
-    .nba .meta.WSH .user svg path {
+    .nba .meta.WSH .user svg path,
+    .nba .WSH > .meta .user svg path {
       fill: #002566; }
-  .nba .meta.WSH .user .op {
+  .nba .meta.WSH .user .op,
+  .nba .WSH > .meta .user .op {
     color: #F5002F;
     background-color: #002566; }
-.nba .meta.WSH .flair {
+.nba .meta.WSH .flair,
+.nba .WSH > .meta .flair {
   display: none; }
+
+.comment.WSH {
+  border: 1px solid #F5002F; }
 
 .comment {
   overflow-wrap: break-word;
@@ -737,15 +977,16 @@ header .user {
   word-break: break-word;
   hyphens: auto; }
   .comment .body {
-    padding: 1rem;
-    padding-top: 0.5rem;
+    padding: 0.5rem 1rem 1.5rem 1rem;
     font-size: 120%; }
 
 .topLevelComment {
   margin: 0.75rem 0; }
 
 .reply {
-  padding-bottom: 0;
-  padding-top: 0; }
+  padding-left: 1rem; }
+  .reply .comment {
+    border-bottom: 0;
+    border-right: 0; }
 
 /*# sourceMappingURL=main.css.map */

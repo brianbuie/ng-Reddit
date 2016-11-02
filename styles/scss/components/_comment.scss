@@ -44,7 +44,8 @@ header .user{
 }
 
 @each $team, $colors in $teams {
-	.nba .meta.#{$team}{
+	.nba .meta.#{$team},
+	.nba .#{$team} > .meta{
 		.user{
 			color: map-get($colors, foreground);
 			background-color: map-get($colors, background);
@@ -64,6 +65,9 @@ header .user{
 			display: none;
 		}
 	}
+	.comment.#{$team}{
+		border: 1px solid map-get($colors, background);
+	}
 }
 
 .comment{
@@ -73,8 +77,7 @@ header .user{
 	hyphens: auto;
 
 	.body{
-		padding: $xl-space;
-		padding-top: $md-space;
+		padding: $md-space $xl-space ($lg-space * 2) $xl-space;
 		font-size: 120%;
 	}
 }
@@ -84,7 +87,11 @@ header .user{
 }
 
 .reply{
-	padding-bottom: 0;
-	padding-top: 0;
+	padding-left: $xl-space;
+
+	.comment{
+		border-bottom: 0;
+		border-right: 0;
+	}
 }
 
