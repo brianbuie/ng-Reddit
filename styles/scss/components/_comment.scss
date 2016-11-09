@@ -44,29 +44,31 @@ header .user{
 }
 
 @each $team, $colors in $teams {
-	.nba .meta.#{$team},
-	.nba .#{$team} > .meta{
-		.user{
-			color: map-get($colors, foreground);
-			background-color: map-get($colors, background);
-			svg{
-				display: block;
+	.nba{
+		.meta.#{$team},
+		.#{$team} > .meta{
+			.user{
+				color: map-get($colors, foreground);
+				background-color: map-get($colors, background);
+				svg{
+					display: block;
 
-				path{
-					fill: map-get($colors, foreground);
+					path{
+						fill: map-get($colors, foreground);
+					}
+				}
+				.op{
+					color: map-get($colors, background);
+					background-color: map-get($colors, foreground);
 				}
 			}
-			.op{
-				color: map-get($colors, background);
-				background-color: map-get($colors, foreground);
+			.flair{
+				display: none;
 			}
 		}
-		.flair{
-			display: none;
+		.comment.#{$team}{
+			border: 1px solid map-get($colors, background);
 		}
-	}
-	.comment.#{$team}{
-		border: 1px solid map-get($colors, background);
 	}
 }
 

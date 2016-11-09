@@ -5,6 +5,7 @@ CRUCIAL DEV
 
 BUGS & ISSUES
 
+// Scroll jump every time a new comment is added
 
 FEATURES TO ADD
 
@@ -13,8 +14,6 @@ FEATURES TO ADD
 // Comment Filters (Post filters?)
 
 // load default settings from JSON file
-
-// NBA icon flair and username/team colors
 
 // Notification sound
 

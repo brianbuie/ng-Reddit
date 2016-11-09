@@ -358,8 +358,7 @@ header .user {
 .nba .meta.ATL .flair,
 .nba .ATL > .meta .flair {
   display: none; }
-
-.comment.ATL {
+.nba .comment.ATL {
   border: 1px solid #E03A3E; }
 
 .nba .meta.BKN .user,
@@ -379,8 +378,7 @@ header .user {
 .nba .meta.BKN .flair,
 .nba .BKN > .meta .flair {
   display: none; }
-
-.comment.BKN {
+.nba .comment.BKN {
   border: 1px solid #000000; }
 
 .nba .meta.BOS .user,
@@ -400,8 +398,7 @@ header .user {
 .nba .meta.BOS .flair,
 .nba .BOS > .meta .flair {
   display: none; }
-
-.comment.BOS {
+.nba .comment.BOS {
   border: 1px solid #008348; }
 
 .nba .meta.CHA .user,
@@ -421,8 +418,7 @@ header .user {
 .nba .meta.CHA .flair,
 .nba .CHA > .meta .flair {
   display: none; }
-
-.comment.CHA {
+.nba .comment.CHA {
   border: 1px solid #008CA8; }
 
 .nba .meta.CHI .user,
@@ -442,8 +438,7 @@ header .user {
 .nba .meta.CHI .flair,
 .nba .CHI > .meta .flair {
   display: none; }
-
-.comment.CHI {
+.nba .comment.CHI {
   border: 1px solid #CE1141; }
 
 .nba .meta.CLE .user,
@@ -463,8 +458,7 @@ header .user {
 .nba .meta.CLE .flair,
 .nba .CLE > .meta .flair {
   display: none; }
-
-.comment.CLE {
+.nba .comment.CLE {
   border: 1px solid #FDBB30; }
 
 .nba .meta.DAL .user,
@@ -484,8 +478,7 @@ header .user {
 .nba .meta.DAL .flair,
 .nba .DAL > .meta .flair {
   display: none; }
-
-.comment.DAL {
+.nba .comment.DAL {
   border: 1px solid #C4CED3; }
 
 .nba .meta.DEN .user,
@@ -505,8 +498,7 @@ header .user {
 .nba .meta.DEN .flair,
 .nba .DEN > .meta .flair {
   display: none; }
-
-.comment.DEN {
+.nba .comment.DEN {
   border: 1px solid #4FA8FF; }
 
 .nba .meta.DET .user,
@@ -526,8 +518,7 @@ header .user {
 .nba .meta.DET .flair,
 .nba .DET > .meta .flair {
   display: none; }
-
-.comment.DET {
+.nba .comment.DET {
   border: 1px solid #006BB6; }
 
 .nba .meta.GSW .user,
@@ -547,8 +538,7 @@ header .user {
 .nba .meta.GSW .flair,
 .nba .GSW > .meta .flair {
   display: none; }
-
-.comment.GSW {
+.nba .comment.GSW {
   border: 1px solid #006BB6; }
 
 .nba .meta.HOU .user,
@@ -568,8 +558,7 @@ header .user {
 .nba .meta.HOU .flair,
 .nba .HOU > .meta .flair {
   display: none; }
-
-.comment.HOU {
+.nba .comment.HOU {
   border: 1px solid #C4CED3; }
 
 .nba .meta.IND .user,
@@ -589,8 +578,7 @@ header .user {
 .nba .meta.IND .flair,
 .nba .IND > .meta .flair {
   display: none; }
-
-.comment.IND {
+.nba .comment.IND {
   border: 1px solid #00275D; }
 
 .nba .meta.LAC .user,
@@ -610,8 +598,7 @@ header .user {
 .nba .meta.LAC .flair,
 .nba .LAC > .meta .flair {
   display: none; }
-
-.comment.LAC {
+.nba .comment.LAC {
   border: 1px solid #FFFFFF; }
 
 .nba .meta.LAL .user,
@@ -631,8 +618,7 @@ header .user {
 .nba .meta.LAL .flair,
 .nba .LAL > .meta .flair {
   display: none; }
-
-.comment.LAL {
+.nba .comment.LAL {
   border: 1px solid #552582; }
 
 .nba .meta.MEM .user,
@@ -652,8 +638,7 @@ header .user {
 .nba .meta.MEM .flair,
 .nba .MEM > .meta .flair {
   display: none; }
-
-.comment.MEM {
+.nba .comment.MEM {
   border: 1px solid #23375B; }
 
 .nba .meta.MIA .user,
@@ -673,8 +658,7 @@ header .user {
 .nba .meta.MIA .flair,
 .nba .MIA > .meta .flair {
   display: none; }
-
-.comment.MIA {
+.nba .comment.MIA {
   border: 1px solid #98002E; }
 
 .nba .meta.MIL .user,
@@ -694,8 +678,7 @@ header .user {
 .nba .meta.MIL .flair,
 .nba .MIL > .meta .flair {
   display: none; }
-
-.comment.MIL {
+.nba .comment.MIL {
   border: 1px solid #00471B; }
 
 .nba .meta.MIN .user,
@@ -715,8 +698,7 @@ header .user {
 .nba .meta.MIN .flair,
 .nba .MIN > .meta .flair {
   display: none; }
-
-.comment.MIN {
+.nba .comment.MIN {
   border: 1px solid #005083; }
 
 .nba .meta.NOP .user,
@@ -736,8 +718,7 @@ header .user {
 .nba .meta.NOP .flair,
 .nba .NOP > .meta .flair {
   display: none; }
-
-.comment.NOP {
+.nba .comment.NOP {
   border: 1px solid #002B5C; }
 
 .nba .meta.NYK .user,
@@ -757,8 +738,7 @@ header .user {
 .nba .meta.NYK .flair,
 .nba .NYK > .meta .flair {
   display: none; }
-
-.comment.NYK {
+.nba .comment.NYK {
   border: 1px solid #006BB6; }
 
 .nba .meta.OKC .user,
@@ -778,8 +758,7 @@ header .user {
 .nba .meta.OKC .flair,
 .nba .OKC > .meta .flair {
   display: none; }
-
-.comment.OKC {
+.nba .comment.OKC {
   border: 1px solid #F05133; }
 
 .nba .meta.ORL .user,
@@ -799,8 +778,7 @@ header .user {
 .nba .meta.ORL .flair,
 .nba .ORL > .meta .flair {
   display: none; }
-
-.comment.ORL {
+.nba .comment.ORL {
   border: 1px solid #007DC5; }
 
 .nba .meta.PHI .user,
@@ -820,8 +798,7 @@ header .user {
 .nba .meta.PHI .flair,
 .nba .PHI > .meta .flair {
   display: none; }
-
-.comment.PHI {
+.nba .comment.PHI {
   border: 1px solid #006BB6; }
 
 .nba .meta.PHX .user,
@@ -841,8 +818,7 @@ header .user {
 .nba .meta.PHX .flair,
 .nba .PHX > .meta .flair {
   display: none; }
-
-.comment.PHX {
+.nba .comment.PHX {
   border: 1px solid #1D1160; }
 
 .nba .meta.POR .user,
@@ -862,8 +838,7 @@ header .user {
 .nba .meta.POR .flair,
 .nba .POR > .meta .flair {
   display: none; }
-
-.comment.POR {
+.nba .comment.POR {
   border: 1px solid #B6BFBF; }
 
 .nba .meta.SAC .user,
@@ -883,8 +858,7 @@ header .user {
 .nba .meta.SAC .flair,
 .nba .SAC > .meta .flair {
   display: none; }
-
-.comment.SAC {
+.nba .comment.SAC {
   border: 1px solid #724C9F; }
 
 .nba .meta.SAS .user,
@@ -904,8 +878,7 @@ header .user {
 .nba .meta.SAS .flair,
 .nba .SAS > .meta .flair {
   display: none; }
-
-.comment.SAS {
+.nba .comment.SAS {
   border: 1px solid #B6BFBF; }
 
 .nba .meta.TOR .user,
@@ -925,8 +898,7 @@ header .user {
 .nba .meta.TOR .flair,
 .nba .TOR > .meta .flair {
   display: none; }
-
-.comment.TOR {
+.nba .comment.TOR {
   border: 1px solid #CE1141; }
 
 .nba .meta.UTA .user,
@@ -946,8 +918,7 @@ header .user {
 .nba .meta.UTA .flair,
 .nba .UTA > .meta .flair {
   display: none; }
-
-.comment.UTA {
+.nba .comment.UTA {
   border: 1px solid #002B5C; }
 
 .nba .meta.WSH .user,
@@ -967,8 +938,7 @@ header .user {
 .nba .meta.WSH .flair,
 .nba .WSH > .meta .flair {
   display: none; }
-
-.comment.WSH {
+.nba .comment.WSH {
   border: 1px solid #F5002F; }
 
 .comment {
